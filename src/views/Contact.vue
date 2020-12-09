@@ -115,5 +115,18 @@ export default {
     }
   }
 }
-
+@media only screen and (max-width: 770px) {
+  .contact {
+    background-size: auto 210px;
+    &-banner {
+      height: 210px;
+      &-content {
+        padding: 10px;
+        .content-title {
+          padding: 20px 0 0;
+        }
+      }
+    }
+  }
+}
 </style>

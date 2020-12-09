@@ -12,27 +12,27 @@
       <div class="about-content-left">
         <h5 class="about-content-left-theme">{{$t('header.service')}}</h5>
         <ul class="about-content-left-list">
-          <li :class="['about-content-left-list-li', {'isActiveLi': String(index) === String(currentIndex)}]" v-for="(item,index) in liData" :key="index" @click="handleClickLi(item, index)">{{item.name}}</li>
+          <li :class="['about-content-left-list-li', {'isActiveLi': index === currentIndex}]" v-for="(item,index) in liData" :key="index" @click="handleClickLi(item, index)">{{item.name}}</li>
         </ul>
       </div>
       <div class="about-content-right">
-        <div class="about-content-right-brief" v-show="currentIndex === '0'">
+        <div class="about-content-right-brief" v-show="currentIndex === 0">
           <h3 class="about-content-right-brief-title">CTMS</h3>
           <h4 class="about-content-right-brief-desc">临床研究项目管理系统</h4>
           <p class="about-content-right-brief-text">
             依据国际人用技术协调委员会（International Conference on Harmonization, ICH）临床试验管理规范（Good Clinical Practice, GCP）、美国FDA临床试验数据管理规范、中国CNDA《临床试验数据管理工作技术指南》和临床数据管理协会临床研究数据管理规范（Good Clinical Data Management Practice, GCDMP）等规定，保证整个临床试验过程中获得的各类数据信息真实可信、准确可靠，使临床试验数据质量完全符合ALCOA+原则，即可归因性（Attributable）、易读性(Legible)、同时性(Contemporaneous)、原始性(Original)、准确性(Accurate)、完整性(Complete)、一致性(Consistent)、持久性(Enduring)和可获得性（Available When Needed）。
           </p>
         </div>
-        <div class="about-content-right-culture" v-show="currentIndex === '1'">
+        <div class="about-content-right-culture" v-show="currentIndex === 1">
         EDC
         </div>
-        <div class="about-content-right-review" v-show="currentIndex === '2'">
+        <div class="about-content-right-review" v-show="currentIndex === 2">
          RTSM
         </div>
-        <div class="about-content-right-review" v-show="currentIndex === '3'">
+        <div class="about-content-right-review" v-show="currentIndex === 3">
          ECOA
         </div>
-        <div class="about-content-right-review" v-show="currentIndex === '4'">
+        <div class="about-content-right-review" v-show="currentIndex === 4">
          ECOMSENT
         </div>
       </div>
@@ -50,15 +50,12 @@ export default {
         {name: 'ECOA'},
         {name: 'ECOMSENT'},
       ],
-      currentIndex: '0',
+      currentIndex: 0,
     }
-  },
-  mounted() {
-    this.currentIndex = String(this.$route.query.index)
   },
   methods: {
     handleClickLi(item,index) {
-      this.currentIndex = String(index)
+      this.currentIndex = index
     }
   }
 }
@@ -198,5 +195,25 @@ export default {
     }
   }
 }
-
+@media only screen and (max-width: 770px) {
+  .about {
+    background-size: auto 210px;
+    &-banner {
+      height: 210px;
+      &-content {
+        padding: 10px;
+        .content-title {
+          padding: 20px 0 0;
+        }
+      }
+    }
+    &-content {
+      flex-wrap: wrap;
+      &-left {
+        width: 90%;
+        margin: 10px auto;
+      }
+    }
+  }
+}
 </style>
