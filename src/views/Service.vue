@@ -71,7 +71,7 @@ export default {
       .content {
         &-title {
           color:#3F4C6E;
-          font-size: 36px;
+          font-size: 24px;
           margin: 0;
           padding: 120px 0 0;
         }

@@ -233,6 +233,7 @@ export default {
         padding: 10px;
         .content-title {
           padding: 20px 0 0;
+          font-size: 24px;
         }
       }
     }

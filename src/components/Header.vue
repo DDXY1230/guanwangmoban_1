@@ -5,12 +5,8 @@
         <img class="yly-icon" src="@/assets/imgs/logo.png" alt="" />
       </div>
       <div class="center">
-        <el-menu
-          :default-active="activeIndex"
-          class="el-menu-demo"
-          mode="horizontal"
-          @select="handleSelect"
-        >
+        <!-- web端菜单 -->
+        <el-menu :default-active="activeIndex" class="el-menu-demo is-web-show" mode="horizontal" @select="handleSelect">
           <el-menu-item index="/">{{ $t("header.home") }}</el-menu-item>
           <el-menu-item index="/about">{{ $t("header.about") }}</el-menu-item>
           <el-menu-item index="/service">{{
@@ -20,18 +16,30 @@
             $t("header.contact")
           }}</el-menu-item>
         </el-menu>
+        <!-- 手机端菜单 -->
+        <el-dropdown class="is-phone-show" trigger="click" @command="handleCommand">
+          <span class="el-dropdown-link">
+            {{ currentItem }}<i class="el-icon-arrow-down el-icon--right"></i>
+          </span>
+          <el-dropdown-menu slot="dropdown">
+            <el-dropdown-item command="/">{{
+              $t("header.home")
+            }}</el-dropdown-item>
+            <el-dropdown-item command="/about">{{
+              $t("header.about")
+            }}</el-dropdown-item>
+            <el-dropdown-item command="/service">{{
+              $t("header.service")
+            }}</el-dropdown-item>
+            <el-dropdown-item command="/contact">{{
+              $t("header.contact")
+            }}</el-dropdown-item>
+          </el-dropdown-menu>
+        </el-dropdown>
       </div>
       <div class="right">
-        <span
-          @click="languageFunc('cn')"
-          :class="{ isActive: isCurrLocal == 'cn' }"
-          >中</span
-        >/
-        <span
-          @click="languageFunc('en')"
-          :class="{ isActive: isCurrLocal == 'en' }"
-          >En</span
-        >
+        <span @click="languageFunc('cn')" :class="{ isActive: isCurrLocal == 'cn' }">中</span>/
+        <span @click="languageFunc('en')" :class="{ isActive: isCurrLocal == 'en' }">En</span>
       </div>
     </div>
   </div>
@@ -42,46 +50,60 @@ export default {
   data() {
     return {
       activeIndex: "/",
+      currentItem: "首页"
     };
   },
   computed: {
     isCurrLocal() {
       return this.$i18n.locale;
-    },
+    }
   },
   watch: {
-    $route(newVal, oldVal) {
-      console.log(newVal, oldVal);
-      switch (newVal.name) {
-        case "Home":
-          this.activeIndex = "/";
-          break;
-        case "About":
-          this.activeIndex = "/about";
-          break;
-        case "Service":
-          this.activeIndex = "/service";
-          break;
-        case "Contact":
-          this.activeIndex = "/contact";
-          break;
-        default:
-          this.activeIndex = "/";
-      }
-    },
+    $route(newVal) {
+      this.getCurrentPageTilte(newVal.name);
+    }
   },
   methods: {
+    handleCommand(command) {
+      console.log(command);
+      this.$router.push({
+        path: command
+      });
+    },
     handleSelect(key, keyPath) {
       console.log(key, keyPath);
       this.$router.push({
-        path: key,
+        path: key
       });
     },
     languageFunc(e) {
       this.$i18n.locale = e;
       localStorage.setItem("lang", e);
+      this.getCurrentPageTilte(this.$route.name);
     },
-  },
+    getCurrentPageTilte(name) {
+      switch (name) {
+        case "Home":
+          this.activeIndex = "/";
+          this.currentItem = this.$t("header.home");
+          break;
+        case "About":
+          this.activeIndex = "/about";
+          this.currentItem = this.$t("header.about");
+          break;
+        case "Service":
+          this.activeIndex = "/service";
+          this.currentItem = this.$t("header.service");
+          break;
+        case "Contact":
+          this.activeIndex = "/contact";
+          this.currentItem = this.$t("header.contact");
+          break;
+        default:
+          this.activeIndex = "/";
+      }
+    }
+  }
 };
 </script>
 <style lang="scss" scoped>
@@ -116,11 +138,21 @@ export default {
       border: none;
     }
   }
+  .is-phone-show {
+    display: none;
+  }
 }
 // 适配移动端
 @media only screen and (max-width: 770px) {
   .header {
     height: 45px;
+    .is-web-show {
+      display: none;
+    }
+    .is-phone-show {
+      display: inline-block;
+      padding: 10px;
+    }
     .left {
       .yly-icon {
         height: 30px;
