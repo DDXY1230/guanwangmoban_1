@@ -60,7 +60,7 @@ export default {
   },
   watch: {
     $route(newVal) {
-      this.getCurrentPageTilte(newVal.name);
+      this.getCurrentPageTitle(newVal.name);
     }
   },
   methods: {
@@ -79,7 +79,7 @@ export default {
     languageFunc(e) {
       this.$i18n.locale = e;
       localStorage.setItem("lang", e);
-      this.getCurrentPageTilte(this.$route.name);
+      this.getCurrentPageTitle(this.$route.name);
     },
     getCurrentPageTitle(name) {
       switch (name) {
