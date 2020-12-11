@@ -81,7 +81,7 @@ export default {
       localStorage.setItem("lang", e);
       this.getCurrentPageTilte(this.$route.name);
     },
-    getCurrentPageTilte(name) {
+    getCurrentPageTitle(name) {
       switch (name) {
         case "Home":
           this.activeIndex = "/";
