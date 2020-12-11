@@ -53,6 +53,9 @@ export default {
       currentIndex: 0,
     }
   },
+  mounted() {
+    this.currentIndex = Number(this.$route.query.index) || 0
+  },
   methods: {
     handleClickLi(item,index) {
       this.currentIndex = index
