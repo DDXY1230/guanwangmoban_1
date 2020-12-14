@@ -10,7 +10,7 @@
             COMMITTED TO THE FIELD OF NEW DRUG RESEARCH AND DEVELOPMENT ADVANCED
             TECHNOLOGY AND BEST SERVICE
           </p>
-          <span class="left-more" @click="learnMore()">LEARN MORE</span>
+          <span class="left-more" @click="learnMore()">MORE</span>
         </div>
         <div class="home-banner-content-right">
           <img src="@/assets/imgs/人物.png" alt="" />
