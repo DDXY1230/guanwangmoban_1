@@ -21,10 +21,51 @@
       <p class="home-content-desc">Product classification</p>
       <div class="home-content-cabinet">
         <div :class="['home-content-cabinet-item',`home-content-cabinet-item-${index + 1}`]" v-for="(i, index) in itemData" :key="index" @click="handleItem(index)">
-          <div :class="['item-icon', `item-${index + 1}`]"></div>
-          <p class="item-title">{{ i.firstTitle }}</p>
-          <p class="item-desc">{{ i.secondTitle }}</p>
+          <div class="item">
+            <div :class="['item-icon', `item-${index + 1}`]"></div>
+            <p class="item-title">{{ i.firstTitle }}</p>
+            <p class="item-desc">{{ i.secondTitle }}</p>
+            <div class="item-more">了解详情 ></div>
+          </div>
         </div>
+      </div>
+    </div>
+    <div class="home-carousel">
+      <div class="home-carousel-content">
+        <div class="home-carousel-content-left">
+          <img src="@/assets/imgs/img_Product.png" alt="">
+        </div>
+        <div class="home-carousel-content-right">
+          <div class="home-carousel-content-right-box">
+            <h3 class="home-carousel-content-right-box-title">eCOA 电子临床结局评估</h3>
+            <ul class="home-carousel-content-right-box-list">
+              <li class="home-carousel-content-right-box-list-li">
+                业内最快实现eCOA部署，平均在4周完成上线
+              </li>
+              <li class="home-carousel-content-right-box-list-li">
+                实施团队具有丰富的国际大型eCOA项目经验
+              </li>
+              <li class="home-carousel-content-right-box-list-li">
+                提供丰富的标准量表库
+              </li>
+              <li class="home-carousel-content-right-box-list-li">
+                支持BYOD和移动终端租赁模式
+              </li>
+              <li class="home-carousel-content-right-box-list-li">
+                同时支持iOS和Android系统
+              </li>
+              <li class="home-carousel-content-right-box-list-li">
+                提供从量表版权获取、翻译、语言验证、eCOA部署、培训、数据质量分析等服务
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="home-about">
+      <div class="home-about-left"></div>
+      <div class="home-about-right">
+          <img src="@/assets/imgs/img_Product.png" alt="">
       </div>
     </div>
   </div>
@@ -81,7 +122,6 @@ export default {
     background: url("../assets/imgs/bannerbg.png") no-repeat center #000d26;
     height: 560px;
     position: relative;
-
     .arrow-down {
       position: absolute;
       bottom: 0;
@@ -148,7 +188,6 @@ export default {
     }
     &-desc {
       color: #00215f;
-
       font-size: 24px;
       font-family: "PingFangSC-Semibold", "PingFang SC";
       font-weight: 600;
@@ -166,40 +205,109 @@ export default {
         border: 1px dashed #ccc;
         background: #fff;
         color: #3f4c6e;
-        @each $i,$name in (1,CTMS), (2,EDC), (3,eCOA), (4,RTSM), (5,eTMF), (6,eConsent) {
+        position: relative;
+        @each $i, $name in (1, CTMS), (2, EDC), (3, eCOA), (4, RTSM), (5, eTMF),
+          (6, eConsent)
+        {
           &-#{$i} {
             background: url("../assets/imgs/#{$name}.png");
           }
         }
         .item {
-          &-icon {
-            width: 50px;
-            height: 50px;
-            margin: 60px auto 10px;
-          }
-          &-title {
-            font-size: 18px;
-            margin: 20px 0 0;
-            font-weight: 700;
-          }
-          &-desc {
-            font-size: 14px;
-            margin: 0;
-          }
+          display: none;
         }
         &:hover {
-          transition: 0.8s linear;
-          background: #1672f7;
+          transition: 0.4s linear;
+          background: #00215f;
           color: #fff;
           .item {
-            @for $i from 1 through 5 {
+            display: block;
+            &-icon {
+              width: 100px;
+              height: 100px;
+              margin: 60px auto 10px;
+            }
+            @each $i, $name in (1, CTMS), (2, EDC), (3, eCOA), (4, RTSM),
+              (5, eTMF), (6, eConsent)
+            {
               &-#{$i} {
-                background: url("../assets/imgs/item-icon-#{$i}-selected.png");
+                background: url("../assets/imgs/icon_#{$name}.png");
               }
+            }
+            &-title {
+              font-size: 24px;
+              margin: 20px 0 0;
+              font-weight: 700;
+            }
+            &-desc {
+              font-size: 16px;
+              margin: 0;
+            }
+            &-more {
+              position: absolute;
+              right: 0;
+              bottom: 10px;
+              width: 118px;
+              line-height: 40px;
+              height: 40px;
+              background: #ee8a1d;
+              font-size: 18px;
+              color: #fff;
+              text-align: right;
+              border-radius: 30px 0 0 0;
             }
           }
         }
       }
+    }
+  }
+  &-carousel {
+    background: #fcc233;
+    height: 480px;
+    &-content {
+      max-width: 1230px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: center;
+      &-left {
+        width: 760px;
+      }
+      &-right {
+        width: 520px;
+        &-box {
+          box-sizing: border-box;
+          height: 400px;
+          margin: 40px 0;
+          background: #fff;
+          padding: 32px;
+          &-title {
+            color: #ee8a1d;
+            font-size: 32px;
+          }
+          &-list {
+            &-li {
+              font-size: 16px;
+              font-family: "PingFangSC-Regular", "PingFang SC";
+              font-weight: 400;
+              line-height: 22px;
+              color: #00215F;
+              padding: 4px;
+            }
+          }
+        }
+      }
+    }
+  }
+  &-about {
+    max-width: 1230px;
+    margin: 0 auto;
+    height: 600px;
+    display: flex;
+    &-left {
+      width: 520px;
+    }
+    &-right {
+      width:760px;
     }
   }
 }
