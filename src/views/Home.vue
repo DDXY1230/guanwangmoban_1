@@ -33,6 +33,8 @@
     </div>
     <div class="home-carousel">
       <div class="home-carousel-content">
+        <img class="home-carousel-content-arrow left" src="@/assets/imgs/arrow2.png" alt="" @click="preItem()">
+        <img class="home-carousel-content-arrow right" src="@/assets/imgs/arrow2.png" alt="" @click="nextItem()">
         <div class="home-carousel-content-left">
           <img :src="currentItem.carouselImagUrl" alt="">
         </div>
@@ -178,6 +180,7 @@ export default {
           descList: []
         }
       ],
+      currentIndex: 0,
       currentItem: {}
     };
   },
@@ -197,8 +200,18 @@ export default {
       });
     },
     handleMouseover(index) {
-      console.log(index);
+      this.currentIndex = index
       this.currentItem = this.itemData[index];
+    },
+    preItem() {
+      if(this.currentIndex == 0) {this.currentIndex = this.itemData.length}
+      this.currentIndex --
+      this.currentItem = this.itemData[this.currentIndex];
+    },
+    nextItem() {
+      this.currentIndex ++
+      if(this.currentIndex == this.itemData.length) {this.currentIndex = 0}
+      this.currentItem = this.itemData[this.currentIndex];
     }
   }
 };
@@ -229,7 +242,7 @@ export default {
           &-title {
             font-size: 72px;
             margin: 100px 0 10px;
-            font-family: 'Helvetica';
+            font-family: "Helvetica";
             line-height: 86px;
             letter-spacing: 6px;
           }
@@ -364,6 +377,20 @@ export default {
       margin: 0 auto;
       display: flex;
       justify-content: center;
+      position: relative;
+      &-arrow {
+        position: absolute;
+        cursor: pointer;
+        &.left {
+          left: -18px;
+          top: 20px;
+        }
+        &.right {
+          right: -18px;
+          bottom: 20px;
+          transform: rotate(180deg);
+        }
+      }
       &-left {
         width: 760px;
       }
