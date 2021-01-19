@@ -4,6 +4,8 @@
     <Header></Header>
     <div class="main">
       <router-view/>
+      <svg-icon iconClass="close"></svg-icon>
+
     </div>
     <Footer></Footer>
   </div>
