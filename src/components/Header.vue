@@ -118,6 +118,8 @@ export default {
       width: 100px;
       align-items: center;
       display: flex;
+      background-color: #00215f;
+      padding: 0 30px;
     }
     .center {
       flex: 1;
@@ -141,6 +143,11 @@ export default {
   .is-phone-show {
     display: none;
   }
+}
+.el-menu.el-menu--horizontal > .el-menu-item.is-active {
+  background-color: #00215f !important;
+  border: none;
+  color: #fff;
 }
 // 适配移动端
 @media only screen and (max-width: 770px) {

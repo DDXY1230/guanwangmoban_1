@@ -20,42 +20,28 @@
       <h2 class="home-content-title">产品分类</h2>
       <p class="home-content-desc">Product classification</p>
       <div class="home-content-cabinet">
-        <div :class="['home-content-cabinet-item',`home-content-cabinet-item-${index + 1}`]" v-for="(i, index) in itemData" :key="index" @click="handleItem(index)">
+        <div :class="['home-content-cabinet-item',`home-content-cabinet-item-${index + 1}`]" v-for="(i, index) in itemData" :key="index" @click="handleItem(index)" @mouseover="handleMouseover(index)">
           <div class="item">
             <div :class="['item-icon', `item-${index + 1}`]"></div>
             <p class="item-title">{{ i.firstTitle }}</p>
             <p class="item-desc">{{ i.secondTitle }}</p>
             <div class="item-more">了解详情 ></div>
           </div>
+          <p class="title">{{ i.firstTitle }}</p>
         </div>
       </div>
     </div>
     <div class="home-carousel">
       <div class="home-carousel-content">
         <div class="home-carousel-content-left">
-          <img src="@/assets/imgs/img_Product.png" alt="">
+          <img :src="currentItem.carouselImagUrl" alt="">
         </div>
         <div class="home-carousel-content-right">
           <div class="home-carousel-content-right-box">
-            <h3 class="home-carousel-content-right-box-title">eCOA 电子临床结局评估</h3>
+            <h3 class="home-carousel-content-right-box-title">{{currentItem.firstTitle}} {{currentItem.secondTitle}}</h3>
             <ul class="home-carousel-content-right-box-list">
-              <li class="home-carousel-content-right-box-list-li">
-                业内最快实现eCOA部署，平均在4周完成上线
-              </li>
-              <li class="home-carousel-content-right-box-list-li">
-                实施团队具有丰富的国际大型eCOA项目经验
-              </li>
-              <li class="home-carousel-content-right-box-list-li">
-                提供丰富的标准量表库
-              </li>
-              <li class="home-carousel-content-right-box-list-li">
-                支持BYOD和移动终端租赁模式
-              </li>
-              <li class="home-carousel-content-right-box-list-li">
-                同时支持iOS和Android系统
-              </li>
-              <li class="home-carousel-content-right-box-list-li">
-                提供从量表版权获取、翻译、语言验证、eCOA部署、培训、数据质量分析等服务
+              <li class="home-carousel-content-right-box-list-li" v-for="(item,index) in currentItem.descList" :key="index">
+                {{item}}
               </li>
             </ul>
           </div>
@@ -129,26 +115,74 @@ export default {
       itemData: [
         {
           firstTitle: "CTMS",
-          secondTitle: "临床项目管理系统"
+          secondTitle: "临床项目管理系统",
+          carouselImagUrl: require("@/assets/imgs/img_Product1.png"),
+          descList: [
+            "业内最快实现eCOA部署,平均在4周完成上线",
+            "实施团队具有丰富的国际大型eCOA项目经验",
+            "提供丰富的标准量表库",
+            "支持BYOD和移动终端租赁模式",
+            "同时支持iOS和Android系统",
+            "提供从量表版权获取、翻译、语言验证、eCOA部署、培训、数据质量分析等服务"
+          ]
         },
         {
           firstTitle: "EDC",
-          secondTitle: "电子数据采集系统"
+          secondTitle: "电子数据采集系统",
+          carouselImagUrl: require("@/assets/imgs/img_Product3.png"),
+          descList: [
+            "支持多种随机方法",
+            "零编程快速实现随机和药物管理的配置",
+            "90%以上的项目可在三小时内完成部署",
+            "药物发放模块具备预测功能，最大可能的减少药物的浪费",
+            "严格的角色配置和权限管理",
+            "与EDC、CTMS等系统无缝整合，也可与外部系统整合"
+          ]
+        },
+        {
+          firstTitle: "eCOA",
+          secondTitle: "电子临床结局评估",
+          carouselImagUrl: require("@/assets/imgs/img_Product4.png"),
+          descList: [
+            "业内最快实现eCOA部署，平均在4周完成上线",
+            "实施团队具有丰富的国际大型eCOA项目经验",
+            "提供丰富的标准量表库",
+            "支持BYOD和移动终端租赁模式",
+            "同时支持iOS和Android系统",
+            "提供从量表版权获取、翻译、语言验证、eCOA部署、培训、数据质量分析等服务"
+          ]
         },
         {
           firstTitle: "RTSM",
-          secondTitle: "随机与药物管理"
+          secondTitle: "随机与药物管理",
+          carouselImagUrl: require("@/assets/imgs/img_Product2.png"),
+          descList: [
+            "快速实现eCRF设计，比传统EDC节约30%时间",
+            "零编程实现复杂的逻辑核查",
+            "提供符合CDISC标准的多个治疗领域的eCRF模板库",
+            "集成MedDRA与WHODD的自动编码功能",
+            "提供业界常用的标准化报表，且用户可任意自定义报表",
+            "同时支持PC端和移动端数据录入"
+          ]
         },
         {
-          firstTitle: "ECOA",
-          secondTitle: "电子临床结局评估"
+          firstTitle: "eTMF",
+          secondTitle: "随机与药物管理",
+          carouselImagUrl: require("@/assets/imgs/img_Product2.png"),
+          descList: []
         },
         {
           firstTitle: "ECONSENT",
-          secondTitle: "电子知情同意书"
+          secondTitle: "电子知情同意书",
+          carouselImagUrl: require("@/assets/imgs/img_Product5.png"),
+          descList: []
         }
-      ]
+      ],
+      currentItem: {}
     };
+  },
+  mounted() {
+    this.currentItem = this.itemData[0];
   },
   methods: {
     contactUs() {
@@ -161,6 +195,10 @@ export default {
           index: index
         }
       });
+    },
+    handleMouseover(index) {
+      console.log(index);
+      this.currentItem = this.itemData[index];
     }
   }
 };
@@ -226,7 +264,6 @@ export default {
     }
   }
   &-content {
-    max-width: 1230px;
     margin: 0 auto;
     padding: 40px 0;
     text-align: center;
@@ -262,6 +299,12 @@ export default {
             background: url("../assets/imgs/#{$name}.png");
           }
         }
+        .title {
+          width: 212px;
+          color: #fff;
+          position: absolute;
+          bottom: 20px;
+        }
         .item {
           display: none;
         }
@@ -269,6 +312,9 @@ export default {
           transition: 0.4s linear;
           background: #00215f;
           color: #fff;
+          .title {
+            display: none;
+          }
           .item {
             display: block;
             &-icon {
