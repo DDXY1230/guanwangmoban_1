@@ -63,10 +63,59 @@
       </div>
     </div>
     <div class="home-about">
-      <div class="home-about-left"></div>
-      <div class="home-about-right">
-          <img src="@/assets/imgs/img_Product.png" alt="">
+      <div class="home-about-left">
+        <h2 class="home-content-title">关于我们</h2>
+        <p class="home-content-desc">About us</p>
+        <p class="home-about-left-text-1">
+          易临云科技旨在建立领先的临床研究云平台，以“<span class="highlight">科技创新为病人带来有效治疗</span>”为使命，立足中国、服务全球的医疗卫生与生命科技企业。
+        </p>
+        <p class="home-about-left-text-2">
+          易临云的临床研究云平台是自主研发的端到端无缝整合一体化平台，包括<span class="highlight">电子知情同意eConsent、电子数据采集EDC、随机与药物管理RTSM、电子临床结局评估eCOA、临床研究项目管理系统CTMS、电子化试验主文档管理eTMF、基于风险的监查系统RBM、虚拟化临床研究Virtual
+            Trial</span>等。通过易临云的专业化解决方案，为制药企业、医疗器械公司、研究机构加速新药研发的进程、缩减临床研究的成本、降低临床研究的风险。
+        </p>
       </div>
+      <div class="home-about-right">
+        <img src="@/assets/imgs/img_Aboutus.png" alt="">
+      </div>
+    </div>
+    <div class="home-dynamic">
+      <h2 class="home-dynamic-title">业内动态</h2>
+      <p class="home-dynamic-title">Industry news</p>
+      <div class="home-dynamic-content">
+        <div class="home-dynamic-content-left">
+          <div class="home-dynamic-content-left-img">
+            <img src="@/assets/imgs/img_eg1.png" alt="">
+            <div class="home-dynamic-content-left-img-mask">
+              <p class="mask-title">最新研究发现c9ww <span class="date">2020-03-23</span></p>
+              <p class="mask-content">利用定量模型和GIS方法，从空间布局、服务范围以及航空客流分布等方面来研究中国的机场体系及其服务水平利用定量模型和GIS方法….</p>
+            </div>
+          </div>
+        </div>
+        <div class="home-dynamic-content-right">
+          <p class="date">2020-03-23</p>
+          <img src="@/assets/imgs/img_eg2.png" alt="">
+          <p class="title">最新研究发现c9ww</p>
+          <p class="content">利用定量模型和GIS方法，从空间布局、服务范围以及航空客流分布等方面来研究中国的机场体系及其服务水平利用定量模型和GIS方法.在中国大陆拥有26家分支行的汇丰银行（HSBC）表示，新条例将使其能够进一步扩大分行网络和服务范围</p>
+        </div>
+      </div>
+    </div>
+    <div class="home-service">
+      <h2 class="home-service-title">服务范围</h2>
+      <p class="home-service-title">Scope of services</p>
+      <div class="home-service-content">
+
+        <div class="home-service-content-left">
+          <img src="@/assets/imgs/img_services.png" alt="">
+        </div>
+        <div class="home-service-content-right">
+          <ul>
+            <li>不同治疗领域的意见领袖深度合作</li>
+            <li>提供从方案优化到数据收集和管理</li>
+            <li>风险管理等解决方案</li>
+          </ul>
+        </div>
+      </div>
+
     </div>
   </div>
 </template>
@@ -290,7 +339,7 @@ export default {
               font-family: "PingFangSC-Regular", "PingFang SC";
               font-weight: 400;
               line-height: 22px;
-              color: #00215F;
+              color: #00215f;
               padding: 4px;
             }
           }
@@ -305,9 +354,140 @@ export default {
     display: flex;
     &-left {
       width: 520px;
+      padding: 60px 30px;
+      box-sizing: border-box;
+      &-text-1,
+      &-text-2 {
+        text-indent: 20px;
+        font-size: 18px;
+        font-family: "PingFangSC-Regular", "PingFang SC";
+        font-weight: 400;
+        .highlight {
+          color: #ee8a1d;
+        }
+      }
     }
     &-right {
-      width:760px;
+      width: 760px;
+      img {
+        width: 100%;
+        height: 600px;
+        object-fit: cover;
+      }
+    }
+  }
+  &-dynamic {
+    height: 620px;
+    background: #00215f;
+    padding: 60px 0;
+    box-sizing: border-box;
+    &-title {
+      color: #fff;
+      text-align: center;
+      font-size: 32px;
+      margin: 4px 0;
+    }
+    &-desc {
+      color: #fff;
+      text-align: center;
+      font-size: 24px;
+      font-family: "PingFangSC-Semibold", "PingFang SC";
+      font-weight: 600;
+      margin: 4px 0;
+    }
+    &-content {
+      max-width: 1230px;
+      display: flex;
+      margin: 30px auto 0;
+      justify-content: center;
+      &-left {
+        flex: 1;
+        &-img {
+          width: 720px;
+          height: 400px;
+          position: relative;
+          img {
+            width: 720px;
+            height: 400px;
+            object-fit: cover;
+          }
+          &-mask {
+            position: absolute;
+            bottom: 0;
+            width: 720px;
+            height: 104px;
+            background: rgba(0, 0, 0, 0.6);
+            cursor: pointer;
+            .mask {
+              &-title {
+                color: #fff;
+                margin: 2px;
+                font-size: 24px;
+                font-family: "PingFangSC-Medium", "PingFang SC";
+                font-weight: 500;
+                position: relative;
+                .date {
+                  position: absolute;
+                  right: 4px;
+                  color: #fff;
+                }
+              }
+              &-content {
+                color: #fff;
+                margin: 4px;
+              }
+            }
+          }
+        }
+      }
+      &-right {
+        flex: 1;
+        padding-left: 12px;
+        color: #fff;
+        .date {
+          margin-top: 0;
+        }
+        .title {
+          font-size: 24px;
+          margin: 2px;
+        }
+      }
+    }
+  }
+  &-service {
+    max-width: 1230px;
+    margin: 60px auto;
+    &-title {
+      color: #00215f;
+      font-size: 32px;
+      text-align: center;
+      margin: 4px 0;
+    }
+    &-desc {
+      color: #00215f;
+      text-align: center;
+      font-size: 24px;
+      font-family: "PingFangSC-Semibold", "PingFang SC";
+      font-weight: 600;
+      margin: 4px 0;
+    }
+    &-content {
+      display: flex;
+      justify-content: center;
+      margin: 30px 0 0;
+      &-left {
+        // flex: 1;
+      }
+      &-right {
+        // flex: 1;
+        margin: 0 30px;
+        ul {
+          li {
+            color: #ee8a1d;
+            line-height: 100px;
+          }
+        }
+      }
     }
   }
 }

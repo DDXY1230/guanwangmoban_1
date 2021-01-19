@@ -32,7 +32,7 @@ body {
 }
 .main {
   min-height: calc(100vh - 120px);
-  border: 1px solid transparent;
+  // border: 1px solid transparent;
   box-sizing: border-box;
 }
 </style>
