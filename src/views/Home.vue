@@ -229,7 +229,7 @@ export default {
           &-title {
             font-size: 72px;
             margin: 100px 0 10px;
-            font-family: Helvetica;
+            font-family: 'Helvetica';
             line-height: 86px;
             letter-spacing: 6px;
           }
