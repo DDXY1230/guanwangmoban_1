@@ -28,7 +28,7 @@ export default {
 body {
   margin: 0;
   width: 100%;
-  overflow-x: scroll;
+  overflow-x: auto;
   min-width: 1280px;
 }
 #app {
