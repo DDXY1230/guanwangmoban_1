@@ -24,23 +24,25 @@
         <div class="about-part1-right-mask"></div>
       </div>
     </div>
-    <div class="about-part2">
-      <div class="about-part2-content">
-        <div class="about-part2-content-left">
-          <p>为了更好地服务中国企业的国际化以及外资企业的全球化战略，公司与全球领先的临床研究系统供应商建立战略合作关系（大中华区独家合作伙伴）；与不同治疗领域的意见领袖深度合作，提供从方案优化到数据收集和管理、风险管理等解决方案：</p>
-          <p class="highlight">
-            比如中心影像评估Central Imaging、<br>
-            心脏安全Cardiac Safety、<br>
-            呼吸科安全Respiratory、<br>
-            传感器与可穿戴设备Sensor & Wearable Device。<br>
-          </p>
+    <div class="about-part2-wrap">
+      <div class="about-part2">
+        <div class="about-part2-content">
+          <div class="about-part2-content-left">
+            <p>为了更好地服务中国企业的国际化以及外资企业的全球化战略，公司与全球领先的临床研究系统供应商建立战略合作关系（大中华区独家合作伙伴）；与不同治疗领域的意见领袖深度合作，提供从方案优化到数据收集和管理、风险管理等解决方案：</p>
+            <p class="highlight">
+              比如中心影像评估Central Imaging、<br>
+              心脏安全Cardiac Safety、<br>
+              呼吸科安全Respiratory、<br>
+              传感器与可穿戴设备Sensor & Wearable Device。<br>
+            </p>
+          </div>
+          <div class="about-part2-content-right">
+            <img class="about-part2-content-right-img" src="@/assets/imgs/img_company3.png" alt="">
+          </div>
+          <img class="zuoyinhao" src="@/assets/imgs/zuoyinhao.png" alt="">
+          <span class="left-line"></span>
+          <span class="right-line"></span>
         </div>
-        <div class="about-part2-content-right">
-          <img class="about-part2-content-right-img" src="@/assets/imgs/img_company3.png" alt="">
-        </div>
-        <img class="zuoyinhao" src="@/assets/imgs/zuoyinhao.png" alt="">
-        <span class="left-line"></span>
-        <span class="right-line"></span>
       </div>
     </div>
     <div class="about-part3">
@@ -130,7 +132,12 @@ export default {
     height: 280px;
     background: #dfe3ee;
     width: 100%;
-    overflow: hidden;
+    &-wrap {
+      height: 360px;
+      padding-top: 60px;
+      width: 100%;
+      overflow: hidden;
+    }
     &-content {
       max-width: $content-width;
       margin: 10px auto;
