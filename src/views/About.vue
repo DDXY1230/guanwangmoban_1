@@ -19,7 +19,6 @@
         </p>
         <p class="about-part1-right-text">
           通过易临云的专业化解决方案，为制药企业、医疗器械公司、研究机构加速新药研发的进程、缩减临床研究的成本、降低临床研究的风险。
-
         </p>
         <div class="about-part1-right-mask"></div>
       </div>
