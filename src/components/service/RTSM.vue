@@ -33,16 +33,16 @@
     <div class="eConsent-support">
       <div class="eConsent-support-content">
         <div class="eConsent-support-content-box box-1">
-          <img src="@/assets/imgs/img_eConsent11.png" alt="">
+          <img src="@/assets/imgs/img_RTSM5.png" alt="">
           <p>药物发放模块具备预测功能</p>
           <p>最大可能的减少药物的浪费</p>
         </div>
         <div class="eConsent-support-content-box box-2">
-          <img src="@/assets/imgs/img_eConsent12.png" alt="">
+          <img src="@/assets/imgs/img_RTSM6.png" alt="">
           <p>严格的角色配置和权限管理</p>
         </div>
         <div class="eConsent-support-content-box box-3">
-          <img src="@/assets/imgs/img_eConsent12.png" alt="">
+          <img src="@/assets/imgs/img_RTSM7.png" alt="">
           <p>提供7*24小时桌面支持</p>
         </div>
       </div>
