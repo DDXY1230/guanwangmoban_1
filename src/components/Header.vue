@@ -13,7 +13,7 @@
             <el-menu-item index="/service/CTMS">CTMS临床研究管理系统</el-menu-item>
             <el-menu-item index="/service/EDC">EDC电子数据采集</el-menu-item>
             <el-menu-item index="/service/eCOA">eCOA电子临床结局评估</el-menu-item>
-            <el-menu-item index="/service">RTSM随机与药物管理</el-menu-item>
+            <el-menu-item index="/service/RTSM">RTSM随机与药物管理</el-menu-item>
             <el-menu-item index="/service">eTMF文档管理</el-menu-item>
             <el-menu-item index="/service/eConsent">eConsent电子知情同意系统</el-menu-item>
           </el-submenu>
@@ -97,6 +97,10 @@ export default {
         case "About":
           this.activeIndex = "/about";
           this.currentItem = this.$t("header.about");
+          break;
+        case "IndustryInfo":
+          this.activeIndex = "/industryInfo";
+          this.currentItem = '行业资讯';
           break;
         case "Service":
           this.activeIndex = "/service";

@@ -45,6 +45,11 @@ const routes = [
         name: 'EDC',
         component: () => import('../components/service/EDC.vue')
       },
+      {
+        path: 'RTSM',
+        name: 'RTSM',
+        component: () => import('../components/service/RTSM.vue')
+      },
     ]
   },
   {
