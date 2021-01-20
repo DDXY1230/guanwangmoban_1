@@ -11,12 +11,13 @@
           <el-submenu index="/service">
             <template slot="title">服务与解决方案</template>
             <el-menu-item index="/service/CTMS">CTMS临床研究管理系统</el-menu-item>
-            <el-menu-item index="/service">EDC电子数据采集</el-menu-item>
+            <el-menu-item index="/service/EDC">EDC电子数据采集</el-menu-item>
             <el-menu-item index="/service/eCOA">eCOA电子临床结局评估</el-menu-item>
             <el-menu-item index="/service">RTSM随机与药物管理</el-menu-item>
             <el-menu-item index="/service">eTMF文档管理</el-menu-item>
             <el-menu-item index="/service/eConsent">eConsent电子知情同意系统</el-menu-item>
           </el-submenu>
+          <el-menu-item index="/industryInfo">行业资讯</el-menu-item>
           <el-menu-item index="/about">{{ $t("header.about") }}</el-menu-item>
           <el-menu-item index="/contact">{{
             $t("header.contact")

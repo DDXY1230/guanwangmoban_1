@@ -11,6 +11,11 @@ const routes = [
     component: Home
   },
   {
+    path: '/industryInfo',
+    name: 'IndustryInfo',
+    component: () => import(/* webpackChunkName: "industryInfo" */ '../views/IndustryInfo.vue')
+  },
+  {
     path: '/about',
     name: 'About',
     component: () => import(/* webpackChunkName: "about" */ '../views/About.vue')
@@ -18,7 +23,7 @@ const routes = [
   {
     path: '/service',
     name: 'Service',
-    component: () => import(/* webpackChunkName: "about" */ '../views/Service.vue'),
+    component: () => import(/* webpackChunkName: "service" */ '../views/Service.vue'),
     children: [
       {
         path: 'CTMS',
@@ -34,6 +39,11 @@ const routes = [
         path: 'eConsent',
         name: 'eConsent',
         component: () => import('../components/service/eConsent.vue')
+      },
+      {
+        path: 'EDC',
+        name: 'EDC',
+        component: () => import('../components/service/EDC.vue')
       },
     ]
   },
