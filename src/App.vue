@@ -27,6 +27,9 @@ export default {
 // }
 body {
   margin: 0;
+  width: 100%;
+  overflow-x: scroll;
+  min-width: 1280px;
 }
 #app {
   font-family: 'PingFangSC-Regular', 'PingFang SC','Avenir', 'Helvetica', 'Arial', 'sans-serif';

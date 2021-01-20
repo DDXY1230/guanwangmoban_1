@@ -4,7 +4,66 @@
     <div class="eCOA-banner">
       <div class="eCOA-banner-title">
         <p class="eCOA-banner-title-1">eCOA</p>
-        <p class="eCOA-banner-title-2">临床研究管理系统</p>
+        <p class="eCOA-banner-title-2">电子临床结局评估</p>
+      </div>
+    </div>
+    <div class="eCOA-support">
+      <div class="eCOA-support-content">
+        <div class="eCOA-support-content-box box-1">
+          <img src="@/assets/imgs/img_ecoa2.png" alt="">
+          <p>同时支持PC端和移动端</p>
+        </div>
+        <div class="eCOA-support-content-box box-2">
+          <img src="@/assets/imgs/img_ecoa3.png" alt="">
+          <p>支持多语言、多时区和多种货币的转换</p>
+        </div>
+        <div class="eCOA-support-content-box box-3">
+          <img src="@/assets/imgs/img_ecoa4.png" alt="">
+          <p>具备不同角色的提醒功能</p>
+        </div>
+      </div>
+    </div>
+    <div class="eCOA-brief-wrap">
+      <div class="eCOA-brief">
+        <div class="eCOA-brief-left">
+          <img src="@/assets/imgs/img_ecoa5.png" alt="">
+        </div>
+        <div class="eCOA-brief-center">
+          <img src="@/assets/imgs/img_ecoa6.png" alt="">
+        </div>
+        <div class="eCOA-brief-right">
+          <div class="eCOA-brief-right-item">
+            <p class="eCOA-brief-right-item-desc">
+              提供丰富的标准量表库
+            </p>
+          </div>
+          <div class="eCOA-brief-right-item">
+            <p class="eCOA-brief-right-item-desc">
+              支持BYOD和移动终端租赁模式
+            </p>
+          </div>
+          <div class="eCOA-brief-right-item">
+            <p class="eCOA-brief-right-item-desc">
+              同时支持iOS和Android系统
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="eCOA-provide">
+      <img class="eCOA-provide-img-1" src="@/assets/imgs/img_ecoa8.png" alt="">
+      <img class="eCOA-provide-img-2" src="@/assets/imgs/img_ecoa9.png" alt="">
+      <div class="eCOA-provide-left">
+        <div class="eCOA-provide-left-box-1">
+          <div class="eCOA-provide-left-box-2">
+            <p>支持离线数据输入</p>
+            <p>支持全球100多种语言</p>
+            <p>提供7*24小时桌面支持</p>
+          </div>
+        </div>
+      </div>
+      <div class="eCOA-provide-right">
+        <img src="@/assets/imgs/img_ecoa7.png" alt="">
       </div>
     </div>
   </div>
@@ -41,12 +100,124 @@ export default {
         position: absolute;
         bottom: 100px;
         margin: 0;
-
       }
       &-2 {
         position: absolute;
         bottom: 10px;
         margin: 8px 0;
+      }
+    }
+  }
+  &-support {
+    height: 426px;
+    &-content {
+      display: flex;
+      max-width: $content-width;
+      margin: 0 auto;
+      justify-content: center;
+      height: 426px;
+      color: #00215f;
+      &-box {
+        flex: 1;
+        text-align: center;
+        padding-top: 100px;
+        font-size: 18px;
+        &.box-1,
+        &.box-3 {
+        }
+      }
+    }
+  }
+  &-brief {
+    max-width: $content-width;
+    margin: 0 auto;
+    display: flex;
+    &-wrap {
+      background: #ee8a1d;
+    }
+    &-left {
+      width: 720px;
+      height: 480px;
+      img {
+        width: 720px;
+        height: 480px;
+        object-fit: cover;
+      }
+    }
+    &-center {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding-left: 60px;
+    }
+    &-right {
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      &-item {
+        color: #fff;
+        margin: 30px 0;
+        &-title {
+          margin: 4px;
+          font-size: 24px;
+        }
+        &-desc {
+          margin: 4px;
+        }
+      }
+    }
+  }
+  &-provide {
+    max-width: 1280px;
+    height: 378px;
+    display: flex;
+    margin: 0 auto 160px;
+    position: relative;
+    &-img-1{
+      position: absolute;
+      left: -165px;
+      top: 10px;
+    }
+    &-img-2{
+      position: absolute;
+      left: 200px;
+      bottom: -140px;
+    }
+    &-left {
+      z-index: 100;
+      flex: 1;
+      background-color: #687aa0;
+      &-box-1 {
+        width: 402px;
+        height: 225px;
+        border: 1px solid #fff;
+        margin: 66px auto;
+        position: relative;
+        top: -10px;
+        left: -10px;
+      }
+      &-box-2 {
+        height: 225px;
+        border: 1px solid #fff;
+        box-sizing: border-box;
+        margin: 0;
+        position: relative;
+        bottom: -10px;
+        right: -10px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        color: #fff;
+      }
+    }
+    &-right {
+      z-index: 100;
+      flex: 1;
+      img {
+        width: 100%;
+        object-fit: cover;
       }
     }
   }
