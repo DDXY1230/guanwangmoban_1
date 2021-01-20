@@ -5,6 +5,8 @@
         <div class="contact-banner-content-collect">
           <h4>联系我们</h4>
           <p>请留下您的联系方式，客服会尽快与您联系。</p>
+          <input class="input1" type="text" placeholder="联系人">
+          <input class="input1" type="text" placeholder="联系电话和邮箱">
           <span class="contact-banner-content-collect-submit" @click="submit()">提交</span>
         </div>
       </div>
@@ -87,14 +89,51 @@ export default {
         background: #fff;
         padding: 40px;
         box-sizing: border-box;
+        input {
+          outline: none;
+        }
+        .input1 {
+          height: 50px;
+          border: none;
+          border-bottom: 2px solid #B2B2B2;
+          transition: 0.5s;
+          width: 100%;
+          box-sizing: border-box;
+          margin-bottom: 20px;
+        }
+        .input1:focus {
+          border-bottom-color: #00215f;
+        }
+        .input1::-webkit-input-placeholder {
+          transition: 0.5s;
+          transform-origin: left top;
+        }
+        .input1::-moz-placeholder {
+          transition: 0.5s;
+          transform-origin: left top;
+        }
+        .input1:-ms-input-placeholder {
+          transition: 0.5s;
+          transform-origin: left top;
+        }
+        .input1:focus::-webkit-input-placeholder {
+          transform: scale(0.7) translateY(-10px);
+        }
+        .input1:focus::-moz-placeholder {
+          transform: scale(0.7) translateY(-10px);
+        }
+        .input1:focus:-ms-input-placeholder {
+          transform: scale(0.7) translateY(-10px);
+        }
         &-submit {
           display: inline-block;
-          width: 366px;
+          width: 100%;
           height: 48px;
           line-height: 48px;
           background: #ee8a1d;
           color: #fff;
           text-align: center;
+          margin-top: 60px;
         }
       }
     }
