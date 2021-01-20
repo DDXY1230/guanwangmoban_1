@@ -95,7 +95,7 @@ export default {
   background: url("../assets/imgs/关于我们-头图.png") no-repeat center top;
   &-banner {
     height: 424px;
-    max-width: 1230px;
+    max-width: $content-width;
     margin: 0 auto;
     &-content {
       .content {
@@ -119,7 +119,7 @@ export default {
     }
   }
   &-content {
-    max-width: 1230px;
+    max-width: $content-width;
     margin: 0 auto;
     padding: 24px 0;
     display: flex;

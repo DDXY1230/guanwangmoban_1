@@ -118,7 +118,7 @@ export default {
         {
           firstTitle: "CTMS",
           secondTitle: "临床项目管理系统",
-          carouselImagUrl: require("@/assets/imgs/img_Product1.png"),
+          carouselImagUrl: require("@/assets/imgs/img_Product6.png"),
           descList: [
             "业内最快实现eCOA部署,平均在4周完成上线",
             "实施团队具有丰富的国际大型eCOA项目经验",
@@ -144,7 +144,8 @@ export default {
         {
           firstTitle: "eCOA",
           secondTitle: "电子临床结局评估",
-          carouselImagUrl: require("@/assets/imgs/img_Product4.png"),
+          carouselImagUrl: require("@/assets/imgs/img_Product1.png"),
+
           descList: [
             "业内最快实现eCOA部署，平均在4周完成上线",
             "实施团队具有丰富的国际大型eCOA项目经验",
@@ -170,13 +171,13 @@ export default {
         {
           firstTitle: "eTMF",
           secondTitle: "随机与药物管理",
-          carouselImagUrl: require("@/assets/imgs/img_Product2.png"),
+          carouselImagUrl: require("@/assets/imgs/img_Product5.png"),
           descList: []
         },
         {
           firstTitle: "ECONSENT",
           secondTitle: "电子知情同意书",
-          carouselImagUrl: require("@/assets/imgs/img_Product5.png"),
+          carouselImagUrl: require("@/assets/imgs/img_Product4.png"),
           descList: []
         }
       ],
@@ -229,7 +230,7 @@ export default {
       transform: translateX(-18px) translateY(18px);
     }
     &-content {
-      max-width: 1230px;
+      max-width: $content-width;
       margin: 0 auto;
       display: flex;
       justify-content: space-around;
@@ -373,7 +374,7 @@ export default {
     background: #fcc233;
     height: 480px;
     &-content {
-      max-width: 1230px;
+      max-width: $content-width;
       margin: 0 auto;
       display: flex;
       justify-content: center;
@@ -421,7 +422,7 @@ export default {
     }
   }
   &-about {
-    max-width: 1230px;
+    max-width: $content-width;
     margin: 0 auto;
     height: 600px;
     display: flex;
@@ -469,7 +470,7 @@ export default {
       margin: 4px 0;
     }
     &-content {
-      max-width: 1230px;
+      max-width: $content-width;
       display: flex;
       margin: 30px auto 0;
       justify-content: center;
@@ -528,7 +529,7 @@ export default {
     }
   }
   &-service {
-    max-width: 1230px;
+    max-width: $content-width;
     margin: 60px auto;
     &-title {
       color: #00215f;

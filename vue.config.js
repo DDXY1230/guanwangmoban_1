@@ -30,6 +30,13 @@ module.exports = {
       title: '易临云', //放要改的title名
     },
   },
+  css: {
+    loaderOptions: {
+      scss: {
+        prependData: `@import "./src/styles/index.scss";`
+      }
+    }
+  }
 }
 const path = require('path')
 

@@ -5,7 +5,6 @@
     <div class="main">
       <router-view/>
       <svg-icon iconClass="close"></svg-icon>
-
     </div>
     <Footer></Footer>
   </div>
@@ -30,7 +29,7 @@ body {
   margin: 0;
 }
 #app {
-  font-family: 'Avenir', 'Helvetica', 'Arial', 'sans-serif';
+  font-family: 'PingFangSC-Regular', 'PingFang SC','Avenir', 'Helvetica', 'Arial', 'sans-serif';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   color: #2c3e50;

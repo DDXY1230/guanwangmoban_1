@@ -68,7 +68,7 @@ export default {
   background: url('../assets/imgs/联系我们-头图.png') no-repeat center top;
   &-banner {
     height: 424px;
-    max-width: 1230px;
+    max-width: $content-width;
     margin: 0 auto;
     &-content {
       .content {
@@ -93,7 +93,7 @@ export default {
     }
   }
   &-content {
-    max-width: 1230px;
+    max-width: $content-width;
     margin: 24px auto;
     background: #fff;
     padding: 20px;

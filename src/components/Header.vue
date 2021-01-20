@@ -8,10 +8,16 @@
         <!-- web端菜单 -->
         <el-menu :default-active="activeIndex" class="el-menu-demo is-web-show" mode="horizontal" @select="handleSelect">
           <el-menu-item index="/">{{ $t("header.home") }}</el-menu-item>
+          <el-submenu index="/service">
+            <template slot="title">服务与解决方案</template>
+            <el-menu-item index="/service/CTMS">CTMS临床研究管理系统</el-menu-item>
+            <el-menu-item index="/service">EDC电子数据采集</el-menu-item>
+            <el-menu-item index="/service/eCOA">eCOA电子临床结局评估</el-menu-item>
+            <el-menu-item index="/service">RTSM随机与药物管理</el-menu-item>
+            <el-menu-item index="/service">eTMF文档管理</el-menu-item>
+            <el-menu-item index="/service/eConsent">eConsent电子知情同意系统</el-menu-item>
+          </el-submenu>
           <el-menu-item index="/about">{{ $t("header.about") }}</el-menu-item>
-          <el-menu-item index="/service">{{
-            $t("header.service")
-          }}</el-menu-item>
           <el-menu-item index="/contact">{{
             $t("header.contact")
           }}</el-menu-item>
@@ -111,7 +117,7 @@ export default {
   height: 60px;
   background: #fff;
   &-content {
-    max-width: 1230px;
+    max-width: $content-width;
     margin: 0 auto;
     display: flex;
     .left {
@@ -149,6 +155,11 @@ export default {
   border: none;
   color: #fff;
 }
+::v-deep .el-menu--horizontal > .el-submenu.is-active .el-submenu__title {
+  background-color: #00215f !important;
+  border: none !important;
+  color: #fff !important;
+}
 // 适配移动端
 @media only screen and (max-width: 770px) {
   .header {
@@ -174,4 +185,6 @@ export default {
     }
   }
 }
+</style>
+<style >
 </style>

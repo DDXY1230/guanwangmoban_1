@@ -18,7 +18,24 @@ const routes = [
   {
     path: '/service',
     name: 'Service',
-    component: () => import(/* webpackChunkName: "about" */ '../views/Service.vue')
+    component: () => import(/* webpackChunkName: "about" */ '../views/Service.vue'),
+    children: [
+      {
+        path: 'CTMS',
+        name: 'CTMS',
+        component: () => import('../components/service/CTMS.vue')
+      },
+      {
+        path: 'eCOA',
+        name: 'eCOA',
+        component: () => import('../components/service/eCOA.vue')
+      },
+      {
+        path: 'eConsent',
+        name: 'eConsent',
+        component: () => import('../components/service/eConsent.vue')
+      },
+    ]
   },
   {
     path: '/contact',
