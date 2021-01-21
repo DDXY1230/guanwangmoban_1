@@ -104,9 +104,9 @@
         </div>
         <div class="home-service-content-right">
           <ul class="home-service-content-right-list">
-            <li>不同治疗领域的意见领袖深度合作</li>
-            <li class="home-service-content-right-list-centerli">提供从方案优化到数据收集和管理</li>
-            <li>风险管理等解决方案</li>
+            <li>· 不同治疗领域的意见领袖深度合作</li>
+            <li class="home-service-content-right-list-centerli">· 提供从方案优化到数据收集和管理</li>
+            <li>· 风险管理等解决方案</li>
           </ul>
         </div>
       </div>
@@ -634,12 +634,13 @@ export default {
         // flex: 1;
         margin: 0 30px;
         &-list {
+          list-style: none;
           li {
             color: #ee8a1d;
             line-height: 100px;
           }
           &-centerli {
-            // padding-left: 60px;
+            padding-left: 40px;
           }
         }
       }
