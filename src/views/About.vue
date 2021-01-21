@@ -187,7 +187,7 @@ export default {
     }
   }
   &-part3 {
-    max-width: 1230px;
+    max-width: 1280px;
     height: 336px;
     display: flex;
     margin: 50px auto;

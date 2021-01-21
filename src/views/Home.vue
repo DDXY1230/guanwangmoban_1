@@ -40,7 +40,10 @@
         </div>
         <div class="home-carousel-content-right">
           <div class="home-carousel-content-right-box">
-            <h3 class="home-carousel-content-right-box-title">{{currentItem.firstTitle}} {{currentItem.secondTitle}}</h3>
+            <h3 class="home-carousel-content-right-box-title">
+              <span class="title-1">{{currentItem.firstTitle}}</span>
+              <span class="title-2">{{currentItem.secondTitle}}</span>
+            </h3>
             <ul class="home-carousel-content-right-box-list">
               <li class="home-carousel-content-right-box-list-li" v-for="(item,index) in currentItem.descList" :key="index">
                 {{item}}
@@ -52,8 +55,8 @@
     </div>
     <div class="home-about">
       <div class="home-about-left">
-        <h2 class="home-content-title">关于我们</h2>
-        <p class="home-content-desc">About us</p>
+        <h2 class="home-about-title">关于我们</h2>
+        <p class="home-about-desc">About us</p>
         <p class="home-about-left-text-1">
           易临云科技旨在建立领先的临床研究云平台，以“<span class="highlight">科技创新为病人带来有效治疗</span>”为使命，立足中国、服务全球的医疗卫生与生命科技企业。
         </p>
@@ -61,12 +64,14 @@
           易临云的临床研究云平台是自主研发的端到端无缝整合一体化平台，包括<span class="highlight">电子知情同意eConsent、电子数据采集EDC、随机与药物管理RTSM、电子临床结局评估eCOA、临床研究项目管理系统CTMS、电子化试验主文档管理eTMF、基于风险的监查系统RBM、虚拟化临床研究Virtual
             Trial</span>等。通过易临云的专业化解决方案，为制药企业、医疗器械公司、研究机构加速新药研发的进程、缩减临床研究的成本、降低临床研究的风险。
         </p>
+        <span class="home-about-left-more" @click="contactUs()">联系我们 ></span>
       </div>
       <div class="home-about-right">
         <img src="@/assets/imgs/img_Aboutus.png" alt="">
       </div>
     </div>
     <div class="home-dynamic">
+      <img class="arrow-down" src="@/assets/imgs/arrow_down.png" alt="">
       <h2 class="home-dynamic-title">业内动态</h2>
       <p class="home-dynamic-title">Industry news</p>
       <div class="home-dynamic-content">
@@ -96,9 +101,9 @@
           <img src="@/assets/imgs/img_services.png" alt="">
         </div>
         <div class="home-service-content-right">
-          <ul>
+          <ul class="home-service-content-right-list">
             <li>不同治疗领域的意见领袖深度合作</li>
-            <li>提供从方案优化到数据收集和管理</li>
+            <li class="home-service-content-right-list-centerli">提供从方案优化到数据收集和管理</li>
             <li>风险管理等解决方案</li>
           </ul>
         </div>
@@ -201,17 +206,21 @@ export default {
       });
     },
     handleMouseover(index) {
-      this.currentIndex = index
+      this.currentIndex = index;
       this.currentItem = this.itemData[index];
     },
     preItem() {
-      if(this.currentIndex == 0) {this.currentIndex = this.itemData.length}
-      this.currentIndex --
+      if (this.currentIndex == 0) {
+        this.currentIndex = this.itemData.length;
+      }
+      this.currentIndex--;
       this.currentItem = this.itemData[this.currentIndex];
     },
     nextItem() {
-      this.currentIndex ++
-      if(this.currentIndex == this.itemData.length) {this.currentIndex = 0}
+      this.currentIndex++;
+      if (this.currentIndex == this.itemData.length) {
+        this.currentIndex = 0;
+      }
       this.currentItem = this.itemData[this.currentIndex];
     }
   }
@@ -259,7 +268,6 @@ export default {
             font-weight: 100;
           }
           &-more {
-            // background: linear-gradient(to right, #1672f7, #2ed1d1);
             background-color: #ee8a1d;
             color: #fff;
             padding: 4px 10px;
@@ -279,7 +287,7 @@ export default {
   }
   &-content {
     margin: 0 auto;
-    padding: 40px 0;
+    padding: 44px 0 10px;
     text-align: center;
     &-title {
       color: #00215f;
@@ -291,12 +299,11 @@ export default {
       font-size: 24px;
       font-family: "PingFangSC-Semibold", "PingFang SC";
       font-weight: 600;
-      margin: 4px 0;
+      margin: 4px 0 40px;
     }
     &-cabinet {
       display: flex;
       justify-content: center;
-      padding-top: 10px;
       flex-wrap: wrap;
       &-item {
         width: 212px;
@@ -383,12 +390,12 @@ export default {
         position: absolute;
         cursor: pointer;
         &.left {
-          left: -18px;
-          top: 20px;
+          left: -30px;
+          top: 64px;
         }
         &.right {
-          right: -18px;
-          bottom: 20px;
+          right: -30px;
+          bottom: 64px;
           transform: rotate(180deg);
         }
       }
@@ -405,9 +412,17 @@ export default {
           padding: 32px;
           &-title {
             color: #ee8a1d;
-            font-size: 32px;
+            margin: 0;
+            .title-1 {
+              font-size: 32px;
+            }
+            .title-2 {
+              font-size: 18px;
+              padding-left: 8px;
+            }
           }
           &-list {
+            padding-left: 22px;
             &-li {
               font-size: 16px;
               font-family: "PingFangSC-Regular", "PingFang SC";
@@ -426,6 +441,18 @@ export default {
     margin: 0 auto;
     height: 600px;
     display: flex;
+    &-title {
+      color: #00215f;
+      font-size: 32px;
+      margin: 0;
+    }
+    &-desc {
+      color: #00215f;
+      font-size: 24px;
+      font-family: "PingFangSC-Semibold", "PingFang SC";
+      font-weight: 600;
+      margin: 4px 0 40px;
+    }
     &-left {
       width: 520px;
       padding: 60px 30px;
@@ -439,6 +466,16 @@ export default {
         .highlight {
           color: #ee8a1d;
         }
+      }
+      &-more {
+        display: inline-block;
+        width: 160px;
+        line-height: 48px;
+        height: 48px;
+        background: #ee8a1d;
+        font-size: 18px;
+        color: #fff;
+        text-align: center;
       }
     }
     &-right {
@@ -455,6 +492,13 @@ export default {
     background: #00215f;
     padding: 60px 0;
     box-sizing: border-box;
+    position: relative;
+    .arrow-down {
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translateX(-18px) translateY(-18px);
+    }
     &-title {
       color: #fff;
       text-align: center;
@@ -475,7 +519,7 @@ export default {
       margin: 30px auto 0;
       justify-content: center;
       &-left {
-        flex: 1;
+        width: 720px;
         &-img {
           width: 720px;
           height: 400px;
@@ -495,7 +539,7 @@ export default {
             .mask {
               &-title {
                 color: #fff;
-                margin: 2px;
+                margin: 11px 10px 3px;
                 font-size: 24px;
                 font-family: "PingFangSC-Medium", "PingFang SC";
                 font-weight: 500;
@@ -508,15 +552,15 @@ export default {
               }
               &-content {
                 color: #fff;
-                margin: 4px;
+                margin: 0 10px;
               }
             }
           }
         }
       }
       &-right {
-        flex: 1;
-        padding-left: 12px;
+        width: 500px;
+        padding-left: 20px;
         color: #fff;
         .date {
           margin-top: 0;
@@ -555,10 +599,13 @@ export default {
       &-right {
         // flex: 1;
         margin: 0 30px;
-        ul {
+        &-list {
           li {
             color: #ee8a1d;
             line-height: 100px;
+          }
+          &-centerli {
+            // padding-left: 60px;
           }
         }
       }
@@ -568,35 +615,6 @@ export default {
 // 适配移动端
 @media only screen and (max-width: 770px) {
   .home {
-    &-banner {
-      height: 310px;
-      &-content {
-        &-left {
-          padding: 10px;
-          min-width: 250px;
-          .left-title {
-            margin: 10px;
-          }
-          .left-second-title {
-            font-size: 26px;
-          }
-        }
-      }
-    }
-    &-content {
-      &-title {
-        font-size: 26px;
-      }
-      &-cabinet {
-        justify-content: space-between;
-        padding: 8px;
-        &-item {
-          margin: 10px 5px;
-          width: 46%;
-          height: 200px;
-        }
-      }
-    }
   }
 }
 </style>

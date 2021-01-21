@@ -117,7 +117,7 @@ export default {
       }
     }
     &-right {
-      padding: 20px;
+      padding: 60px;
       display: flex;
       flex-direction: column;
       justify-content: space-around;
