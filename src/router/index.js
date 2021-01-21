@@ -4,8 +4,7 @@ import Home from '../views/Home.vue'
 
 Vue.use(VueRouter)
 
-const routes = [
-  {
+const routes = [{
     path: '/',
     name: 'Home',
     component: Home
@@ -13,19 +12,23 @@ const routes = [
   {
     path: '/industryInfo',
     name: 'IndustryInfo',
-    component: () => import(/* webpackChunkName: "industryInfo" */ '../views/IndustryInfo.vue')
+    component: () => import( /* webpackChunkName: "industryInfo" */ '../views/IndustryInfo.vue')
+  },
+  {
+    path: '/industryInfoDetail',
+    name: 'IndustryInfoDetail',
+    component: () => import( /* webpackChunkName: "industryInfoDetail" */ '../views/IndustryInfoDetail.vue')
   },
   {
     path: '/about',
     name: 'About',
-    component: () => import(/* webpackChunkName: "about" */ '../views/About.vue')
+    component: () => import( /* webpackChunkName: "about" */ '../views/About.vue')
   },
   {
     path: '/service',
     name: 'Service',
-    component: () => import(/* webpackChunkName: "service" */ '../views/Service.vue'),
-    children: [
-      {
+    component: () => import( /* webpackChunkName: "service" */ '../views/Service.vue'),
+    children: [{
         path: 'CTMS',
         name: 'CTMS',
         component: () => import('../components/service/CTMS.vue')
@@ -55,7 +58,7 @@ const routes = [
   {
     path: '/contact',
     name: 'Contact',
-    component: () => import(/* webpackChunkName: "about" */ '../views/Contact.vue')
+    component: () => import( /* webpackChunkName: "about" */ '../views/Contact.vue')
   },
 ]
 
