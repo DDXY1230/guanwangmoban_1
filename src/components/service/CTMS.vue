@@ -82,6 +82,7 @@ export default {
   &-banner {
     height: 400px;
     background: url("../../assets/imgs/img_ctmsn1.png") center top no-repeat;
+    background-size:100% auto;
     &-title {
       position: relative;
       max-width: $content-width;

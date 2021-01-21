@@ -110,13 +110,14 @@
       </div>
 
     </div>
+
   </div>
 </template>
 
 <script>
+
 export default {
   name: "Home",
-  components: {},
   data() {
     return {
       itemData: [
@@ -175,7 +176,7 @@ export default {
         },
         {
           firstTitle: "eTMF",
-          secondTitle: "随机与药物管理",
+          secondTitle: "文档管理",
           carouselImagUrl: require("@/assets/imgs/img_Product5.png"),
           descList: []
         },
@@ -198,11 +199,35 @@ export default {
       this.$message.info("开发中,敬请期待!");
     },
     handleItem(index) {
+      if(index == 4) {
+        this.$message.info('努力开发中💪  ,敬请期待!')
+        return
+      }
+      let name = "";
+      switch (index) {
+        case 0:
+          name = "CTMS";
+          break;
+        case 1:
+          name = "EDC";
+          break;
+        case 2:
+          name = "eCOA";
+          break;
+        case 3:
+          name = "RTSM";
+          break;
+        case 4:
+          name = "eTMF";
+          break;
+        case 5:
+          name = "eConsent";
+          break;
+        default:
+          name = "CTMS";
+      }
       this.$router.push({
-        path: "/service",
-        query: {
-          index: index
-        }
+        path: `/service/${name}`,
       });
     },
     handleMouseover(index) {
@@ -252,7 +277,7 @@ export default {
           &-title {
             font-size: 72px;
             margin: 100px 0 10px;
-            font-family: "Helvetica";
+            font-family: "SourceHanSerifCN-Bold-2";
             line-height: 86px;
             letter-spacing: 6px;
           }
@@ -260,6 +285,7 @@ export default {
             font-size: 48px;
             line-height: 58px;
             letter-spacing: 6px;
+            font-family: "SourceHanSerifCN-Bold-2";
             margin: 0;
           }
           &-desc {
@@ -380,6 +406,8 @@ export default {
   &-carousel {
     background: #fcc233;
     height: 480px;
+    width: 100%;
+    overflow: hidden;
     &-content {
       max-width: $content-width;
       margin: 0 auto;

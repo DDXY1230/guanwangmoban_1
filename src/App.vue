@@ -7,24 +7,29 @@
       <svg-icon iconClass="close"></svg-icon>
     </div>
     <Footer></Footer>
+    <quick-to-top></quick-to-top>
+
   </div>
 </template>
 <script>
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
+import QuickToTop from '@/components/QuickToTop'
+
 export default {
   components: {
     Header,
-    Footer
+    Footer,
+    QuickToTop
   }
 }
 </script>
 
 <style lang="scss">
-// @font-face {
-//   src: url('./fonts/Helvetica.TTF') format('truetype');
-//   font-family: 'Helvetica';
-// }
+@font-face {
+  src: url('./fonts/SourceHanSerifCN-Bold-2.otf') format('truetype');
+  font-family: 'SourceHanSerifCN-Bold-2';
+}
 body {
   margin: 0;
   width: 100%;

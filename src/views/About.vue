@@ -73,6 +73,7 @@ export default {
   &-banner {
     height: 800px;
     background: url("../assets/imgs/img_company1.png") center top no-repeat;
+    background-size:100% auto;
     &-content {
       max-width: $content-width;
       height: 800px;
@@ -86,13 +87,15 @@ export default {
         background: rgba(255, 255, 255, 0.8);
         bottom: 50px;
         right: 0;
-        padding: 10px;
+        padding: 20px 22px;
+        box-sizing: border-box;
         &-title {
           font-size: 28px;
-          margin: 2px 0;
+          margin: 0 0 10px;
         }
         &-desc {
           font-size: 18px;
+          margin: 0;
         }
       }
     }
@@ -122,7 +125,7 @@ export default {
         background: #eee;
         position: absolute;
         z-index: 1;
-        left: -10px;
+        left: 15px;
         top: 220px;
       }
     }
@@ -145,12 +148,12 @@ export default {
       position: relative;
       .zuoyinhao {
         position: absolute;
-        top: -20px;
-        left: -40px;
+        top: -14px;
+        left: -32px;
       }
       .left-line {
         position: absolute;
-        bottom: 10px;
+        bottom: 29px;
         left: -208px;
         display: inline-block;
         width: 208px;
@@ -159,7 +162,7 @@ export default {
       }
       .right-line {
         position: absolute;
-        top: 10px;
+        top: 12px;
         right: -208px;
         display: inline-block;
         width: 208px;
@@ -173,7 +176,7 @@ export default {
         justify-content: center;
         color: #00215f;
         font-size: 18px;
-        padding-left: 30px;
+        padding-left: 32px;
       }
       &-right {
         flex: 1;
@@ -204,9 +207,13 @@ export default {
         position: absolute;
         width: 64px;
         height: 64px;
-        background: rgba(238, 138, 29, 0.7);
+        background: rgba(238, 138, 29);
         top: 0;
         left: 10px;
+        z-index: 0;
+      }
+      p {
+        z-index: 99;
       }
     }
     &-right {

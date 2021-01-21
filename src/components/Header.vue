@@ -14,7 +14,7 @@
             <el-menu-item index="/service/EDC">EDC电子数据采集</el-menu-item>
             <el-menu-item index="/service/eCOA">eCOA电子临床结局评估</el-menu-item>
             <el-menu-item index="/service/RTSM">RTSM随机与药物管理</el-menu-item>
-            <el-menu-item index="/service">eTMF文档管理</el-menu-item>
+            <el-menu-item index="/service/eTMF">eTMF文档管理</el-menu-item>
             <el-menu-item index="/service/eConsent">eConsent电子知情同意系统</el-menu-item>
           </el-submenu>
           <el-menu-item index="/industryInfo">行业资讯</el-menu-item>
@@ -79,16 +79,25 @@ export default {
     },
     handleSelect(key, keyPath) {
       console.log(key, keyPath);
+      if (key === "/service/eTMF") {
+        this.$message.info("努力开发中💪  ,敬请期待!");
+        return;
+      }
       this.$router.push({
         path: key
       });
     },
     languageFunc(e) {
+      if (e == "en") {
+        this.$message.info("努力开发中💪  , 敬请期待!");
+        return;
+      }
       this.$i18n.locale = e;
       localStorage.setItem("lang", e);
       this.getCurrentPageTitle(this.$route.name);
     },
     getCurrentPageTitle(name) {
+      console.log(name)
       switch (name) {
         case "Home":
           this.activeIndex = "/";
@@ -100,14 +109,20 @@ export default {
           break;
         case "IndustryInfo":
           this.activeIndex = "/industryInfo";
-          this.currentItem = '行业资讯';
+          this.currentItem = "行业资讯";
           break;
         case "IndustryInfoDetail":
           this.activeIndex = "/industryInfo";
-          this.currentItem = '行业资讯';
+          this.currentItem = "行业资讯";
           break;
         case "Service":
-          this.activeIndex = "/service";
+        case "CTMS":
+        case "EDC":
+        case "eCOA":
+        case "RTSM":
+        case "eTMF":
+        case "eConsent":
+          this.activeIndex = "/service/CTMS";
           this.currentItem = this.$t("header.service");
           break;
         case "Contact":
@@ -123,7 +138,7 @@ export default {
 </script>
 <style lang="scss" scoped>
 .header {
-  height: 60px;
+  height: 100px;
   background: #fff;
   &-content {
     max-width: $content-width;
@@ -158,6 +173,14 @@ export default {
   .is-phone-show {
     display: none;
   }
+}
+.el-menu.el-menu--horizontal > .el-menu-item {
+  height: 100px;
+  line-height: 100px;
+}
+::v-deep .el-menu--horizontal > .el-submenu .el-submenu__title {
+  height: 100px;
+  line-height: 100px;
 }
 .el-menu.el-menu--horizontal > .el-menu-item.is-active {
   background-color: #00215f !important;

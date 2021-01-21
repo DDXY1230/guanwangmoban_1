@@ -2,7 +2,7 @@
 <!--百度地图容器-->
 <template>
   <div class=''>
-    <div style="width:697px;height:550px;border:#ccc solid 1px;" id="dituContent1"></div>
+    <div style="width:1040px;height:200px;border:#ccc solid 1px;" id="dituContent1"></div>
   </div>
 </template>
 

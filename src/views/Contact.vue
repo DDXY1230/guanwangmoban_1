@@ -3,11 +3,12 @@
     <div class="contact-banner">
       <div class="contact-banner-content">
         <div class="contact-banner-content-collect">
-          <h4>联系我们</h4>
-          <p>请留下您的联系方式，客服会尽快与您联系。</p>
+          <h4 class="contact-banner-content-collect-title">联系我们</h4>
+          <p class="contact-banner-content-collect-hint">请留下您的联系方式，客服会尽快与您联系。</p>
           <input class="input1" type="text" placeholder="联系人">
           <input class="input1" type="text" placeholder="联系电话和邮箱">
           <span class="contact-banner-content-collect-submit" @click="submit()">提交</span>
+        <img class="left-icon" src="@/assets/imgs/ic1.png" alt="">
         </div>
       </div>
     </div>
@@ -100,6 +101,12 @@ export default {
         background: #fff;
         padding: 40px;
         box-sizing: border-box;
+        position: relative;
+        .left-icon {
+          position: absolute;
+          top: 0;
+          left: 16px;
+        }
         input {
           outline: none;
         }
@@ -135,6 +142,10 @@ export default {
         }
         .input1:focus:-ms-input-placeholder {
           transform: scale(0.7) translateY(-10px);
+        }
+        &-title {
+          margin: 0 0 19px;
+          font-size: 28px;
         }
         &-submit {
           display: inline-block;
@@ -193,9 +204,8 @@ export default {
   }
   &-map {
     text-align: center;
-    border: 1px solid #ccc;
-    height: 550px;
-    width: 697px;
+    height: 200px;
+    width: 1040px;
     margin: 0 auto 130px;
   }
 }

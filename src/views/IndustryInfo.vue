@@ -37,6 +37,7 @@ export default {
 .industryInfo {
   &-banner {
     background: url("../assets/imgs/img_industryInfo1.png") no-repeat center;
+    background-size:100% auto;
     height: 300px;
   }
   &-article {
