@@ -102,6 +102,10 @@ export default {
           this.activeIndex = "/industryInfo";
           this.currentItem = '行业资讯';
           break;
+        case "IndustryInfoDetail":
+          this.activeIndex = "/industryInfo";
+          this.currentItem = '行业资讯';
+          break;
         case "Service":
           this.activeIndex = "/service";
           this.currentItem = this.$t("header.service");

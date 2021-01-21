@@ -2,7 +2,7 @@
 <template>
   <div class='industryInfo'>
     <div class="industryInfo-banner"></div>
-    <div class="industryInfo-article">
+    <div class="industryInfo-article" @click="viewArticle()">
       <div class="industryInfo-article-cover">
         <img class="industryInfo-article-cover-img" src="@/assets/imgs/img_Product2.png" alt="">
       </div>
@@ -24,11 +24,13 @@ export default {
   data() {
     return {};
   },
-  computed: {},
-  created() {},
-  mounted() {},
-  watch: {},
-  methods: {}
+  methods: {
+    viewArticle() {
+      this.$router.push({
+        path: '/industryInfoDetail/1',
+      })
+    }
+  }
 };
 </script>
 <style lang='scss' scoped>
@@ -44,6 +46,7 @@ export default {
     max-width: $content-width;
     margin: 0 auto;
     padding: 40px 0;
+    cursor: pointer;
     &-cover {
       width: 480px;
       height: 280px;

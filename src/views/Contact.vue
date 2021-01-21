@@ -32,10 +32,9 @@
       </div>
     </div>
     <div class="contact-map">
-      地图
+      <map1></map1>
     </div>
     <div class="contact-location">
-
       <div class="contact-location-right">
         <span class="contact-location-right-center">
           成都研发中心
@@ -56,12 +55,18 @@
       </div>
     </div>
     <div class="contact-map">
-      地图
+      <map2></map2>
     </div>
   </div>
 </template>
 <script>
+import map1 from "@/components/map1.vue";
+import map2 from "@/components/map2.vue";
 export default {
+  components: {
+    map1,
+    map2
+  },
   data() {
     return {};
   },
@@ -95,7 +100,7 @@ export default {
         .input1 {
           height: 50px;
           border: none;
-          border-bottom: 2px solid #B2B2B2;
+          border-bottom: 2px solid #b2b2b2;
           transition: 0.5s;
           width: 100%;
           box-sizing: border-box;
@@ -140,7 +145,7 @@ export default {
   }
   &-location {
     display: flex;
-    margin: 100px 0;
+    margin: 100px 0 20px;
     justify-content: center;
     &-left {
       text-align: right;
@@ -183,9 +188,9 @@ export default {
   &-map {
     text-align: center;
     border: 1px solid #ccc;
-    height: 300px;
-    width: 1000px;
-    margin: 0 auto;
+    height: 550px;
+    width: 697px;
+    margin: 0 auto 130px;
   }
 }
 </style>

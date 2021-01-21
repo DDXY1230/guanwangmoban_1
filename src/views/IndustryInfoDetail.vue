@@ -15,7 +15,7 @@
       </p>
     </div>
     <div class="industryInfoDetail-right">
-      <div class="industryInfoDetail-right-item">
+      <div class="industryInfoDetail-right-item" @click="viewArticle()">
         <img class="industryInfoDetail-right-item-img" src="@/assets/imgs/img_Product2.png" alt="">
         <h5>最新研究发现c9ww</h5>
         <p>2021-02-12</p>
@@ -29,6 +29,18 @@ export default {
   components: {},
   data() {
     return {};
+  },
+  mounted() {
+    console.log(this.$route);
+  },
+  methods: {
+    viewArticle() {
+      this.$message.info('敬请期待.')
+      return
+      // this.$router.push({
+      //   path: "/industryInfoDetail/2"
+      // });
+    }
   }
 };
 </script>
@@ -37,12 +49,11 @@ export default {
   max-width: $content-width;
   margin: 10px auto;
   display: flex;
-  color: #00215F;
+  color: #00215f;
   &-left {
     flex: 1;
     margin-right: 200px;
     &-back {
-
     }
     &-title {
       font-size: 28px;
@@ -53,9 +64,9 @@ export default {
       margin: 0 0 14px;
     }
     &-cover {
-width: 480px;
-height: 280px;
-object-fit: cover;
+      width: 480px;
+      height: 280px;
+      object-fit: cover;
     }
   }
   &-right {
@@ -63,6 +74,7 @@ object-fit: cover;
     padding-top: 100px;
     &-item {
       width: 264px;
+      cursor: pointer;
       &-img {
         width: 264px;
         height: 154px;
