@@ -12,15 +12,15 @@
       <div class="eConsent-support-content">
         <div class="eConsent-support-content-box box-1">
           <img src="@/assets/imgs/img_EDC2.png" alt="">
-          <p>快速实现eCRF设计比传统EDC节约30%时间</p>
+          <p class="box-desc">快速实现eCRF设计比传统EDC节约30%时间</p>
         </div>
         <div class="eConsent-support-content-box box-2">
           <img src="@/assets/imgs/img_EDC3.png" alt="">
-          <p>零编程实现复杂的逻辑核查</p>
+          <p class="box-desc">零编程实现复杂的逻辑核查</p>
         </div>
         <div class="eConsent-support-content-box box-3">
           <img src="@/assets/imgs/img_EDC4.png" alt="">
-          <p>提供符合CDISC标准的多个治疗领域的eCRF模板库</p>
+          <p class="box-desc">提供符合CDISC标准的多个治疗领域的eCRF模板库</p>
         </div>
       </div>
     </div>
@@ -126,6 +126,7 @@ export default {
         width: 100%;
         text-align: center;
         position: absolute;
+        margin: 0;
         bottom: 20px;
       }
       img {
@@ -158,6 +159,10 @@ export default {
         text-align: center;
         padding-top: 100px;
         font-size: 18px;
+        .box-desc {
+          margin-top: 57px;
+          font-size: 18px;
+        }
         &.box-1,
         &.box-3 {
         }

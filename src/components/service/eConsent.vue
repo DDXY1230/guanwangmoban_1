@@ -145,6 +145,7 @@ export default {
         width: 100%;
         text-align: center;
         position: absolute;
+        margin: 0;
         bottom: 20px;
       }
       img{
@@ -164,20 +165,23 @@ export default {
     }
   }
   &-support {
-    height: 426px;
+    height: 300px;
     background: #ee8a1d;
     &-content {
       display: flex;
       max-width: $content-width;
       margin: 0 auto;
       justify-content: center;
-      height: 426px;
+      height: 300px;
       color: #fff;
       &-box {
         flex: 1;
         text-align: center;
-        padding-top: 100px;
+        padding-top: 40px;
         font-size: 18px;
+        p {
+          margin: 28px 0;
+        }
         &.box-1,
         &.box-3 {
         }

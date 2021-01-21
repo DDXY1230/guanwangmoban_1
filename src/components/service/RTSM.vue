@@ -127,6 +127,7 @@ export default {
         width: 100%;
         text-align: center;
         position: absolute;
+        margin: 0;
         bottom: 20px;
       }
       img {

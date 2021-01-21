@@ -36,15 +36,15 @@
       <div class="ctms-support-content">
         <div class="ctms-support-content-box box-1">
           <img src="@/assets/imgs/img_ctmsn3.png" alt="">
-          <p>同时支持PC端和移动端</p>
+          <p class="box-desc">同时支持PC端和移动端</p>
         </div>
         <div class="ctms-support-content-box box-2">
           <img src="@/assets/imgs/img_ctmsn4.png" alt="">
-          <p>支持多语言、多时区和多种货币的转换</p>
+          <p class="box-desc">支持多语言、多时区和多种货币的转换</p>
         </div>
         <div class="ctms-support-content-box box-3">
           <img src="@/assets/imgs/img_ctmsn5.png" alt="">
-          <p>具备不同角色的提醒功能</p>
+          <p class="box-desc">具备不同角色的提醒功能</p>
         </div>
       </div>
     </div>
@@ -82,7 +82,7 @@ export default {
   &-banner {
     height: 400px;
     background: url("../../assets/imgs/img_ctmsn1.png") center top no-repeat;
-    background-size:100% auto;
+    background-size: 100% auto;
     &-title {
       position: relative;
       max-width: $content-width;
@@ -150,6 +150,10 @@ export default {
         text-align: center;
         padding-top: 100px;
         font-size: 18px;
+        .box-desc {
+          margin-top: 63px;
+          font-size: 18px;
+        }
         &.box-1,
         &.box-3 {
           background: #00215f;
@@ -163,21 +167,24 @@ export default {
     text-align: center;
     position: relative;
     &-desc {
-      width: 500px;
+      width: 516px;
       height: 100px;
       line-height: 100px;
       background: #ee8a1d;
       position: absolute;
       color: #fff;
       font-size: 18px;
+      box-sizing: border-box;
       font-family: "PingFangSC-Regular", "PingFang SC";
-      &.desc-left{
+      &.desc-left {
         left: 0;
         top: 100px;
+        padding-right: 36px;
       }
-      &.desc-right{
+      &.desc-right {
         right: 0;
         bottom: 100px;
+        padding-left: 36px;
       }
     }
   }

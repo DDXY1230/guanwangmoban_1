@@ -53,21 +53,23 @@
         </div>
       </div>
     </div>
-    <div class="home-about">
-      <div class="home-about-left">
-        <h2 class="home-about-title">关于我们</h2>
-        <p class="home-about-desc">About us</p>
-        <p class="home-about-left-text-1">
-          易临云科技旨在建立领先的临床研究云平台，以“<span class="highlight">科技创新为病人带来有效治疗</span>”为使命，立足中国、服务全球的医疗卫生与生命科技企业。
-        </p>
-        <p class="home-about-left-text-2">
-          易临云的临床研究云平台是自主研发的端到端无缝整合一体化平台，包括<span class="highlight">电子知情同意eConsent、电子数据采集EDC、随机与药物管理RTSM、电子临床结局评估eCOA、临床研究项目管理系统CTMS、电子化试验主文档管理eTMF、基于风险的监查系统RBM、虚拟化临床研究Virtual
-            Trial</span>等。通过易临云的专业化解决方案，为制药企业、医疗器械公司、研究机构加速新药研发的进程、缩减临床研究的成本、降低临床研究的风险。
-        </p>
-        <span class="home-about-left-more" @click="contactUs()">联系我们 ></span>
-      </div>
-      <div class="home-about-right">
-        <img src="@/assets/imgs/img_Aboutus.png" alt="">
+    <div class="home-about-wrap">
+      <div class="home-about">
+        <div class="home-about-left">
+          <h2 class="home-about-title">关于我们</h2>
+          <p class="home-about-desc">About us</p>
+          <p class="home-about-left-text-1">
+            易临云科技旨在建立领先的临床研究云平台，以“<span class="highlight">科技创新为病人带来有效治疗</span>”为使命，立足中国、服务全球的医疗卫生与生命科技企业。
+          </p>
+          <p class="home-about-left-text-2">
+            易临云的临床研究云平台是自主研发的端到端无缝整合一体化平台，包括<span class="highlight">电子知情同意eConsent、电子数据采集EDC、随机与药物管理RTSM、电子临床结局评估eCOA、临床研究项目管理系统CTMS、电子化试验主文档管理eTMF、基于风险的监查系统RBM、虚拟化临床研究Virtual
+              Trial</span>等。通过易临云的专业化解决方案，为制药企业、医疗器械公司、研究机构加速新药研发的进程、缩减临床研究的成本、降低临床研究的风险。
+          </p>
+          <span class="home-about-left-more" @click="contactUs()">联系我们 ></span>
+        </div>
+        <div class="home-about-right">
+          <img src="@/assets/imgs/img_Aboutus.png" alt="">
+        </div>
       </div>
     </div>
     <div class="home-dynamic">
@@ -115,7 +117,6 @@
 </template>
 
 <script>
-
 export default {
   name: "Home",
   data() {
@@ -196,12 +197,14 @@ export default {
   },
   methods: {
     contactUs() {
-      this.$message.info("开发中,敬请期待!");
+      this.$router.push({
+        path: "/contact"
+      });
     },
     handleItem(index) {
-      if(index == 4) {
-        this.$message.info('努力开发中💪  ,敬请期待!')
-        return
+      if (index == 4) {
+        this.$message.info("努力开发中💪  ,敬请期待!");
+        return;
       }
       let name = "";
       switch (index) {
@@ -227,7 +230,7 @@ export default {
           name = "CTMS";
       }
       this.$router.push({
-        path: `/service/${name}`,
+        path: `/service/${name}`
       });
     },
     handleMouseover(index) {
@@ -268,7 +271,6 @@ export default {
       margin: 0 auto;
       display: flex;
       justify-content: space-around;
-
       &-left {
         min-width: 300px;
         max-width: 510px;
@@ -299,6 +301,12 @@ export default {
             padding: 4px 10px;
             border-radius: 2px;
             cursor: pointer;
+            width: 160px;
+            height: 48px;
+            line-height: 48px;
+            font-size: 18px;
+            text-align: center;
+            display: inline-block;
           }
         }
       }
@@ -335,7 +343,6 @@ export default {
         width: 212px;
         height: 360px;
         cursor: pointer;
-        border: 1px dashed #ccc;
         background: #fff;
         color: #3f4c6e;
         position: relative;
@@ -469,6 +476,10 @@ export default {
     margin: 0 auto;
     height: 600px;
     display: flex;
+    &-wrap {
+      width: 100%;
+      overflow: hidden;
+    }
     &-title {
       color: #00215f;
       font-size: 32px;
@@ -482,7 +493,7 @@ export default {
       margin: 4px 0 40px;
     }
     &-left {
-      width: 520px;
+      width: 760px;
       padding: 60px 30px;
       box-sizing: border-box;
       &-text-1,
@@ -507,12 +518,7 @@ export default {
       }
     }
     &-right {
-      width: 760px;
-      img {
-        width: 100%;
-        height: 600px;
-        object-fit: cover;
-      }
+      width: 520px;
     }
   }
   &-dynamic {
