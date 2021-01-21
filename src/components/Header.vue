@@ -163,7 +163,7 @@ export default {
         cursor: pointer;
       }
       .isActive {
-        color: #1672f7;
+        color: #00215f;
       }
     }
     ::v-deep .el-menu.el-menu--horizontal {
@@ -173,6 +173,9 @@ export default {
   .is-phone-show {
     display: none;
   }
+}
+.el-menu-item {
+  padding: 0 42px;
 }
 .el-menu.el-menu--horizontal > .el-menu-item {
   height: 100px;

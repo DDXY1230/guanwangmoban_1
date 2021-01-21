@@ -49,9 +49,13 @@
       </div>
     </div>
     <div class="ctms-security">
-      <div class="ctms-security-desc desc-left">支持离线完成监查报告</div>
+      <div class="ctms-security-desc desc-left"><span class="desc-left-text">支持离线完成监查报告</span>
+        <svg-icon iconClass="arrow3"></svg-icon>
+      </div>
       <img src="@/assets/imgs/img_ctmsn6.png" alt="">
-      <div class="ctms-security-desc desc-right">高级别数据安全性和多地数据备份</div>
+      <div class="ctms-security-desc desc-right">
+        <svg-icon iconClass="arrow4"></svg-icon><span class="desc-right-text">高级别数据安全性和多地数据备份</span>
+      </div>
     </div>
     <div class="ctms-connect">
       <div class="ctms-connect-left">
@@ -180,11 +184,17 @@ export default {
         left: 0;
         top: 100px;
         padding-right: 36px;
+        .desc-left-text {
+          padding-right: 60px;
+        }
       }
       &.desc-right {
         right: 0;
         bottom: 100px;
         padding-left: 36px;
+        .desc-right-text {
+          padding-left: 60px;
+        }
       }
     }
   }

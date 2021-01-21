@@ -4,10 +4,10 @@
     <p>© 2020-2020 易临云（深圳）科技有限公司 版权所有 粤ICP备20068916号.</p>
     <p>
       <svg-icon iconClass="phone"></svg-icon>
-      028-11123233
+      0755-22671619
       {{someSpace}}
       <svg-icon iconClass="email"></svg-icon>
-      341341241@123.com
+      huangyamei@eclincloud.com
     </p>
   </div>
 </template>
