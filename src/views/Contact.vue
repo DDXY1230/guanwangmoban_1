@@ -62,6 +62,7 @@
 <script>
 import map1 from "@/components/map1.vue";
 import map2 from "@/components/map2.vue";
+import { submitData } from '@/api/user.js'
 export default {
   components: {
     map1,
@@ -71,7 +72,12 @@ export default {
     return {};
   },
   methods: {
-    submit() {}
+    async submit() {
+      this.$message.info('暂时不能提交,请直接用以下邮箱电话方式联系!')
+      return
+      let data = await submitData()
+      console.log(data)
+    }
   }
 };
 </script>
