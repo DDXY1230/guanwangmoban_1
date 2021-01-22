@@ -35,15 +35,15 @@
     <div class="ctms-support">
       <div class="ctms-support-content">
         <div class="ctms-support-content-box box-1">
-          <img src="@/assets/imgs/img_ctmsn3.png" alt="">
+          <img class="box-img" src="@/assets/imgs/img_ctmsn3.png" alt="">
           <p class="box-desc">同时支持PC端和移动端</p>
         </div>
         <div class="ctms-support-content-box box-2">
-          <img src="@/assets/imgs/img_ctmsn4.png" alt="">
+          <img class="box-img" src="@/assets/imgs/img_ctmsn4.png" alt="">
           <p class="box-desc">支持多语言、多时区和多种货币的转换</p>
         </div>
         <div class="ctms-support-content-box box-3">
-          <img src="@/assets/imgs/img_ctmsn5.png" alt="">
+          <img class="box-img" src="@/assets/imgs/img_ctmsn5.png" alt="">
           <p class="box-desc">具备不同角色的提醒功能</p>
         </div>
       </div>
@@ -122,19 +122,21 @@ export default {
       }
     }
     &-right {
-      padding: 60px;
+      float: 1;
+      padding: 50px 0 50px 50px;
       display: flex;
       flex-direction: column;
       justify-content: space-around;
       &-item {
         color: #00215f;
         border-left: 4px solid #f4bb78;
+        padding-left: 16px;
         &-title {
-          margin: 4px;
+          margin: 4px 0;
           font-size: 24px;
         }
         &-desc {
-          margin: 4px;
+          margin: 4px 0;
         }
       }
     }
@@ -154,6 +156,10 @@ export default {
         text-align: center;
         padding-top: 100px;
         font-size: 18px;
+        .box-img {
+          width: 158px;
+          height: 158px;
+        }
         .box-desc {
           margin-top: 63px;
           font-size: 18px;

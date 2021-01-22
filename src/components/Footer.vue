@@ -7,7 +7,7 @@
       0755-22671619
       {{someSpace}}
       <svg-icon iconClass="email"></svg-icon>
-      huangyamei@eclincloud.com
+      ecc@eclincloud.com
     </p>
   </div>
 </template>
