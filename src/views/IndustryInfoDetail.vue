@@ -3,7 +3,7 @@
   <div class='industryInfoDetail'>
 
     <div class="industryInfoDetail-left">
-      <p class="industryInfoDetail-left-back">行业资讯 《 <span @click="back()">返回</span></p>
+      <p class="industryInfoDetail-left-back">行业资讯 《 <span class="back" @click="back()">返回</span></p>
 
       <h4 class="industryInfoDetail-left-title">最新研究发现c9ww</h4>
       <p class="industryInfoDetail-left-time">2021-02-12</p>
@@ -59,6 +59,9 @@ export default {
     flex: 1;
     margin-right: 200px;
     &-back {
+      .back {
+        cursor: pointer;
+      }
     }
     &-title {
       font-size: 28px;

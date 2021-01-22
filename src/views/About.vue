@@ -73,7 +73,7 @@ export default {
   &-banner {
     height: 800px;
     background: url("../assets/imgs/img_company1.png") center top no-repeat;
-    background-size:100% auto;
+    background-size:cover;
     &-content {
       max-width: $content-width;
       height: 800px;

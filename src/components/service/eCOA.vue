@@ -87,7 +87,7 @@ export default {
   &-banner {
     height: 400px;
     background: url("../../assets/imgs/img_ecoa1.png") center top no-repeat;
-    background-size:100% auto;
+    background-size:cover;
     &-title {
       position: relative;
       max-width: $content-width;
