@@ -103,6 +103,8 @@ export default {
   &-part1 {
     display: flex;
     margin: 30px 0;
+    width: 100%;
+    overflow: hidden;
     &-left {
       flex: 1;
       padding-right: 50px;
