@@ -6,7 +6,7 @@ const cn = {
   },
   header: {
     home: '首页',
-    about: '关于我们',
+    about: '关于易临云',
     service: '业务范围',
     contact: '联系我们'
   },

@@ -258,7 +258,7 @@ export default {
 .home {
   &-banner {
     background: url("../assets/imgs/bannerbg.png") no-repeat center #000d26;
-    height: 560px;
+    height: 600px;
     position: relative;
     .arrow-down {
       position: absolute;
@@ -331,7 +331,6 @@ export default {
     &-desc {
       color: #00215f;
       font-size: 24px;
-      font-family: "PingFangSC-Semibold", "PingFang SC";
       font-weight: 600;
       margin: 4px 0 40px;
     }
@@ -426,12 +425,13 @@ export default {
         cursor: pointer;
         &.left {
           left: -30px;
-          top: 64px;
+          top: 50%;
+          transform: translateY(-30px);
         }
         &.right {
           right: -30px;
-          bottom: 64px;
-          transform: rotate(180deg);
+          top: 50%;
+          transform: translateY(-30px) rotate(180deg);
         }
       }
       &-left {
@@ -460,7 +460,6 @@ export default {
             padding-left: 22px;
             &-li {
               font-size: 16px;
-              font-family: "PingFangSC-Regular", "PingFang SC";
               font-weight: 400;
               line-height: 22px;
               color: #00215f;

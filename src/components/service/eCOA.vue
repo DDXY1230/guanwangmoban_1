@@ -10,16 +10,17 @@
     <div class="eCOA-support">
       <div class="eCOA-support-content">
         <div class="eCOA-support-content-box box-1">
-          <img src="@/assets/imgs/img_ecoa2.png" alt="">
-          <p>同时支持PC端和移动端</p>
+          <img class="box-img" src="@/assets/imgs/img_ecoa2.png" alt="">
+          <p class="box-desc">业内<span class="highlight">最快</span>实现eCOA部署</p>
+          <p class="box-desc">平均在4周完成上线</p>
         </div>
         <div class="eCOA-support-content-box box-2">
-          <img src="@/assets/imgs/img_ecoa3.png" alt="">
-          <p>支持多语言、多时区和多种货币的转换</p>
+          <img class="box-img" src="@/assets/imgs/img_ecoa3.png" alt="">
+          <p class="box-desc">实施团队具有丰富的<span class="highlight">国际大型eCOA项目</span>经验</p>
         </div>
         <div class="eCOA-support-content-box box-3">
-          <img src="@/assets/imgs/img_ecoa4.png" alt="">
-          <p>具备不同角色的提醒功能</p>
+          <img class="box-img" src="@/assets/imgs/img_ecoa4.png" alt="">
+          <p class="box-desc">提供从量表版权获取、翻译、语言验证、<span class="highlight">eCOA部署</span>、培训、数据质量分析等服务</p>
         </div>
       </div>
     </div>
@@ -110,19 +111,28 @@ export default {
     }
   }
   &-support {
-    height: 426px;
+    height: 480px;
     &-content {
       display: flex;
       max-width: $content-width;
       margin: 0 auto;
       justify-content: center;
-      height: 426px;
+      height: 480px;
       color: #00215f;
       &-box {
         flex: 1;
         text-align: center;
         padding-top: 100px;
         font-size: 18px;
+        .box-img {
+          width: 158px;
+          height: 158px;
+          margin-bottom: 48px;
+        }
+        .box-desc {
+          margin: 2px 0;
+          font-size: 18px;
+        }
         &.box-1,
         &.box-3 {
         }
@@ -133,15 +143,16 @@ export default {
     max-width: $content-width;
     margin: 0 auto;
     display: flex;
+    justify-content: center;
     &-wrap {
-      background: #ee8a1d;
+      background: #00215F;
     }
     &-left {
-      width: 720px;
-      height: 480px;
+      width: 548px;
+      height: 320px;
       img {
-        width: 720px;
-        height: 480px;
+        width: 548px;
+        height: 320px;
         object-fit: cover;
       }
     }

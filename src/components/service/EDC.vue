@@ -7,20 +7,20 @@
         <p class="eConsent-banner-title-2">电子数据采集</p>
       </div>
     </div>
-
     <div class="eConsent-support">
       <div class="eConsent-support-content">
         <div class="eConsent-support-content-box box-1">
-          <img src="@/assets/imgs/img_EDC2.png" alt="">
-          <p class="box-desc">快速实现eCRF设计比传统EDC节约30%时间</p>
+          <img class="box-img" src="@/assets/imgs/img_EDC2.png" alt="">
+          <p class="box-desc">快速实现eCRF设计</p>
+          <p class="box-desc">比传统EDC<span class="highlight">节约30%</span>时间</p>
         </div>
         <div class="eConsent-support-content-box box-2">
-          <img src="@/assets/imgs/img_EDC3.png" alt="">
-          <p class="box-desc">零编程实现复杂的逻辑核查</p>
+          <img class="box-img" src="@/assets/imgs/img_EDC3.png" alt="">
+          <p class="box-desc"><span class="highlight">零编程</span>实现复杂的逻辑核查</p>
         </div>
         <div class="eConsent-support-content-box box-3">
-          <img src="@/assets/imgs/img_EDC4.png" alt="">
-          <p class="box-desc">提供符合CDISC标准的多个治疗领域的eCRF模板库</p>
+          <img class="box-img" src="@/assets/imgs/img_EDC4.png" alt="">
+          <p class="box-desc">提供符合<span class="highlight">CDISC</span>标准的多个治疗领域的eCRF模板库</p>
         </div>
       </div>
     </div>
@@ -46,7 +46,7 @@
     </div>
     <div class="eConsent-connect">
       <div class="eConsent-connect-left">
-        <img src="@/assets/imgs/img_ctmsn7.png" alt="">
+        <img src="@/assets/imgs/lian.png" alt="">
       </div>
       <div class="eConsent-connect-right">
         <p>界面简洁大方，交互友好</p>
@@ -55,7 +55,6 @@
     </div>
   </div>
 </template>
-
 <script>
 export default {
   components: {},
@@ -73,7 +72,7 @@ export default {
 .eConsent {
   &-banner {
     height: 400px;
-    background: url("../../assets/imgs/img_eConsent1.png") center top no-repeat;
+    background: url("../../assets/imgs/img_EDC1.png") center top no-repeat;
     background-size:cover;
     &-title {
       position: relative;
@@ -146,21 +145,26 @@ export default {
     }
   }
   &-support {
-    height: 426px;
+    height: 456px;
     &-content {
       display: flex;
       max-width: $content-width;
       margin: 0 auto;
       justify-content: center;
-      height: 426px;
+      height: 456px;
       color: #00215f;
       &-box {
         flex: 1;
         text-align: center;
         padding-top: 100px;
         font-size: 18px;
+        .box-img {
+          width: 158px;
+          height: 158px;
+          margin-bottom: 48px;
+        }
         .box-desc {
-          margin-top: 57px;
+          margin: 2px 0;
           font-size: 18px;
         }
         &.box-1,
@@ -171,14 +175,19 @@ export default {
   }
   &-connect {
     max-width: $content-width;
-    margin: 40px auto;
+    margin: 100px auto;
     display: flex;
     justify-content: center;
     &-right {
       padding-left: 50px;
       display: flex;
+      color: #00215F;
       flex-direction: column;
       justify-content: center;
+      p{
+        text-align: center;
+        margin: 10px;
+      }
     }
   }
 }

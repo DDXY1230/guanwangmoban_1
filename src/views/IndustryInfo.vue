@@ -38,7 +38,7 @@ export default {
   &-banner {
     background: url("../assets/imgs/img_industryInfo1.png") no-repeat center;
     background-size:cover;
-    height: 300px;
+    height: 580px;
   }
   &-article {
     display: flex;

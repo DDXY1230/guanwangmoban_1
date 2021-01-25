@@ -7,34 +7,26 @@
         <p class="eConsent-banner-title-2">电子知情同意系统</p>
       </div>
     </div>
-    <div class="eConsent-desc">
-      <div class="eConsent-desc-item">
-        <img src="@/assets/imgs/img_eConsent2.png" alt="">
-        <p>
-          <svg-icon iconClass="arrow_hint_down"></svg-icon>
-        </p>
-        <p>改变受试者签署知情同意的全过程</p>
-      </div>
-      <div class="eConsent-desc-item">
-        <img src="@/assets/imgs/img_eConsent3.png" alt="">
-        <p>
-          <svg-icon iconClass="arrow_hint_down"></svg-icon>
-        </p>
-        <p>实现受试者对临床研究的充分知情</p>
-      </div>
-      <div class="eConsent-desc-item">
-        <img src="@/assets/imgs/img_eConsent4.png" alt="">
-        <p>
-          <svg-icon iconClass="arrow_hint_down"></svg-icon>
-        </p>
-        <p>知情同意全过程完全留痕</p>
+    <div class="eConsent-support-1">
+      <div class="eConsent-support-1-content">
+        <div class="eConsent-support-1-content-box box-1">
+          <img class="box-img" src="@/assets/imgs/img_eConsent2.png" alt="">
+          <p class="box-desc">改变受试者<span class="highlight">签署知情同意</span>的全过程</p>
+        </div>
+        <div class="eConsent-support-1-content-box box-2">
+          <img class="box-img" src="@/assets/imgs/img_eConsent3.png" alt="">
+          <p class="box-desc">实现受试者对临床研究的<span class="highlight">充分知情</span></p>
+        </div>
+        <div class="eConsent-support-1-content-box box-3">
+          <img class="box-img" src="@/assets/imgs/img_eConsent4.png" alt="">
+          <p class="box-desc">知情同意全过程<span class="highlight">完全留痕</span></p>
+        </div>
       </div>
     </div>
     <div class="eConsent-function-wrap">
     <div class="eConsent-function">
       <img class="eConsent-function-left" src="@/assets/imgs/img_eConsent5.png" alt="">
       <img class="eConsent-function-right" src="@/assets/imgs/img_eConsent6.png" alt="">
-
       <div class="eConsent-function-item">
         <img src="@/assets/imgs/img_eConsent7.png" alt="">
         <p class="desc">应用视频、动画、语音等富媒体辅助纯文本</p>
@@ -67,10 +59,11 @@
     </div>
     <div class="eConsent-connect">
       <div class="eConsent-connect-left">
-        <img src="@/assets/imgs/img_ctmsn7.png" alt="">
+        <img src="@/assets/imgs/lian.png" alt="">
       </div>
       <div class="eConsent-connect-right">
-        <p>与平台其他系统无缝整合,也可以对接外部系统</p>
+        <p>与平台其他系统无缝整合</p>
+        <p>也可以对接外部系统</p>
       </div>
     </div>
   </div>
@@ -164,9 +157,37 @@ export default {
       bottom: -40px;
     }
   }
+  &-support-1 {
+    height: 426px;
+    background: #fff;
+    &-content {
+      display: flex;
+      max-width: $content-width;
+      margin: 0 auto;
+      justify-content: center;
+      height: 300px;
+      color: #00215F;
+      &-box {
+        flex: 1;
+        text-align: center;
+        padding-top: 100px;
+        font-size: 18px;
+        .box-img {
+          width: 158px;
+          height: 158px;
+        }
+        p {
+          margin: 28px 0;
+        }
+        &.box-1,
+        &.box-3 {
+        }
+      }
+    }
+  }
   &-support {
     height: 300px;
-    background: #ee8a1d;
+    background: #00215F;
     &-content {
       display: flex;
       max-width: $content-width;
@@ -179,6 +200,10 @@ export default {
         text-align: center;
         padding-top: 40px;
         font-size: 18px;
+        .box-img {
+          width: 158px;
+          height: 158px;
+        }
         p {
           margin: 28px 0;
         }
@@ -190,14 +215,19 @@ export default {
   }
   &-connect {
     max-width: $content-width;
-    margin: 40px auto;
+    margin: 100px auto;
     display: flex;
     justify-content: center;
     &-right {
       padding-left: 50px;
+      color: #00215F;
       display: flex;
       flex-direction: column;
       justify-content: center;
+      p{
+        text-align: center;
+        margin: 10px;
+      }
     }
   }
 }

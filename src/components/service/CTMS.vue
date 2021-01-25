@@ -7,44 +7,46 @@
         <p class="ctms-banner-title-2">临床研究管理系统</p>
       </div>
     </div>
-    <div class="ctms-brief">
-      <div class="ctms-brief-left">
-        <img src="@/assets/imgs/img_ctmsn2.png" alt="">
-      </div>
-      <div class="ctms-brief-right">
-        <div class="ctms-brief-right-item">
-          <h4 class="ctms-brief-right-item-title">行业领先</h4>
-          <p class="ctms-brief-right-item-desc">
-            业内领先的CTMS系统，具备完善的功能模块
-          </p>
-        </div>
-        <div class="ctms-brief-right-item">
-          <h4 class="ctms-brief-right-item-title">全方位掌控</h4>
-          <p class="ctms-brief-right-item-desc">
-            简洁明了的仪表盘和报表，实现实时掌握项目的全方位进展
-          </p>
-        </div>
-        <div class="ctms-brief-right-item">
-          <h4 class="ctms-brief-right-item-title">快速上线</h4>
-          <p class="ctms-brief-right-item-desc">
-            内置多套功能模板，实现快速部署，平均1-2个月完成系统上线
-          </p>
-        </div>
-      </div>
-    </div>
     <div class="ctms-support">
       <div class="ctms-support-content">
         <div class="ctms-support-content-box box-1">
           <img class="box-img" src="@/assets/imgs/img_ctmsn3.png" alt="">
-          <p class="box-desc">同时支持PC端和移动端</p>
+          <p class="box-desc">同时支持<span class="highlight">PC端</span>和<span class="highlight">移动端</span></p>
         </div>
         <div class="ctms-support-content-box box-2">
           <img class="box-img" src="@/assets/imgs/img_ctmsn4.png" alt="">
-          <p class="box-desc">支持多语言、多时区和多种货币的转换</p>
+          <p class="box-desc">支持多语言、多时区和多种货币的<span class="highlight">转换</span></p>
         </div>
         <div class="ctms-support-content-box box-3">
           <img class="box-img" src="@/assets/imgs/img_ctmsn5.png" alt="">
-          <p class="box-desc">具备不同角色的提醒功能</p>
+          <p class="box-desc">具备<span class="highlight">不同角色</span>的提醒功能</p>
+        </div>
+      </div>
+    </div>
+    <div class="ctms-brief-wrap">
+      <div class="ctms-brief">
+        <div class="ctms-brief-left">
+          <img src="@/assets/imgs/img_ctmsn2.png" alt="">
+        </div>
+        <div class="ctms-brief-right">
+          <div class="ctms-brief-right-item">
+            <h4 class="ctms-brief-right-item-title">行业领先</h4>
+            <p class="ctms-brief-right-item-desc">
+              业内领先的CTMS系统，具备完善的功能模块
+            </p>
+          </div>
+          <div class="ctms-brief-right-item">
+            <h4 class="ctms-brief-right-item-title">全方位掌控</h4>
+            <p class="ctms-brief-right-item-desc">
+              简洁明了的仪表盘和报表，实现实时掌握项目的全方位进展
+            </p>
+          </div>
+          <div class="ctms-brief-right-item">
+            <h4 class="ctms-brief-right-item-title">快速上线</h4>
+            <p class="ctms-brief-right-item-desc">
+              内置多套功能模板，实现快速部署，平均1-2个月完成系统上线
+            </p>
+          </div>
         </div>
       </div>
     </div>
@@ -59,7 +61,7 @@
     </div>
     <div class="ctms-connect">
       <div class="ctms-connect-left">
-        <img src="@/assets/imgs/img_ctmsn7.png" alt="">
+        <img src="@/assets/imgs/lian.png" alt="">
       </div>
       <div class="ctms-connect-right">
         <p>与eTMF、EDC、RTSM等系统无缝整合</p>
@@ -86,7 +88,7 @@ export default {
   &-banner {
     height: 400px;
     background: url("../../assets/imgs/img_ctmsn1.png") center top no-repeat;
-    background-size:cover;
+    background-size: cover;
     &-title {
       position: relative;
       max-width: $content-width;
@@ -108,10 +110,42 @@ export default {
       }
     }
   }
+  &-support {
+    height: 426px;
+    background: #fff;
+    &-content {
+      display: flex;
+      max-width: $content-width;
+      margin: 0 auto;
+      justify-content: center;
+      height: 426px;
+      color: #00215F;
+      &-box {
+        flex: 1;
+        text-align: center;
+        padding-top: 100px;
+        font-size: 18px;
+        .box-img {
+          width: 158px;
+          height: 158px;
+        }
+        .box-desc {
+          margin-top: 63px;
+          font-size: 18px;
+        }
+        &.box-1,
+        &.box-3 {
+        }
+      }
+    }
+  }
   &-brief {
     max-width: $content-width;
     margin: 0 auto;
     display: flex;
+    &-wrap {
+      background: #00215f;
+    }
     &-left {
       width: 720px;
       height: 480px;
@@ -128,7 +162,7 @@ export default {
       flex-direction: column;
       justify-content: space-around;
       &-item {
-        color: #00215f;
+        color: #fff;
         border-left: 4px solid #f4bb78;
         padding-left: 16px;
         &-title {
@@ -137,36 +171,6 @@ export default {
         }
         &-desc {
           margin: 4px 0;
-        }
-      }
-    }
-  }
-  &-support {
-    height: 426px;
-    background: #9aa6c0;
-    &-content {
-      display: flex;
-      max-width: $content-width;
-      margin: 0 auto;
-      justify-content: center;
-      height: 426px;
-      color: #fff;
-      &-box {
-        flex: 1;
-        text-align: center;
-        padding-top: 100px;
-        font-size: 18px;
-        .box-img {
-          width: 158px;
-          height: 158px;
-        }
-        .box-desc {
-          margin-top: 63px;
-          font-size: 18px;
-        }
-        &.box-1,
-        &.box-3 {
-          background: #00215f;
         }
       }
     }
@@ -206,14 +210,19 @@ export default {
   }
   &-connect {
     max-width: $content-width;
-    margin: 40px auto;
+    margin: 100px auto;
     display: flex;
     justify-content: center;
     &-right {
       padding-left: 50px;
       display: flex;
+      color: #00215F;
       flex-direction: column;
       justify-content: center;
+      p{
+        text-align: center;
+        margin: 10px;
+      }
     }
   }
 }

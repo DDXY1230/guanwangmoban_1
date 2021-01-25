@@ -14,13 +14,16 @@
         <img src="@/assets/imgs/img_company2.png" alt="">
       </div>
       <div class="about-part1-right">
+        <div class="about-part1-right-content">
+
         <p class="about-part1-right-text">
           易临云的临床研究云平台是自主研发的端到端无缝整合一体化平台，包括<span class="highlight">电子知情同意eConsent、电子数据采集EDC、随机与药物管理RTSM、电子临床结局评估eCOA、临床研究项目管理系统CTMS、电子化试验主文档管理eTMF、基于风险的监查系统RBM、虚拟化临床研究Virtual Trial</span>等。
         </p>
         <p class="about-part1-right-text">
           通过易临云的专业化解决方案，为制药企业、医疗器械公司、研究机构加速新药研发的进程、缩减临床研究的成本、降低临床研究的风险。
         </p>
-        <div class="about-part1-right-mask"></div>
+        </div>
+
       </div>
     </div>
     <div class="about-part2-wrap">
@@ -71,12 +74,12 @@ export default {
     color: #ee8a1d;
   }
   &-banner {
-    height: 800px;
+    height: 580px;
     background: url("../assets/imgs/img_company1.png") center top no-repeat;
-    background-size:cover;
+    background-size: cover;
     &-content {
       max-width: $content-width;
-      height: 800px;
+      height: 580px;
       position: relative;
       margin: 0 auto;
       &-brief {
@@ -116,19 +119,13 @@ export default {
       display: flex;
       flex-direction: column;
       justify-content: center;
-      position: relative;
+      &-content {
+        background: #eeeeee;
+        padding: 27px;
+      }
       &-text {
         max-width: 600px;
         z-index: 100;
-      }
-      &-mask {
-        height: 216px;
-        width: 100%;
-        background: #eee;
-        position: absolute;
-        z-index: 1;
-        left: 15px;
-        top: 220px;
       }
     }
   }

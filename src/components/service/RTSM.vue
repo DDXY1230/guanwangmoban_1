@@ -7,49 +7,54 @@
         <p class="eConsent-banner-title-2">随机与药物管理</p>
       </div>
     </div>
-    <div class="eConsent-desc">
-      <div class="eConsent-desc-item">
-        <img src="@/assets/imgs/img_RTSM2.png" alt="">
-        <p>
-          <svg-icon iconClass="arrow_hint_down"></svg-icon>
-        </p>
-        <p>支持多种随机方法</p>
-      </div>
-      <div class="eConsent-desc-item">
-        <img src="@/assets/imgs/img_RTSM3.png" alt="">
-        <p>
-          <svg-icon iconClass="arrow_hint_down"></svg-icon>
-        </p>
-        <p>零编程快速实现随机和药物管理的配置</p>
-      </div>
-      <div class="eConsent-desc-item">
-        <img src="@/assets/imgs/img_RTSM4.png" alt="">
-        <p>
-          <svg-icon iconClass="arrow_hint_down"></svg-icon>
-        </p>
-        <p>90%以上的项目可在三小时内完成部署</p>
-      </div>
-    </div>
+  
     <div class="eConsent-support">
       <div class="eConsent-support-content">
         <div class="eConsent-support-content-box box-1">
-          <img src="@/assets/imgs/img_RTSM5.png" alt="">
-          <p>药物发放模块具备预测功能</p>
+          <img class="box-img" src="@/assets/imgs/img_RTSM5.png" alt="">
+          <p>药物发放模块具备<span class="highlight">预测</span>功能</p>
           <p>最大可能的减少药物的浪费</p>
         </div>
         <div class="eConsent-support-content-box box-2">
-          <img src="@/assets/imgs/img_RTSM6.png" alt="">
-          <p>严格的角色配置和权限管理</p>
+          <img class="box-img" src="@/assets/imgs/img_RTSM6.png" alt="">
+          <p>严格的<span class="highlight">角色配置</span>和<span class="highlight">权限管理</span></p>
         </div>
         <div class="eConsent-support-content-box box-3">
-          <img src="@/assets/imgs/img_RTSM7.png" alt="">
-          <p>提供7*24小时桌面支持</p>
+          <img class="box-img" src="@/assets/imgs/img_RTSM7.png" alt="">
+          <p>提供<span class="highlight">7*24小时</span>桌面支持</p>
         </div>
       </div>
     </div>
+
+    <div class="eConsent-desc-wrap">
+      <div class="eConsent-desc">
+      <div class="eConsent-desc-item">
+        <img src="@/assets/imgs/img_RTSM2.png" alt="">
+        <!-- <p>
+          <svg-icon iconClass="arrow_hint_down"></svg-icon>
+        </p> -->
+        <p class="eConsent-desc-item-text">支持多种随机方法</p>
+      </div>
+      <div class="eConsent-desc-item">
+        <img src="@/assets/imgs/img_RTSM3.png" alt="">
+        <!-- <p>
+          <svg-icon iconClass="arrow_hint_down"></svg-icon>
+        </p> -->
+        <p class="eConsent-desc-item-text">零编程快速实现随机和药物管理的配置</p>
+      </div>
+      <div class="eConsent-desc-item">
+        <img src="@/assets/imgs/img_RTSM4.png" alt="">
+        <!-- <p>
+          <svg-icon iconClass="arrow_hint_down"></svg-icon>
+        </p> -->
+        <p class="eConsent-desc-item-text">90%以上的项目可在三小时内完成部署</p>
+      </div>
+    </div>
+    </div>
+
     <div class="eConsent-connect">
       <div class="eConsent-connect-left">
-        <img src="@/assets/imgs/img_ctmsn7.png" alt="">
+        <img src="@/assets/imgs/lian.png" alt="">
       </div>
       <div class="eConsent-connect-right">
         <p>与EDC、CTMS等系统无缝整合，也可与外部系统整合</p>
@@ -100,12 +105,21 @@ export default {
   }
   &-desc {
     max-width: $content-width;
-    margin: 40px auto;
+    margin: 0 auto;
     display: flex;
     justify-content: space-around;
     text-align: center;
-    color: #00215f;
+    color: #fff;
     font-size: 18px;
+    &-wrap {
+      background: #00215f;
+      padding: 68px 0 71px;
+    }
+    &-item {
+      &-text {
+        margin: 43px 0;
+      }
+    }
   }
   &-function {
     max-width: 1280px;
@@ -147,20 +161,28 @@ export default {
     }
   }
   &-support {
-    height: 426px;
-    background: #00215F;
+    height: 456px;
+    background: #fff;
     &-content {
       display: flex;
       max-width: $content-width;
       margin: 0 auto;
       justify-content: center;
       height: 426px;
-      color: #fff;
+      color: #00215F;
       &-box {
         flex: 1;
         text-align: center;
-        padding-top: 100px;
+        padding: 100px 0;
         font-size: 18px;
+        .box-img {
+          width: 158px;
+          height: 158px;
+          margin-bottom: 48px;
+        }
+        p {
+          margin: 2px 0;
+        }
         &.box-1,
         &.box-3 {
         }
@@ -169,14 +191,19 @@ export default {
   }
   &-connect {
     max-width: $content-width;
-    margin: 40px auto;
+    margin: 100px auto;
     display: flex;
     justify-content: center;
     &-right {
       padding-left: 50px;
+      color: #00215F;
       display: flex;
       flex-direction: column;
       justify-content: center;
+      p{
+        text-align: center;
+        margin: 10px;
+      }
     }
   }
 }

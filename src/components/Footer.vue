@@ -23,7 +23,7 @@ export default {
 </script>
 <style lang="scss" scoped>
 .footer {
-  background: #454545;
+  background: #00215F;
   color: #fff;
   text-align: center;
   padding: 50px 0;

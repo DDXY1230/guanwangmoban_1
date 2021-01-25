@@ -4,7 +4,6 @@
     <Header></Header>
     <div class="main">
       <router-view/>
-      <svg-icon iconClass="close"></svg-icon>
     </div>
     <Footer></Footer>
     <quick-to-top></quick-to-top>
@@ -47,5 +46,8 @@ body {
   min-height: calc(100vh - 120px);
   // border: 1px solid transparent;
   box-sizing: border-box;
+}
+.highlight {
+    color: #ee8a1d;
 }
 </style>
