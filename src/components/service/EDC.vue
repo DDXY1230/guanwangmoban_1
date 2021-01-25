@@ -115,7 +115,7 @@ export default {
     &-wrap {
       width: 100%;
       overflow: hidden;
-      background: #ee8a1d;
+      background: #00215F;
     }
     &-item {
       max-width: 640px;
