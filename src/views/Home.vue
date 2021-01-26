@@ -8,7 +8,7 @@
           <p class="left-desc">
             leverage innovative technology for patients to access effective treatment
           </p>
-          <span class="left-more" @click="contactUs()">联系我们 ></span>
+          <!-- <span class="left-more" @click="contactUs()">联系我们 ></span> -->
         </div>
         <div class="home-banner-content-right">
           <!-- <img src="@/assets/imgs/人物.png" alt="" /> -->

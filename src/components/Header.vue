@@ -2,7 +2,7 @@
   <div class="header">
     <div class="header-content">
       <div class="left">
-        <img class="yly-icon" src="@/assets/imgs/logo.png" alt="" />
+        <img class="yly-logo" src="@/assets/imgs/logo.png" alt="" />
       </div>
       <div class="center">
         <!-- web端菜单 -->
@@ -148,8 +148,12 @@ export default {
       width: 100px;
       align-items: center;
       display: flex;
-      background-color: #00215f;
+      // background-color: #00215f;
       padding: 0 30px;
+      .yly-logo {
+        width: 120px;
+        height: 60px;
+      }
     }
     .center {
       flex: 1;
@@ -159,6 +163,7 @@ export default {
       width: 60px;
       align-items: center;
       display: flex;
+      font-size: 18px;
       span {
         cursor: pointer;
       }
@@ -176,6 +181,7 @@ export default {
 }
 .el-menu-item {
   padding: 0 42px;
+  font-size: 18px;
 }
 .el-menu.el-menu--horizontal > .el-menu-item {
   height: 100px;
