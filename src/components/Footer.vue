@@ -1,6 +1,6 @@
 <template>
   <div class="footer">
-    <img src="@/assets/imgs/logo.png" alt="">
+    <img src="@/assets/imgs/logo2.png" alt="">
     <p>© 2020-2020 易临云（深圳）科技有限公司 版权所有 粤ICP备20068916号.</p>
     <p>
       <svg-icon iconClass="phone"></svg-icon>
