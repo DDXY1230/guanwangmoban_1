@@ -2,7 +2,7 @@
   <div class="header">
     <div class="header-content">
       <div class="left">
-        <img class="yly-logo" src="@/assets/imgs/logo.png" alt="" />
+        <img class="yly-logo" src="@/assets/imgs/ECC_Logo.png" alt="" />
       </div>
       <div class="center">
         <!-- web端菜单 -->
@@ -190,6 +190,7 @@ export default {
 ::v-deep .el-menu--horizontal > .el-submenu .el-submenu__title {
   height: 100px;
   line-height: 100px;
+  font-size: 18px !important;
 }
 .el-menu.el-menu--horizontal > .el-menu-item.is-active {
   background-color: #00215f !important;

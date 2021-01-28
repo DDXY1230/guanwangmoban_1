@@ -11,39 +11,42 @@
       <div class="eConsent-support-1-content">
         <div class="eConsent-support-1-content-box box-1">
           <img class="box-img" src="@/assets/imgs/img_eConsent2.png" alt="">
+          <h4 class="box-strong">多端协作</h4>
           <p class="box-desc">改变受试者<span class="highlight">签署知情同意</span>的全过程</p>
         </div>
         <div class="eConsent-support-1-content-box box-2">
           <img class="box-img" src="@/assets/imgs/img_eConsent3.png" alt="">
+          <h4 class="box-strong">多端协作</h4>
           <p class="box-desc">实现受试者对临床研究的<span class="highlight">充分知情</span></p>
         </div>
         <div class="eConsent-support-1-content-box box-3">
           <img class="box-img" src="@/assets/imgs/img_eConsent4.png" alt="">
+          <h4 class="box-strong">多端协作</h4>
           <p class="box-desc">知情同意全过程<span class="highlight">完全留痕</span></p>
         </div>
       </div>
     </div>
     <div class="eConsent-function-wrap">
-    <div class="eConsent-function">
-      <img class="eConsent-function-left" src="@/assets/imgs/img_eConsent5.png" alt="">
-      <img class="eConsent-function-right" src="@/assets/imgs/img_eConsent6.png" alt="">
-      <div class="eConsent-function-item">
-        <img src="@/assets/imgs/img_eConsent7.png" alt="">
-        <p class="desc">应用视频、动画、语音等富媒体辅助纯文本</p>
+      <div class="eConsent-function">
+        <img class="eConsent-function-left" src="@/assets/imgs/img_eConsent5.png" alt="">
+        <img class="eConsent-function-right" src="@/assets/imgs/img_eConsent6.png" alt="">
+        <div class="eConsent-function-item">
+          <img src="@/assets/imgs/img_eConsent7.png" alt="">
+          <p class="desc">应用视频、动画、语音等富媒体辅助纯文本</p>
+        </div>
+        <div class="eConsent-function-item">
+          <img src="@/assets/imgs/img_eConsent8.png" alt="">
+          <p class="desc">支持远程签署知情同意书</p>
+        </div>
+        <div class="eConsent-function-item">
+          <img src="@/assets/imgs/img_eConsent9.png" alt="">
+          <p class="desc">支持监护人和受试者都签署知情同意书</p>
+        </div>
+        <div class="eConsent-function-item">
+          <img src="@/assets/imgs/img_eConsent10.png" alt="">
+          <p class="desc">支持纯电子签名、打印手动签名、以及混合模式</p>
+        </div>
       </div>
-      <div class="eConsent-function-item">
-        <img src="@/assets/imgs/img_eConsent8.png" alt="">
-        <p class="desc">支持远程签署知情同意书</p>
-      </div>
-      <div class="eConsent-function-item">
-        <img src="@/assets/imgs/img_eConsent9.png" alt="">
-        <p class="desc">支持监护人和受试者都签署知情同意书</p>
-      </div>
-      <div class="eConsent-function-item">
-        <img src="@/assets/imgs/img_eConsent10.png" alt="">
-        <p class="desc">支持纯电子签名、打印手动签名、以及混合模式</p>
-      </div>
-    </div>
     </div>
     <div class="eConsent-support">
       <div class="eConsent-support-content">
@@ -62,8 +65,8 @@
         <img src="@/assets/imgs/lian.png" alt="">
       </div>
       <div class="eConsent-connect-right">
-        <p>与平台其他系统无缝整合</p>
-        <p>也可以对接外部系统</p>
+        <p class="eConsent-connect-right-strong">多系统协作</p>
+        <p class="eConsent-connect-right-text">与平台<span class="highlight">其他系统</span>无缝整合，也可以对接外部系统</p>
       </div>
     </div>
   </div>
@@ -87,7 +90,7 @@ export default {
   &-banner {
     height: 400px;
     background: url("../../assets/imgs/img_eConsent1.png") center top no-repeat;
-    background-size:cover;
+    background-size: cover;
     &-title {
       position: relative;
       max-width: $content-width;
@@ -139,9 +142,10 @@ export default {
         text-align: center;
         position: absolute;
         margin: 0;
-        bottom: 20px;
+        bottom: 16px;
+        font-size: 24px;
       }
-      img{
+      img {
         width: 100%;
         object-fit: cover;
       }
@@ -158,7 +162,7 @@ export default {
     }
   }
   &-support-1 {
-    height: 426px;
+    height: 486px;
     background: #fff;
     &-content {
       display: flex;
@@ -166,7 +170,7 @@ export default {
       margin: 0 auto;
       justify-content: center;
       height: 300px;
-      color: #00215F;
+      color: #00215f;
       &-box {
         flex: 1;
         text-align: center;
@@ -176,8 +180,13 @@ export default {
           width: 158px;
           height: 158px;
         }
-        p {
-          margin: 28px 0;
+        .box-strong {
+          margin: 40px 0 10px;
+          font-size: 36px;
+        }
+        .box-desc {
+          margin: 0;
+          font-size: 20px;
         }
         &.box-1,
         &.box-3 {
@@ -186,8 +195,8 @@ export default {
     }
   }
   &-support {
-    height: 300px;
-    background: #00215F;
+    height: 350px;
+    background: #00215f;
     &-content {
       display: flex;
       max-width: $content-width;
@@ -198,8 +207,8 @@ export default {
       &-box {
         flex: 1;
         text-align: center;
-        padding-top: 40px;
-        font-size: 18px;
+        padding-top: 60px;
+        font-size: 24px;
         .box-img {
           width: 158px;
           height: 158px;
@@ -220,13 +229,22 @@ export default {
     justify-content: center;
     &-right {
       padding-left: 50px;
-      color: #00215F;
+      color: #00215f;
       display: flex;
       flex-direction: column;
       justify-content: center;
-      p{
+      p {
         text-align: center;
-        margin: 10px;
+      }
+      &-strong {
+        font-size: 36px;
+        margin: 0;
+        font-weight: 700;
+      }
+      &-text {
+        text-align: center;
+        margin: 10px 10px 0;
+        font-size: 20px;
       }
     }
   }

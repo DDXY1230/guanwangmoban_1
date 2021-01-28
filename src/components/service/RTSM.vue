@@ -12,16 +12,19 @@
       <div class="eConsent-support-content">
         <div class="eConsent-support-content-box box-1">
           <img class="box-img" src="@/assets/imgs/img_RTSM5.png" alt="">
-          <p>药物发放模块具备<span class="highlight">预测</span>功能</p>
-          <p>最大可能的减少药物的浪费</p>
+          <h4 class="box-strong">准确预测</h4>
+          <p class="box-desc">药物发放模块具备<span class="highlight">预测</span>功能</p>
+          <p class="box-desc">最大可能的减少药物的浪费</p>
         </div>
         <div class="eConsent-support-content-box box-2">
           <img class="box-img" src="@/assets/imgs/img_RTSM6.png" alt="">
-          <p>严格的<span class="highlight">角色配置</span>和<span class="highlight">权限管理</span></p>
+          <h4 class="box-strong">角色分明</h4>
+          <p class="box-desc">严格的<span class="highlight">角色配置</span>和<span class="highlight">权限管理</span></p>
         </div>
         <div class="eConsent-support-content-box box-3">
           <img class="box-img" src="@/assets/imgs/img_RTSM7.png" alt="">
-          <p>提供<span class="highlight">7*24小时</span>桌面支持</p>
+          <h4 class="box-strong">即时支持</h4>
+          <p class="box-desc">提供<span class="highlight">7*24小时</span>桌面支持</p>
         </div>
       </div>
     </div>
@@ -40,7 +43,8 @@
         <!-- <p>
           <svg-icon iconClass="arrow_hint_down"></svg-icon>
         </p> -->
-        <p class="eConsent-desc-item-text">零编程快速实现随机和药物管理的配置</p>
+        <p class="eConsent-desc-item-text">零编程快速实现</p>
+        <p class="eConsent-desc-item-text">随机和药物管理的配置</p>
       </div>
       <div class="eConsent-desc-item">
         <img src="@/assets/imgs/img_RTSM4.png" alt="">
@@ -57,7 +61,8 @@
         <img src="@/assets/imgs/lian.png" alt="">
       </div>
       <div class="eConsent-connect-right">
-        <p>与EDC、CTMS等系统无缝整合，也可与外部系统整合</p>
+        <p class="eConsent-connect-right-strong">多系统协作</p>
+        <p class="eConsent-connect-right-text">与<span class="highlight">EDC、CTMS</span>等系统无缝整合，也可与外部系统整合</p>
       </div>
     </div>
   </div>
@@ -78,6 +83,7 @@ export default {
 </script>
 <style lang='scss' scoped>
 .eConsent {
+  font-size: 18px;
   &-banner {
     height: 400px;
     background: url("../../assets/imgs/img_RTSM1.png") center top no-repeat;
@@ -110,14 +116,17 @@ export default {
     justify-content: space-around;
     text-align: center;
     color: #fff;
-    font-size: 18px;
+    font-size: 24px;
     &-wrap {
       background: #00215f;
       padding: 68px 0 71px;
     }
     &-item {
+      img {
+        margin-bottom: 43px;
+      }
       &-text {
-        margin: 43px 0;
+        margin:  0;
       }
     }
   }
@@ -161,7 +170,7 @@ export default {
     }
   }
   &-support {
-    height: 456px;
+    height: 514px;
     background: #fff;
     &-content {
       display: flex;
@@ -178,10 +187,14 @@ export default {
         .box-img {
           width: 158px;
           height: 158px;
-          margin-bottom: 48px;
         }
-        p {
-          margin: 2px 0;
+        .box-strong {
+          margin: 40px 0 10px;
+          font-size: 36px;
+        }
+        .box-desc {
+          margin: 0;
+          font-size: 20px;
         }
         &.box-1,
         &.box-3 {
@@ -200,9 +213,18 @@ export default {
       display: flex;
       flex-direction: column;
       justify-content: center;
-      p{
+      p {
         text-align: center;
-        margin: 10px;
+      }
+      &-strong {
+        font-size: 36px;
+        margin: 0;
+        font-weight: 700;
+      }
+      &-text {
+        text-align: center;
+        margin: 10px 10px 0;
+        font-size: 20px;
       }
     }
   }

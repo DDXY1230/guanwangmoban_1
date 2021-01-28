@@ -11,16 +11,21 @@
       <div class="eCOA-support-content">
         <div class="eCOA-support-content-box box-1">
           <img class="box-img" src="@/assets/imgs/img_ecoa2.png" alt="">
+          <h4 class="box-strong">多端协作</h4>
           <p class="box-desc">业内<span class="highlight">最快</span>实现eCOA部署</p>
           <p class="box-desc">平均在4周完成上线</p>
         </div>
         <div class="eCOA-support-content-box box-2">
           <img class="box-img" src="@/assets/imgs/img_ecoa3.png" alt="">
-          <p class="box-desc">实施团队具有丰富的<span class="highlight">国际大型eCOA项目</span>经验</p>
+          <h4 class="box-strong">多端协作</h4>
+          <p class="box-desc">实施团队具有丰富的</p>
+          <p class="box-desc"><span class="highlight">国际大型eCOA项目</span>经验</p>
         </div>
         <div class="eCOA-support-content-box box-3">
           <img class="box-img" src="@/assets/imgs/img_ecoa4.png" alt="">
-          <p class="box-desc">提供从量表版权获取、翻译、语言验证、<span class="highlight">eCOA部署</span>、培训、数据质量分析等服务</p>
+          <h4 class="box-strong">多端协作</h4>
+          <p class="box-desc">提供从量表版权获取、翻译、语言验证、</p>
+          <p class="box-desc"><span class="highlight">eCOA部署</span>、培训、数据质量分析等服务</p>
         </div>
       </div>
     </div>
@@ -88,7 +93,7 @@ export default {
   &-banner {
     height: 400px;
     background: url("../../assets/imgs/img_ecoa1.png") center top no-repeat;
-    background-size:cover;
+    background-size: cover;
     &-title {
       position: relative;
       max-width: $content-width;
@@ -111,7 +116,7 @@ export default {
     }
   }
   &-support {
-    height: 480px;
+    height: 514px;
     &-content {
       display: flex;
       max-width: $content-width;
@@ -127,11 +132,14 @@ export default {
         .box-img {
           width: 158px;
           height: 158px;
-          margin-bottom: 48px;
+        }
+        .box-strong {
+          margin: 40px 0 10px;
+          font-size: 36px;
         }
         .box-desc {
-          margin: 2px 0;
-          font-size: 18px;
+          margin: 0;
+          font-size: 20px;
         }
         &.box-1,
         &.box-3 {
@@ -143,16 +151,15 @@ export default {
     max-width: $content-width;
     margin: 0 auto;
     display: flex;
-    justify-content: center;
     &-wrap {
-      background: #00215F;
+      background: #00215f;
     }
     &-left {
-      width: 548px;
-      height: 320px;
+      width: 640px;
+      height: 380px;
       img {
-        width: 548px;
-        height: 320px;
+        width: 640px;
+        height: 380px;
         object-fit: cover;
       }
     }
@@ -163,37 +170,35 @@ export default {
       padding-left: 60px;
     }
     &-right {
-      padding: 20px;
+      padding:40px 20px;
       display: flex;
       flex-direction: column;
       justify-content: center;
+      box-sizing: border-box;
       &-item {
         color: #fff;
-        margin: 30px 0;
-        &-title {
-          margin: 4px;
-          font-size: 24px;
-        }
+        margin: 22px 0;
         &-desc {
+          font-size: 24px;
           margin: 4px;
         }
       }
     }
   }
   &-provide {
-    max-width: 1280px;
+    max-width: $content-width;
     height: 378px;
     display: flex;
     margin: 0 auto 160px;
     position: relative;
-    &-img-1{
+    &-img-1 {
       position: absolute;
       left: -165px;
       top: 10px;
     }
-    &-img-2{
+    &-img-2 {
       position: absolute;
-      left: 200px;
+      left: 315px;
       bottom: -140px;
     }
     &-left {
@@ -222,6 +227,10 @@ export default {
         justify-content: center;
         text-align: center;
         color: #fff;
+        font-size: 24px;
+        p {
+          margin: 10px;
+        }
       }
     }
     &-right {

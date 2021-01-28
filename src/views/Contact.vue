@@ -21,11 +21,11 @@
           深圳研发中心
         </span>
         <p class="contact-location-right-icon">
-          <svg-icon iconClass="icon_dingwei"></svg-icon>
+          <svg-icon iconClass="icon_dingwei" style="font-size: 40px"></svg-icon>
         </p>
         <p>广东省深圳市深圳湾科技生态园12栋B座2楼13号</p>
         <p class="contact-location-right-icon">
-          <svg-icon iconClass="icon_mail2"></svg-icon>
+          <svg-icon iconClass="icon_mail2" style="font-size: 40px"></svg-icon>
         </p>
         <p>huangyamei@eclincloud.com</p>
         <p class="contact-location-right-number">0755-22671619</p>
@@ -41,11 +41,11 @@
           成都研发中心
         </span>
         <p class="contact-location-right-icon">
-          <svg-icon iconClass="icon_dingwei"></svg-icon>
+          <svg-icon iconClass="icon_dingwei" style="font-size: 40px"></svg-icon>
         </p>
         <p>四川省成都市武侯区武侯大道双楠段112号武侯庭园E3座</p>
         <p class="contact-location-right-icon">
-          <svg-icon iconClass="icon_mail2"></svg-icon>
+          <svg-icon iconClass="icon_mail2" style="font-size: 40px"></svg-icon>
         </p>
         <p>huangyamei@eclincloud.com</p>
         <p class="contact-location-right-number">028-67136918</p>
@@ -84,6 +84,7 @@ export default {
 </script>
 <style lang="scss" scoped>
 .contact {
+  font-size: 18px;
   &-banner {
     background: url("../assets/imgs/img_conus1.png") no-repeat center #000d26;
     height: 580px;

@@ -11,14 +11,17 @@
       <div class="ctms-support-content">
         <div class="ctms-support-content-box box-1">
           <img class="box-img" src="@/assets/imgs/img_ctmsn3.png" alt="">
+          <h4 class="box-strong">多端协作</h4>
           <p class="box-desc">同时支持<span class="highlight">PC端</span>和<span class="highlight">移动端</span></p>
         </div>
         <div class="ctms-support-content-box box-2">
           <img class="box-img" src="@/assets/imgs/img_ctmsn4.png" alt="">
+          <h4 class="box-strong">多区转换</h4>
           <p class="box-desc">支持多语言、多时区和多种货币的<span class="highlight">转换</span></p>
         </div>
         <div class="ctms-support-content-box box-3">
           <img class="box-img" src="@/assets/imgs/img_ctmsn5.png" alt="">
+          <h4 class="box-strong">角色明确</h4>
           <p class="box-desc">具备<span class="highlight">不同角色</span>的提醒功能</p>
         </div>
       </div>
@@ -64,7 +67,8 @@
         <img src="@/assets/imgs/lian.png" alt="">
       </div>
       <div class="ctms-connect-right">
-        <p>与eTMF、EDC、RTSM等系统无缝整合</p>
+        <p class="ctms-connect-right-strong">多系统协作</p>
+        <p class="ctms-connect-right-text">与<span class="highlight">eTMF、EDC、RTSM</span>等系统无缝整合</p>
       </div>
     </div>
   </div>
@@ -111,7 +115,7 @@ export default {
     }
   }
   &-support {
-    height: 426px;
+    height: 486px;
     background: #fff;
     &-content {
       display: flex;
@@ -119,7 +123,7 @@ export default {
       margin: 0 auto;
       justify-content: center;
       height: 426px;
-      color: #00215F;
+      color: #00215f;
       &-box {
         flex: 1;
         text-align: center;
@@ -129,9 +133,13 @@ export default {
           width: 158px;
           height: 158px;
         }
+        .box-strong {
+          margin: 40px 0 10px;
+          font-size: 36px;
+        }
         .box-desc {
-          margin-top: 63px;
-          font-size: 18px;
+          margin: 0;
+          font-size: 20px;
         }
         &.box-1,
         &.box-3 {
@@ -147,30 +155,41 @@ export default {
       background: #00215f;
     }
     &-left {
-      width: 720px;
-      height: 480px;
+      width: 540px;
+      height: 584px;
       img {
-        width: 720px;
-        height: 480px;
+        width: 540px;
+        height: 584px;
         object-fit: cover;
       }
     }
     &-right {
       float: 1;
-      padding: 50px 0 50px 50px;
+      padding: 50px 0 50px 100px;
       display: flex;
       flex-direction: column;
       justify-content: space-around;
       &-item {
         color: #fff;
-        border-left: 4px solid #f4bb78;
         padding-left: 16px;
         &-title {
           margin: 4px 0;
-          font-size: 24px;
+          font-size: 36px;
+          position: relative;
+          &::before {
+            width: 19px;
+            height: 19px;
+            display: inline-block;
+            content: "";
+            background-color: #ee8a1d;
+            position: absolute;
+            left: -38px;
+            top: 18px;
+          }
         }
         &-desc {
           margin: 4px 0;
+          font-size: 20px;
         }
       }
     }
@@ -187,9 +206,8 @@ export default {
       background: #ee8a1d;
       position: absolute;
       color: #fff;
-      font-size: 18px;
+      font-size: 24px;
       box-sizing: border-box;
-      font-family: "PingFangSC-Regular", "PingFang SC";
       &.desc-left {
         left: 0;
         top: 100px;
@@ -216,12 +234,21 @@ export default {
     &-right {
       padding-left: 50px;
       display: flex;
-      color: #00215F;
+      color: #00215f;
       flex-direction: column;
       justify-content: center;
-      p{
+      p {
         text-align: center;
-        margin: 10px;
+      }
+      &-strong {
+        font-size: 36px;
+        margin: 0;
+        font-weight: 700;
+      }
+      &-text {
+        text-align: center;
+        margin: 10px 10px 0;
+        font-size: 20px;
       }
     }
   }

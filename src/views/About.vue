@@ -15,13 +15,14 @@
       </div>
       <div class="about-part1-right">
         <div class="about-part1-right-content">
-
-        <p class="about-part1-right-text">
-          易临云的临床研究云平台是自主研发的端到端无缝整合一体化平台，包括<span class="highlight">电子知情同意eConsent、电子数据采集EDC、随机与药物管理RTSM、电子临床结局评估eCOA、临床研究项目管理系统CTMS、电子化试验主文档管理eTMF、基于风险的监查系统RBM、虚拟化临床研究Virtual Trial</span>等。
-        </p>
-        <p class="about-part1-right-text">
-          通过易临云的专业化解决方案，为制药企业、医疗器械公司、研究机构加速新药研发的进程、缩减临床研究的成本、降低临床研究的风险。
-        </p>
+          <img class="about-part1-right-content-zuoyinhao" src="@/assets/imgs/zuoyinhao.png" alt="">
+          <h3 class="about-part1-right-content-title">一体化平台</h3>
+          <p class="about-part1-right-text">
+            易临云的临床研究云平台是自主研发的端到端无缝整合一体化平台，包括<span class="highlight">电子知情同意eConsent、电子数据采集EDC、随机与药物管理RTSM、电子临床结局评估eCOA、临床研究项目管理系统CTMS、电子化试验主文档管理eTMF、基于风险的监查系统RBM、虚拟化临床研究Virtual Trial</span>等。
+          </p>
+          <p class="about-part1-right-text">
+            通过易临云的专业化解决方案，为制药企业、医疗器械公司、研究机构加速新药研发的进程、缩减临床研究的成本、降低临床研究的风险。
+          </p>
         </div>
 
       </div>
@@ -30,7 +31,8 @@
       <div class="about-part2">
         <div class="about-part2-content">
           <div class="about-part2-content-left">
-            <p>为了更好地服务中国企业的国际化以及外资企业的全球化战略，公司与全球领先的临床研究系统供应商建立战略合作关系（大中华区独家合作伙伴）；与不同治疗领域的意见领袖深度合作，提供从方案优化到数据收集和管理、风险管理等解决方案：</p>
+            <h3 class="about-part2-content-left-title">解决方案</h3>
+            <p class="about-part2-content-left-text">为了更好地服务中国企业的国际化以及外资企业的全球化战略，公司与全球领先的临床研究系统供应商建立战略合作关系（大中华区独家合作伙伴）；与不同治疗领域的意见领袖深度合作，提供从方案优化到数据收集和管理、风险管理等解决方案：</p>
             <p class="highlight">
               比如中心影像评估Central Imaging、<br>
               心脏安全Cardiac Safety、<br>
@@ -86,18 +88,18 @@ export default {
         color: #00215f;
         position: absolute;
         width: 748px;
-        height: 140px;
-        background: rgba(255, 255, 255, 0.8);
-        bottom: 50px;
-        right: 0;
+        height: 154px;
+        background: #fff;
+        bottom: 20px;
+        left: 0;
         padding: 20px 22px;
         box-sizing: border-box;
         &-title {
-          font-size: 28px;
+          font-size: 36px;
           margin: 0 0 10px;
         }
         &-desc {
-          font-size: 18px;
+          font-size: 20px;
           margin: 0;
         }
       }
@@ -108,6 +110,7 @@ export default {
     margin: 30px 0;
     width: 100%;
     overflow: hidden;
+    color: #00215F;
     &-left {
       flex: 1;
       padding-right: 50px;
@@ -121,7 +124,20 @@ export default {
       justify-content: center;
       &-content {
         background: #eeeeee;
-        padding: 27px;
+        padding: 35px 61px;
+        position: relative;
+        font-size: 18px;
+        &-zuoyinhao {
+          position: absolute;
+          top: -15px;
+          left: 20px;
+        }
+        &-title {
+          position: absolute;
+          top: -61px;
+          left: 61px;
+          font-size: 36px;
+        }
       }
       &-text {
         max-width: 600px;
@@ -176,6 +192,15 @@ export default {
         color: #00215f;
         font-size: 18px;
         padding-left: 32px;
+        &-title {
+          position: absolute;
+          top: -61px;
+          left: 34px;
+          font-size: 36px;
+        }
+        &-text {
+          margin: 30px 0 0;
+        }
       }
       &-right {
         flex: 1;
@@ -193,6 +218,7 @@ export default {
     height: 336px;
     display: flex;
     margin: 50px auto;
+    font-size: 18px;
     &-left {
       flex: 1;
       background: #00215f;

@@ -5,9 +5,9 @@
         <div class="home-banner-content-left">
           <h2 class="left-title">以科技创新</h2>
           <h2 class="left-second-title">为病人带来有效治疗</h2>
-          <p class="left-desc">
+          <!-- <p class="left-desc">
             leverage innovative technology for patients to access effective treatment
-          </p>
+          </p> -->
           <!-- <span class="left-more" @click="contactUs()">联系我们 ></span> -->
         </div>
         <div class="home-banner-content-right">
@@ -18,7 +18,7 @@
     </div>
     <div class="home-content">
       <h2 class="home-content-title">产品分类</h2>
-      <p class="home-content-desc">Product classification</p>
+      <!-- <p class="home-content-desc">Product classification</p> -->
       <div class="home-content-cabinet">
         <div :class="['home-content-cabinet-item',`home-content-cabinet-item-${index + 1}`]" v-for="(i, index) in itemData" :key="index" @click="handleItem(index)" @mouseover="handleMouseover(index)">
           <div class="item">
@@ -36,7 +36,7 @@
         <img class="home-carousel-content-arrow left" src="@/assets/imgs/arrow2.png" alt="" @click="preItem()">
         <img class="home-carousel-content-arrow right" src="@/assets/imgs/arrow2.png" alt="" @click="nextItem()">
         <div class="home-carousel-content-left">
-          <img :src="currentItem.carouselImagUrl" alt="">
+          <img class="home-carousel-content-left-cover" :src="currentItem.carouselImagUrl" alt="">
         </div>
         <div class="home-carousel-content-right">
           <div class="home-carousel-content-right-box">
@@ -57,7 +57,7 @@
       <div class="home-about">
         <div class="home-about-left">
           <h2 class="home-about-title">关于我们</h2>
-          <p class="home-about-desc">About us</p>
+          <!-- <p class="home-about-desc">About us</p> -->
           <p class="home-about-left-text-1">
             易临云科技旨在建立领先的临床研究云平台，以“<span class="highlight">科技创新为病人带来有效治疗</span>”为使命，立足中国、服务全球的医疗卫生与生命科技企业。
           </p>
@@ -75,7 +75,7 @@
     <div class="home-dynamic">
       <img class="arrow-down" src="@/assets/imgs/arrow_down.png" alt="">
       <h2 class="home-dynamic-title">业内动态</h2>
-      <p class="home-dynamic-title">Industry news</p>
+      <!-- <p class="home-dynamic-title">Industry news</p> -->
       <div class="home-dynamic-content">
         <div class="home-dynamic-content-left">
           <div class="home-dynamic-content-left-img">
@@ -96,7 +96,7 @@
     </div>
     <div class="home-service">
       <h2 class="home-service-title">服务范围</h2>
-      <p class="home-service-title">Scope of services</p>
+      <!-- <p class="home-service-title">Scope of services</p> -->
       <div class="home-service-content">
 
         <div class="home-service-content-left">
@@ -104,9 +104,9 @@
         </div>
         <div class="home-service-content-right">
           <ul class="home-service-content-right-list">
-            <li>· 不同治疗领域的意见领袖深度合作</li>
-            <li class="home-service-content-right-list-centerli">· 提供从方案优化到数据收集和管理</li>
-            <li>· 风险管理等解决方案</li>
+            <li>• 不同治疗领域的意见领袖深度合作</li>
+            <li class="home-service-content-right-list-centerli">• 提供从方案优化到数据收集和管理</li>
+            <li>• 风险管理等解决方案</li>
           </ul>
         </div>
       </div>
@@ -256,6 +256,7 @@ export default {
 </script>
 <style lang="scss" scoped>
 .home {
+  font-size: 18px;
   &-banner {
     background: url("../assets/imgs/bannerbg.png") no-repeat center #000d26;
     height: 600px;
@@ -321,12 +322,12 @@ export default {
   }
   &-content {
     margin: 0 auto;
-    padding: 44px 0 10px;
+    padding: 0;
     text-align: center;
     &-title {
       color: #00215f;
-      font-size: 32px;
-      margin: 4px 0;
+      font-size: 36px;
+      margin: 56px 0 59px;
     }
     &-desc {
       color: #00215f;
@@ -357,6 +358,7 @@ export default {
           color: #fff;
           position: absolute;
           bottom: 20px;
+          font-size: 24px;
         }
         .item {
           display: none;
@@ -410,7 +412,7 @@ export default {
     }
   }
   &-carousel {
-    background: #fcc233;
+    background: #EE8A1D;
     height: 480px;
     width: 100%;
     overflow: hidden;
@@ -435,10 +437,15 @@ export default {
         }
       }
       &-left {
-        width: 760px;
+        width: 700px;
+        &-cover {
+          width: 700px;
+          height: 480px;
+          object-fit: cover;
+        }
       }
       &-right {
-        width: 520px;
+        width: 580px;
         &-box {
           box-sizing: border-box;
           height: 400px;
@@ -449,7 +456,7 @@ export default {
             color: #ee8a1d;
             margin: 0;
             .title-1 {
-              font-size: 32px;
+              font-size: 36px;
             }
             .title-2 {
               font-size: 18px;
@@ -459,7 +466,7 @@ export default {
           &-list {
             padding-left: 22px;
             &-li {
-              font-size: 16px;
+              font-size: 18px;
               font-weight: 400;
               line-height: 22px;
               color: #00215f;
@@ -473,7 +480,7 @@ export default {
   &-about {
     max-width: $content-width;
     margin: 0 auto;
-    height: 600px;
+    height: 480px;
     display: flex;
     &-wrap {
       width: 100%;
@@ -481,8 +488,8 @@ export default {
     }
     &-title {
       color: #00215f;
-      font-size: 32px;
-      margin: 0;
+      font-size: 36px;
+      margin: 40px 0 35px;
     }
     &-desc {
       color: #00215f;
@@ -492,14 +499,13 @@ export default {
       margin: 4px 0 40px;
     }
     &-left {
-      width: 760px;
-      padding: 60px 30px;
+      width: 700px;
+      padding: 0 30px;
       box-sizing: border-box;
       &-text-1,
       &-text-2 {
         text-indent: 20px;
         font-size: 18px;
-        font-family: "PingFangSC-Regular", "PingFang SC";
         font-weight: 400;
         .highlight {
           color: #ee8a1d;
@@ -514,6 +520,7 @@ export default {
         font-size: 18px;
         color: #fff;
         text-align: center;
+        cursor: pointer;
       }
     }
     &-right {
@@ -521,9 +528,9 @@ export default {
     }
   }
   &-dynamic {
-    height: 620px;
+    height: 565px;
     background: #00215f;
-    padding: 60px 0;
+    padding: 40px 0;
     box-sizing: border-box;
     position: relative;
     .arrow-down {
@@ -535,7 +542,7 @@ export default {
     &-title {
       color: #fff;
       text-align: center;
-      font-size: 32px;
+      font-size: 36px;
       margin: 4px 0;
     }
     &-desc {
@@ -617,8 +624,7 @@ export default {
     &-desc {
       color: #00215f;
       text-align: center;
-      font-size: 24px;
-      font-family: "PingFangSC-Semibold", "PingFang SC";
+      font-size: 36px;
       font-weight: 600;
       margin: 4px 0;
     }
@@ -634,6 +640,7 @@ export default {
         margin: 0 30px;
         &-list {
           list-style: none;
+            font-size: 24px;
           li {
             color: #ee8a1d;
             line-height: 100px;

@@ -1,14 +1,14 @@
 <template>
   <div class="footer">
-    <img src="@/assets/imgs/logo2.png" alt="">
-    <p>© 2020-2020 易临云（深圳）科技有限公司 版权所有 粤ICP备20068916号.</p>
-    <p>
+    <img class="footer-img" src="@/assets/imgs/ECC_Logo2.png" alt="">
+    <p class="footer-contact">
       <svg-icon iconClass="phone"></svg-icon>
       0755-22671619
       {{someSpace}}
       <svg-icon iconClass="email"></svg-icon>
       ecc@eclincloud.com
     </p>
+    <p>© 2020-2020 易临云（深圳）科技有限公司 版权所有 粤ICP备20068916号.</p>
   </div>
 </template>
 <script>
@@ -26,6 +26,13 @@ export default {
   background: #00215F;
   color: #fff;
   text-align: center;
-  padding: 50px 0;
+  padding: 60px 0 30px;
+  font-size: 12px;
+  &-img {
+    margin-bottom: 33px;
+  }
+  &-contact {
+    margin-bottom: 26px;
+  }
 }
 </style>
