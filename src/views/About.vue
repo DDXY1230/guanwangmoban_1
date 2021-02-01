@@ -167,7 +167,7 @@ export default {
     }
   }
   &-part2 {
-    height: 280px;
+    min-height: 280px;
     background: #dfe3ee;
     width: 100%;
     &-wrap {
@@ -179,7 +179,7 @@ export default {
     &-content {
       max-width: $content-width;
       margin: 10px auto;
-      height: 280px;
+      min-height: 280px;
       display: flex;
       position: relative;
       .zuoyinhao {
@@ -236,7 +236,7 @@ export default {
   }
   &-part3 {
     max-width: 1280px;
-    height: 336px;
+    min-height: 336px;
     display: flex;
     margin: 50px auto;
     font-size: 18px;
@@ -266,7 +266,7 @@ export default {
       flex: 1;
       img {
         width: 100%;
-        height: 336px;
+        height: 100%;
         object-fit: cover;
       }
     }

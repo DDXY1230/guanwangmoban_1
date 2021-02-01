@@ -98,7 +98,7 @@ export default {
       color: #00215f;
       &-collect {
         width: 446px;
-        height: 436px;
+        min-height: 436px;
         background: #fff;
         padding: 40px;
         box-sizing: border-box;

@@ -12,17 +12,20 @@
         <div class="ctms-support-content-box box-1">
           <img class="box-img" src="@/assets/imgs/img_ctmsn3.png" alt="">
           <h4 class="box-strong">{{$t("ctms.collaboration")}}</h4>
-          <p class="box-desc">同时支持<span class="highlight">PC端</span>和<span class="highlight">移动端</span></p>
+          <p class="box-desc" v-if="isCurrLocal == 'cn'">同时支持<span class="highlight">PC端</span>和<span class="highlight">移动端</span></p>
+          <p class="box-desc" v-else>Both <span class="highlight">PC</span> and <span class="highlight">mobile terminals</span> are supported</p>
         </div>
         <div class="ctms-support-content-box box-2">
           <img class="box-img" src="@/assets/imgs/img_ctmsn4.png" alt="">
           <h4 class="box-strong">{{$t("ctms.transition")}}</h4>
-          <p class="box-desc">支持多语言、多时区和多种货币的<span class="highlight">转换</span></p>
+          <p class="box-desc" v-if="isCurrLocal == 'cn'">支持多语言、多时区和多种货币的<span class="highlight">转换</span></p>
+          <p class="box-desc" v-else>Support multi language, multi time zone and <span class="highlight">multi currency conversion</span></p>
         </div>
         <div class="ctms-support-content-box box-3">
           <img class="box-img" src="@/assets/imgs/img_ctmsn5.png" alt="">
           <h4 class="box-strong">{{$t("ctms.role")}}</h4>
-          <p class="box-desc">具备<span class="highlight">不同角色</span>的提醒功能</p>
+          <p class="box-desc" v-if="isCurrLocal == 'cn'">具备<span class="highlight">不同角色</span>的提醒功能</p>
+          <p class="box-desc" v-else>Reminder function for <span class="highlight">different roles</span></p>
         </div>
       </div>
     </div>
@@ -74,7 +77,8 @@
       </div>
       <div class="ctms-connect-right">
         <p class="ctms-connect-right-strong">{{$t("ctms.manySys")}}</p>
-        <p class="ctms-connect-right-text">与<span class="highlight">eTMF、EDC、RTSM</span>等系统无缝整合</p>
+        <p class="ctms-connect-right-text" v-if="isCurrLocal == 'cn'">与<span class="highlight">eTMF、EDC、RTSM</span>等系统无缝整合</p>
+        <p class="ctms-connect-right-text" v-else>Seamless integration with <span class="highlight">ETMF, EDC, RTSM</span> and other systems</p>
       </div>
     </div>
   </div>

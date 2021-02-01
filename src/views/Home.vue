@@ -3,8 +3,8 @@
     <div class="home-banner">
       <div class="home-banner-content">
         <div class="home-banner-content-left">
-          <h2 class="left-title">{{$t("home.innovate")}}</h2>
-          <h2 class="left-second-title">{{$t("home.effective")}}</h2>
+          <h2 :class="['left-title',{'left-title-isEn': isCurrLocal == 'en'}]">{{$t("home.innovate")}}</h2>
+          <h2 :class="['left-second-title', {'left-second-title-isEn': isCurrLocal == 'en'}]">{{$t("home.effective")}}</h2>
           <!-- <p class="left-desc">
             leverage innovative technology for patients to access effective treatment
           </p> -->
@@ -58,13 +58,23 @@
         <div class="home-about-left">
           <h2 class="home-about-title">{{$t("home.aboutUs")}}</h2>
           <!-- <p class="home-about-desc">About us</p> -->
-          <p class="home-about-left-text-1">
-            易临云科技旨在建立领先的临床研究云平台，以“<span class="highlight">科技创新为病人带来有效治疗</span>”为使命，立足中国、服务全球的医疗卫生与生命科技企业。
-          </p>
-          <p class="home-about-left-text-2">
-            易临云的临床研究云平台是自主研发的端到端无缝整合一体化平台，包括<span class="highlight">电子知情同意eConsent、电子数据采集EDC、随机与药物管理RTSM、电子临床结局评估eCOA、临床研究项目管理系统CTMS、电子化试验主文档管理eTMF、基于风险的监查系统RBM、虚拟化临床研究Virtual
-              Trial</span>等。通过易临云的专业化解决方案，为制药企业、医疗器械公司、研究机构加速新药研发的进程、缩减临床研究的成本、降低临床研究的风险。
-          </p>
+          <div v-if="isCurrLocal == 'cn'">
+            <p class="home-about-left-text-1">
+              易临云科技旨在建立领先的临床研究云平台，以“<span class="highlight">科技创新为病人带来有效治疗</span>”为使命，立足中国、服务全球的医疗卫生与生命科技企业。
+            </p>
+            <p class="home-about-left-text-2">
+              易临云的临床研究云平台是自主研发的端到端无缝整合一体化平台，包括<span class="highlight">电子知情同意eConsent、电子数据采集EDC、随机与药物管理RTSM、电子临床结局评估eCOA、临床研究项目管理系统CTMS、电子化试验主文档管理eTMF、基于风险的监查系统RBM、虚拟化临床研究Virtual
+                Trial</span>等。通过易临云的专业化解决方案，为制药企业、医疗器械公司、研究机构加速新药研发的进程、缩减临床研究的成本、降低临床研究的风险。
+            </p>
+          </div>
+          <div v-else>
+            <p>
+              eClinCloud Technologies (AKA. ECC) is a global clinical trial cloud platform. Our mission is to "leverage innovative technology for patients to access effective treatment". Our journey started in China, servicing the global life sciences community. ECC’s clinical trial cloud platform is a uniformed platform, including eConsent, EDC, RTSM, eCOA, CTMS, eTM, RBM and Virtual Trial solutions. 
+            </p>
+            <p>
+              ECC’s suite of strategic solutions accelerate the clinical research process with a focus to deliver treatments to patients faster with lower costs and risks for pharmaceutical companies, medical instrument companies and clinical trial institutions. 
+            </p>
+          </div>
           <span class="home-about-left-more" @click="contactUs()">{{$t("home.contact")}} ></span>
         </div>
         <div class="home-about-right">
@@ -103,7 +113,7 @@
           <img src="@/assets/imgs/img_services.png" alt="">
         </div>
         <div class="home-service-content-right">
-          <ul class="home-service-content-right-list">
+          <ul :class="['home-service-content-right-list',{'home-service-content-right-list-isEn': isCurrLocal == 'en'}]">
             <li>• {{$t("home.teamwork")}}</li>
             <li class="home-service-content-right-list-centerli">• {{$t("home.manage")}}</li>
             <li>• {{$t("home.risk")}}</li>
@@ -127,12 +137,12 @@ export default {
           secondTitle: "临床项目管理系统",
           carouselImagUrl: require("@/assets/imgs/img_Product6.png"),
           descList: [
-            this.$t('ctms.desc_1'),
-            this.$t('ctms.desc_2'),
-            this.$t('ctms.desc_3'),
-            this.$t('ctms.desc_4'),
-            this.$t('ctms.desc_5'),
-            this.$t('ctms.desc_6'),
+            this.$t("ctms.desc_1"),
+            this.$t("ctms.desc_2"),
+            this.$t("ctms.desc_3"),
+            this.$t("ctms.desc_4")
+            // this.$t('ctms.desc_5'),
+            // this.$t('ctms.desc_6'),
           ]
         },
         {
@@ -140,12 +150,12 @@ export default {
           secondTitle: "电子数据采集系统",
           carouselImagUrl: require("@/assets/imgs/img_Product3.png"),
           descList: [
-            this.$t('edc.desc_1'),
-            this.$t('edc.desc_2'),
-            this.$t('edc.desc_3'),
-            this.$t('edc.desc_4'),
-            this.$t('edc.desc_5'),
-            this.$t('edc.desc_6'),
+            this.$t("edc.desc_1"),
+            this.$t("edc.desc_2"),
+            this.$t("edc.desc_3"),
+            this.$t("edc.desc_4"),
+            this.$t("edc.desc_5"),
+            this.$t("edc.desc_6")
           ]
         },
         {
@@ -153,12 +163,12 @@ export default {
           secondTitle: "电子临床结局评估",
           carouselImagUrl: require("@/assets/imgs/img_Product1.png"),
           descList: [
-            this.$t('ecoa.desc_1'),
-            this.$t('ecoa.desc_2'),
-            this.$t('ecoa.desc_3'),
-            this.$t('ecoa.desc_4'),
-            this.$t('ecoa.desc_5'),
-            this.$t('ecoa.desc_6'),
+            this.$t("ecoa.desc_1"),
+            this.$t("ecoa.desc_2"),
+            this.$t("ecoa.desc_3"),
+            this.$t("ecoa.desc_4"),
+            this.$t("ecoa.desc_5")
+            // this.$t('ecoa.desc_6'),
           ]
         },
         {
@@ -166,12 +176,12 @@ export default {
           secondTitle: "随机与药物管理",
           carouselImagUrl: require("@/assets/imgs/img_Product2.png"),
           descList: [
-            this.$t('rtsm.desc_1'),
-            this.$t('rtsm.desc_2'),
-            this.$t('rtsm.desc_3'),
-            this.$t('rtsm.desc_4'),
-            this.$t('rtsm.desc_5'),
-            this.$t('rtsm.desc_6'),
+            this.$t("rtsm.desc_1"),
+            this.$t("rtsm.desc_2"),
+            this.$t("rtsm.desc_3"),
+            this.$t("rtsm.desc_4"),
+            this.$t("rtsm.desc_5")
+            // this.$t('rtsm.desc_6'),
           ]
         },
         {
@@ -185,11 +195,11 @@ export default {
           secondTitle: "电子知情同意书",
           carouselImagUrl: require("@/assets/imgs/img_Product4.png"),
           descList: [
-            this.$t('econsent.desc_1'),
-            this.$t('econsent.desc_2'),
-            this.$t('econsent.desc_3'),
-            this.$t('econsent.desc_4'),
-            this.$t('econsent.desc_5'),
+            this.$t("econsent.desc_1"),
+            this.$t("econsent.desc_2"),
+            this.$t("econsent.desc_3"),
+            this.$t("econsent.desc_4"),
+            this.$t("econsent.desc_5")
           ]
         }
       ],
@@ -293,6 +303,10 @@ export default {
             font-family: "SourceHanSerifCN-Bold-2";
             line-height: 86px;
             letter-spacing: 6px;
+            &-isEn {
+              font-size: 26px;
+              line-height: 36px;
+            }
           }
           &-second-title {
             font-size: 48px;
@@ -300,6 +314,10 @@ export default {
             letter-spacing: 6px;
             font-family: "SourceHanSerifCN-Bold-2";
             margin: 0;
+            &-isEn {
+              font-size: 26px;
+              line-height: 36px;
+            }
           }
           &-desc {
             font-size: 24px;
@@ -651,6 +669,9 @@ export default {
         &-list {
           list-style: none;
           font-size: 24px;
+          &-isEn {
+            font-size: 20px;
+          }
           li {
             color: #ee8a1d;
             line-height: 100px;

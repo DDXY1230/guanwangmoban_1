@@ -12,20 +12,39 @@
         <div class="eCOA-support-content-box box-1">
           <img class="box-img" src="@/assets/imgs/img_ecoa2.png" alt="">
           <h4 class="box-strong">{{$t("ecoa.rapidDeployment")}}</h4>
-          <p class="box-desc">业内<span class="highlight">最快</span>实现eCOA部署</p>
-          <p class="box-desc">平均在4周完成上线</p>
+          <div v-if="isCurrLocal == 'cn'">
+            <p class="box-desc">业内<span class="highlight">最快</span>实现eCOA部署</p>
+            <p class="box-desc">平均在4周完成上线</p>
+          </div>
+          <div v-else>
+            <p>
+              ECOA deployment is <span class="highlight">the fastest</span> in the industry, with an average of 4 weeks
+            </p>
+          </div>
         </div>
         <div class="eCOA-support-content-box box-2">
           <img class="box-img" src="@/assets/imgs/img_ecoa3.png" alt="">
           <h4 class="box-strong">{{$t("ecoa.internationalProject")}}</h4>
-          <p class="box-desc">实施团队具有丰富的</p>
-          <p class="box-desc"><span class="highlight">国际大型eCOA项目</span>经验</p>
+          <div v-if="isCurrLocal == 'cn'">
+            <p class="box-desc">实施团队具有丰富的</p>
+            <p class="box-desc"><span class="highlight">国际大型eCOA项目</span>经验</p>
+          </div>
+          <div v-else>
+            <p>
+              The implementation team has rich experience in <span class="highlight">large international ECOA</span> projects
+            </p>
+          </div>
         </div>
         <div class="eCOA-support-content-box box-3">
           <img class="box-img" src="@/assets/imgs/img_ecoa4.png" alt="">
           <h4 class="box-strong">{{$t("ecoa.multiservice")}}</h4>
-          <p class="box-desc">提供从量表版权获取、翻译、语言验证、</p>
-          <p class="box-desc"><span class="highlight">eCOA部署</span>、培训、数据质量分析等服务</p>
+          <div v-if="isCurrLocal == 'cn'">
+            <p class="box-desc">提供从量表版权获取、翻译、语言验证、</p>
+            <p class="box-desc"><span class="highlight">eCOA部署</span>、培训、数据质量分析等服务</p>
+          </div>
+          <div v-else>
+            <p>It provides services such as scale copyright acquisition, translation, language verification, <span class="highlight">ECOA</span> deployment, training, data quality analysis, etc</p>
+          </div>
         </div>
       </div>
     </div>
@@ -175,7 +194,7 @@ export default {
       padding-left: 60px;
     }
     &-right {
-      padding:40px 20px;
+      padding: 40px 20px;
       display: flex;
       flex-direction: column;
       justify-content: center;

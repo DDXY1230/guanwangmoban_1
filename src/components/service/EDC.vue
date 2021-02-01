@@ -12,18 +12,29 @@
         <div class="eConsent-support-content-box box-1">
           <img class="box-img" src="@/assets/imgs/img_EDC2.png" alt="">
           <h4 class="box-strong">{{$t("edc.design")}}</h4>
+          <div v-if="isCurrLocal == 'cn'">
           <p class="box-desc">快速实现eCRF设计</p>
           <p class="box-desc">比传统EDC<span class="highlight">节约30%</span>时间</p>
+          </div>
+          <div v-else>
+            <p>
+              Fast implementation of ECRF design <span class="highlight">saves 30%</span> time compared with traditional EDC
+            </p>
+          </div>
         </div>
         <div class="eConsent-support-content-box box-2">
           <img class="box-img" src="@/assets/imgs/img_EDC3.png" alt="">
           <h4 class="box-strong">{{$t("edc.examine")}}</h4>
-          <p class="box-desc"><span class="highlight">零编程</span>实现复杂的逻辑核查</p>
+          <p class="box-desc" v-if="isCurrLocal == 'cn'"><span class="highlight">零编程</span>实现复杂的逻辑核查</p>
+          <p v-else>
+            <span class="highlight">Zero programming</span> for complex logic verification
+          </p>
         </div>
         <div class="eConsent-support-content-box box-3">
           <img class="box-img" src="@/assets/imgs/img_EDC4.png" alt="">
           <h4 class="box-strong">{{$t("edc.template")}}</h4>
-          <p class="box-desc">提供符合<span class="highlight">CDISC</span>标准的多个治疗领域的eCRF模板库</p>
+          <p class="box-desc" v-if="isCurrLocal == 'cn'">提供符合<span class="highlight">CDISC</span>标准的多个治疗领域的eCRF模板库</p>
+          <p class="box-desc" v-else>Provide ECRF template library of multiple treatment fields in accordance with <span class="highlight">CDISC</span> standard</p>
         </div>
       </div>
     </div>
@@ -53,8 +64,15 @@
       </div>
       <div class="eConsent-connect-right">
         <p class="eConsent-connect-right-strong">{{$t("edc.manySys")}}</p>
+        <div v-if="isCurrLocal == 'cn'">
         <p class="eConsent-connect-right-text">界面简洁大方，交互友好</p>
         <p class="eConsent-connect-right-text">与<span class="highlight">电子知情同意系统、随机和药物管理、项目管理系统</span>等无缝整合</p>
+        </div>
+        <div v-else>
+          <p>
+            The interface is simple and friendly. It integrates with electronic informed consent system, random and drug management system, project management system and so on
+          </p>
+        </div>
       </div>
     </div>
   </div>
