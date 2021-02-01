@@ -4,24 +4,24 @@
     <div class="eConsent-banner">
       <div class="eConsent-banner-title">
         <p class="eConsent-banner-title-1">eConsent</p>
-        <p class="eConsent-banner-title-2">电子知情同意系统</p>
+        <p class="eConsent-banner-title-2">{{$t("econsent.system")}}</p>
       </div>
     </div>
     <div class="eConsent-support-1">
       <div class="eConsent-support-1-content">
         <div class="eConsent-support-1-content-box box-1">
           <img class="box-img" src="@/assets/imgs/img_eConsent2.png" alt="">
-          <h4 class="box-strong">多端协作</h4>
+          <h4 class="box-strong">{{$t("econsent.process")}}</h4>
           <p class="box-desc">改变受试者<span class="highlight">签署知情同意</span>的全过程</p>
         </div>
         <div class="eConsent-support-1-content-box box-2">
           <img class="box-img" src="@/assets/imgs/img_eConsent3.png" alt="">
-          <h4 class="box-strong">多端协作</h4>
+          <h4 class="box-strong">{{$t("econsent.know")}}</h4>
           <p class="box-desc">实现受试者对临床研究的<span class="highlight">充分知情</span></p>
         </div>
         <div class="eConsent-support-1-content-box box-3">
           <img class="box-img" src="@/assets/imgs/img_eConsent4.png" alt="">
-          <h4 class="box-strong">多端协作</h4>
+          <h4 class="box-strong">{{$t("econsent.trace")}}</h4>
           <p class="box-desc">知情同意全过程<span class="highlight">完全留痕</span></p>
         </div>
       </div>
@@ -32,19 +32,19 @@
         <img class="eConsent-function-right" src="@/assets/imgs/img_eConsent6.png" alt="">
         <div class="eConsent-function-item">
           <img src="@/assets/imgs/img_eConsent7.png" alt="">
-          <p class="desc">应用视频、动画、语音等富媒体辅助纯文本</p>
+          <p class="desc">{{$t("econsent.support_1")}}</p>
         </div>
         <div class="eConsent-function-item">
           <img src="@/assets/imgs/img_eConsent8.png" alt="">
-          <p class="desc">支持远程签署知情同意书</p>
+          <p class="desc">{{$t("econsent.support_2")}}</p>
         </div>
         <div class="eConsent-function-item">
           <img src="@/assets/imgs/img_eConsent9.png" alt="">
-          <p class="desc">支持监护人和受试者都签署知情同意书</p>
+          <p class="desc">{{$t("econsent.support_3")}}</p>
         </div>
         <div class="eConsent-function-item">
           <img src="@/assets/imgs/img_eConsent10.png" alt="">
-          <p class="desc">支持纯电子签名、打印手动签名、以及混合模式</p>
+          <p class="desc">{{$t("econsent.support_4")}}</p>
         </div>
       </div>
     </div>
@@ -52,11 +52,11 @@
       <div class="eConsent-support-content">
         <div class="eConsent-support-content-box box-1">
           <img src="@/assets/imgs/img_eConsent11.png" alt="">
-          <p>遵循211 CFR Part 11关于电子签名的要求</p>
+          <p>{{$t("econsent.keep_1")}}</p>
         </div>
         <div class="eConsent-support-content-box box-3">
           <img src="@/assets/imgs/img_eConsent12.png" alt="">
-          <p>符合HIPAA和GPPR关于受试者隐私保护的要求</p>
+          <p>{{$t("econsent.keep_2")}}</p>
         </div>
       </div>
     </div>
@@ -78,7 +78,11 @@ export default {
   data() {
     return {};
   },
-  computed: {},
+  computed: {
+    isCurrLocal() {
+      return this.$i18n.locale;
+    }
+  },
   created() {},
   mounted() {},
   watch: {},

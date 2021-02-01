@@ -49,5 +49,6 @@ body {
 }
 .highlight {
     color: #ee8a1d;
+    font-weight: bold;
 }
 </style>

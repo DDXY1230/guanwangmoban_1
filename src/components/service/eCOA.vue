@@ -4,26 +4,26 @@
     <div class="eCOA-banner">
       <div class="eCOA-banner-title">
         <p class="eCOA-banner-title-1">eCOA</p>
-        <p class="eCOA-banner-title-2">电子临床结局评估</p>
+        <p class="eCOA-banner-title-2">{{$t("ecoa.assessment")}}</p>
       </div>
     </div>
     <div class="eCOA-support">
       <div class="eCOA-support-content">
         <div class="eCOA-support-content-box box-1">
           <img class="box-img" src="@/assets/imgs/img_ecoa2.png" alt="">
-          <h4 class="box-strong">多端协作</h4>
+          <h4 class="box-strong">{{$t("ecoa.rapidDeployment")}}</h4>
           <p class="box-desc">业内<span class="highlight">最快</span>实现eCOA部署</p>
           <p class="box-desc">平均在4周完成上线</p>
         </div>
         <div class="eCOA-support-content-box box-2">
           <img class="box-img" src="@/assets/imgs/img_ecoa3.png" alt="">
-          <h4 class="box-strong">多端协作</h4>
+          <h4 class="box-strong">{{$t("ecoa.internationalProject")}}</h4>
           <p class="box-desc">实施团队具有丰富的</p>
           <p class="box-desc"><span class="highlight">国际大型eCOA项目</span>经验</p>
         </div>
         <div class="eCOA-support-content-box box-3">
           <img class="box-img" src="@/assets/imgs/img_ecoa4.png" alt="">
-          <h4 class="box-strong">多端协作</h4>
+          <h4 class="box-strong">{{$t("ecoa.multiservice")}}</h4>
           <p class="box-desc">提供从量表版权获取、翻译、语言验证、</p>
           <p class="box-desc"><span class="highlight">eCOA部署</span>、培训、数据质量分析等服务</p>
         </div>
@@ -40,17 +40,17 @@
         <div class="eCOA-brief-right">
           <div class="eCOA-brief-right-item">
             <p class="eCOA-brief-right-item-desc">
-              提供丰富的标准量表库
+              {{$t("ecoa.scale")}}
             </p>
           </div>
           <div class="eCOA-brief-right-item">
             <p class="eCOA-brief-right-item-desc">
-              支持BYOD和移动终端租赁模式
+              {{$t("ecoa.leasingModel")}}
             </p>
           </div>
           <div class="eCOA-brief-right-item">
             <p class="eCOA-brief-right-item-desc">
-              同时支持iOS和Android系统
+              {{$t("ecoa.support")}}
             </p>
           </div>
         </div>
@@ -62,9 +62,9 @@
       <div class="eCOA-provide-left">
         <div class="eCOA-provide-left-box-1">
           <div class="eCOA-provide-left-box-2">
-            <p>支持离线数据输入</p>
-            <p>支持全球100多种语言</p>
-            <p>提供7*24小时桌面支持</p>
+            <p>{{$t("ecoa.support_1")}}</p>
+            <p>{{$t("ecoa.support_2")}}</p>
+            <p>{{$t("ecoa.support_3")}}</p>
           </div>
         </div>
       </div>
@@ -81,7 +81,11 @@ export default {
   data() {
     return {};
   },
-  computed: {},
+  computed: {
+    isCurrLocal() {
+      return this.$i18n.locale;
+    }
+  },
   created() {},
   mounted() {},
   watch: {},

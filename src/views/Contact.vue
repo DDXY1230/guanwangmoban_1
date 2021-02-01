@@ -3,11 +3,11 @@
     <div class="contact-banner">
       <div class="contact-banner-content">
         <div class="contact-banner-content-collect">
-          <h4 class="contact-banner-content-collect-title">联系我们</h4>
-          <p class="contact-banner-content-collect-hint">请留下您的联系方式，客服会尽快与您联系。</p>
-          <input class="input1" type="text" placeholder="联系人">
-          <input class="input1" type="text" placeholder="联系电话和邮箱">
-          <span class="contact-banner-content-collect-submit" @click="submit()">提交</span>
+          <h4 class="contact-banner-content-collect-title">{{$t("contact.contactUs")}}</h4>
+          <p class="contact-banner-content-collect-hint">{{$t("contact.contactWay")}}</p>
+          <input class="input1" type="text" :placeholder="$t('contact.linkman')">
+          <input class="input1" type="text" :placeholder="$t('contact.phone')">
+          <span class="contact-banner-content-collect-submit" @click="submit()">{{$t("contact.submit")}}</span>
         <img class="left-icon" src="@/assets/imgs/ic1.png" alt="">
         </div>
       </div>
@@ -18,7 +18,7 @@
       </div>
       <div class="contact-location-right">
         <span class="contact-location-right-center">
-          深圳研发中心
+          {{$t("contact.shenzhen")}}
         </span>
         <p class="contact-location-right-icon">
           <svg-icon iconClass="icon_dingwei" style="font-size: 35px"></svg-icon>
@@ -38,7 +38,7 @@
     <div class="contact-location">
       <div class="contact-location-right">
         <span class="contact-location-right-center">
-          成都研发中心
+          {{$t("contact.chengdu")}}
         </span>
         <p class="contact-location-right-icon">
           <svg-icon iconClass="icon_dingwei" style="font-size: 35px"></svg-icon>
@@ -74,7 +74,7 @@ export default {
   },
   methods: {
     async submit() {
-      this.$message.info('暂时不能提交,请直接用以下邮箱电话方式联系!')
+      this.$message.info(this.$t('contact.nonsupport'))
       return
       let data = await submitData()
       console.log(data)
@@ -114,7 +114,7 @@ export default {
         .input1 {
           height: 50px;
           border: none;
-          border-bottom: 2px solid #b2b2b2;
+          border-bottom: 1px solid #b2b2b2;
           transition: 0.5s;
           width: 100%;
           box-sizing: border-box;
@@ -197,6 +197,7 @@ export default {
         font-weight: bold;
         color: #00215f;
         font-size: 48px;
+        font-family: "SourceHanSerifCN-Bold-2";
       }
       &-phone {
         position: absolute;

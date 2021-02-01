@@ -3,8 +3,8 @@
     <div class="home-banner">
       <div class="home-banner-content">
         <div class="home-banner-content-left">
-          <h2 class="left-title">以科技创新</h2>
-          <h2 class="left-second-title">为病人带来有效治疗</h2>
+          <h2 class="left-title">{{$t("home.innovate")}}</h2>
+          <h2 class="left-second-title">{{$t("home.effective")}}</h2>
           <!-- <p class="left-desc">
             leverage innovative technology for patients to access effective treatment
           </p> -->
@@ -17,7 +17,7 @@
       </div>
     </div>
     <div class="home-content">
-      <h2 class="home-content-title">产品分类</h2>
+      <h2 class="home-content-title">{{$t("home.product")}}</h2>
       <!-- <p class="home-content-desc">Product classification</p> -->
       <div class="home-content-cabinet">
         <div :class="['home-content-cabinet-item',`home-content-cabinet-item-${index + 1}`]" v-for="(i, index) in itemData" :key="index" @click="handleItem(index)" @mouseover="handleMouseover(index)">
@@ -25,7 +25,7 @@
             <div :class="['item-icon', `item-${index + 1}`]"></div>
             <p class="item-title">{{ i.firstTitle }}</p>
             <p class="item-desc">{{ i.secondTitle }}</p>
-            <div class="item-more">了解详情 ></div>
+            <div class="item-more">{{$t("home.learn")}} ></div>
           </div>
           <p class="title">{{ i.firstTitle }}</p>
         </div>
@@ -56,7 +56,7 @@
     <div class="home-about-wrap">
       <div class="home-about">
         <div class="home-about-left">
-          <h2 class="home-about-title">关于我们</h2>
+          <h2 class="home-about-title">{{$t("home.aboutUs")}}</h2>
           <!-- <p class="home-about-desc">About us</p> -->
           <p class="home-about-left-text-1">
             易临云科技旨在建立领先的临床研究云平台，以“<span class="highlight">科技创新为病人带来有效治疗</span>”为使命，立足中国、服务全球的医疗卫生与生命科技企业。
@@ -65,7 +65,7 @@
             易临云的临床研究云平台是自主研发的端到端无缝整合一体化平台，包括<span class="highlight">电子知情同意eConsent、电子数据采集EDC、随机与药物管理RTSM、电子临床结局评估eCOA、临床研究项目管理系统CTMS、电子化试验主文档管理eTMF、基于风险的监查系统RBM、虚拟化临床研究Virtual
               Trial</span>等。通过易临云的专业化解决方案，为制药企业、医疗器械公司、研究机构加速新药研发的进程、缩减临床研究的成本、降低临床研究的风险。
           </p>
-          <span class="home-about-left-more" @click="contactUs()">联系我们 ></span>
+          <span class="home-about-left-more" @click="contactUs()">{{$t("home.contact")}} ></span>
         </div>
         <div class="home-about-right">
           <img src="@/assets/imgs/img_Aboutus.png" alt="">
@@ -74,7 +74,7 @@
     </div>
     <div class="home-dynamic">
       <img class="arrow-down" src="@/assets/imgs/arrow_down.png" alt="">
-      <h2 class="home-dynamic-title">业内动态</h2>
+      <h2 class="home-dynamic-title">{{$t("home.dynamic")}}</h2>
       <!-- <p class="home-dynamic-title">Industry news</p> -->
       <div class="home-dynamic-content">
         <div class="home-dynamic-content-left">
@@ -95,7 +95,7 @@
       </div>
     </div>
     <div class="home-service">
-      <h2 class="home-service-title">服务范围</h2>
+      <h2 class="home-service-title">{{$t("home.service")}}</h2>
       <!-- <p class="home-service-title">Scope of services</p> -->
       <div class="home-service-content">
 
@@ -104,9 +104,9 @@
         </div>
         <div class="home-service-content-right">
           <ul class="home-service-content-right-list">
-            <li>• 不同治疗领域的意见领袖深度合作</li>
-            <li class="home-service-content-right-list-centerli">• 提供从方案优化到数据收集和管理</li>
-            <li>• 风险管理等解决方案</li>
+            <li>• {{$t("home.teamwork")}}</li>
+            <li class="home-service-content-right-list-centerli">• {{$t("home.manage")}}</li>
+            <li>• {{$t("home.risk")}}</li>
           </ul>
         </div>
       </div>
@@ -127,12 +127,12 @@ export default {
           secondTitle: "临床项目管理系统",
           carouselImagUrl: require("@/assets/imgs/img_Product6.png"),
           descList: [
-            "业内最快实现eCOA部署,平均在4周完成上线",
-            "实施团队具有丰富的国际大型eCOA项目经验",
-            "提供丰富的标准量表库",
-            "支持BYOD和移动终端租赁模式",
-            "同时支持iOS和Android系统",
-            "提供从量表版权获取、翻译、语言验证、eCOA部署、培训、数据质量分析等服务"
+            this.$t('ctms.desc_1'),
+            this.$t('ctms.desc_2'),
+            this.$t('ctms.desc_3'),
+            this.$t('ctms.desc_4'),
+            this.$t('ctms.desc_5'),
+            this.$t('ctms.desc_6'),
           ]
         },
         {
@@ -140,26 +140,25 @@ export default {
           secondTitle: "电子数据采集系统",
           carouselImagUrl: require("@/assets/imgs/img_Product3.png"),
           descList: [
-            "支持多种随机方法",
-            "零编程快速实现随机和药物管理的配置",
-            "90%以上的项目可在三小时内完成部署",
-            "药物发放模块具备预测功能，最大可能的减少药物的浪费",
-            "严格的角色配置和权限管理",
-            "与EDC、CTMS等系统无缝整合，也可与外部系统整合"
+            this.$t('edc.desc_1'),
+            this.$t('edc.desc_2'),
+            this.$t('edc.desc_3'),
+            this.$t('edc.desc_4'),
+            this.$t('edc.desc_5'),
+            this.$t('edc.desc_6'),
           ]
         },
         {
           firstTitle: "eCOA",
           secondTitle: "电子临床结局评估",
           carouselImagUrl: require("@/assets/imgs/img_Product1.png"),
-
           descList: [
-            "业内最快实现eCOA部署，平均在4周完成上线",
-            "实施团队具有丰富的国际大型eCOA项目经验",
-            "提供丰富的标准量表库",
-            "支持BYOD和移动终端租赁模式",
-            "同时支持iOS和Android系统",
-            "提供从量表版权获取、翻译、语言验证、eCOA部署、培训、数据质量分析等服务"
+            this.$t('ecoa.desc_1'),
+            this.$t('ecoa.desc_2'),
+            this.$t('ecoa.desc_3'),
+            this.$t('ecoa.desc_4'),
+            this.$t('ecoa.desc_5'),
+            this.$t('ecoa.desc_6'),
           ]
         },
         {
@@ -167,12 +166,12 @@ export default {
           secondTitle: "随机与药物管理",
           carouselImagUrl: require("@/assets/imgs/img_Product2.png"),
           descList: [
-            "快速实现eCRF设计，比传统EDC节约30%时间",
-            "零编程实现复杂的逻辑核查",
-            "提供符合CDISC标准的多个治疗领域的eCRF模板库",
-            "集成MedDRA与WHODD的自动编码功能",
-            "提供业界常用的标准化报表，且用户可任意自定义报表",
-            "同时支持PC端和移动端数据录入"
+            this.$t('rtsm.desc_1'),
+            this.$t('rtsm.desc_2'),
+            this.$t('rtsm.desc_3'),
+            this.$t('rtsm.desc_4'),
+            this.$t('rtsm.desc_5'),
+            this.$t('rtsm.desc_6'),
           ]
         },
         {
@@ -186,17 +185,22 @@ export default {
           secondTitle: "电子知情同意书",
           carouselImagUrl: require("@/assets/imgs/img_Product4.png"),
           descList: [
-            "改变受试者签署知情同意的全过程",
-            "实现受试者对临床研究的充分知情",
-            "知情同意全过程完全留痕",
-            "遵循211 CFR Part 11关于电子签名的要求",
-            "符合HIPAA和GPPR关于受试者隐私保护的要求",
+            this.$t('econsent.desc_1'),
+            this.$t('econsent.desc_2'),
+            this.$t('econsent.desc_3'),
+            this.$t('econsent.desc_4'),
+            this.$t('econsent.desc_5'),
           ]
         }
       ],
       currentIndex: 0,
       currentItem: {}
     };
+  },
+  computed: {
+    isCurrLocal() {
+      return this.$i18n.locale;
+    }
   },
   mounted() {
     this.currentItem = this.itemData[0];

@@ -3,7 +3,7 @@
   <div class='industryInfoDetail'>
 
     <div class="industryInfoDetail-left">
-      <p class="industryInfoDetail-left-back">行业资讯 《 <span class="back" @click="back()">返回</span></p>
+      <p class="industryInfoDetail-left-back">{{ $t("header.news") }} 《 <span class="back" @click="back()">{{ $t("header.back") }}</span></p>
 
       <h4 class="industryInfoDetail-left-title">最新研究发现c9ww</h4>
       <p class="industryInfoDetail-left-time">2021-02-12</p>
@@ -29,6 +29,11 @@ export default {
   components: {},
   data() {
     return {};
+  },
+  computed: {
+    isCurrLocal() {
+      return this.$i18n.locale;
+    }
   },
   mounted() {
     console.log(this.$route);

@@ -4,24 +4,24 @@
     <div class="ctms-banner">
       <div class="ctms-banner-title">
         <p class="ctms-banner-title-1">CTMS</p>
-        <p class="ctms-banner-title-2">临床研究管理系统</p>
+        <p class="ctms-banner-title-2">{{$t("ctms.clinicalStudy")}}</p>
       </div>
     </div>
     <div class="ctms-support">
       <div class="ctms-support-content">
         <div class="ctms-support-content-box box-1">
           <img class="box-img" src="@/assets/imgs/img_ctmsn3.png" alt="">
-          <h4 class="box-strong">多端协作</h4>
+          <h4 class="box-strong">{{$t("ctms.collaboration")}}</h4>
           <p class="box-desc">同时支持<span class="highlight">PC端</span>和<span class="highlight">移动端</span></p>
         </div>
         <div class="ctms-support-content-box box-2">
           <img class="box-img" src="@/assets/imgs/img_ctmsn4.png" alt="">
-          <h4 class="box-strong">多区转换</h4>
+          <h4 class="box-strong">{{$t("ctms.transition")}}</h4>
           <p class="box-desc">支持多语言、多时区和多种货币的<span class="highlight">转换</span></p>
         </div>
         <div class="ctms-support-content-box box-3">
           <img class="box-img" src="@/assets/imgs/img_ctmsn5.png" alt="">
-          <h4 class="box-strong">角色明确</h4>
+          <h4 class="box-strong">{{$t("ctms.role")}}</h4>
           <p class="box-desc">具备<span class="highlight">不同角色</span>的提醒功能</p>
         </div>
       </div>
@@ -33,21 +33,21 @@
         </div>
         <div class="ctms-brief-right">
           <div class="ctms-brief-right-item">
-            <h4 class="ctms-brief-right-item-title">行业领先</h4>
+            <h4 class="ctms-brief-right-item-title">{{$t("ctms.lead")}}</h4>
             <p class="ctms-brief-right-item-desc">
-              业内领先的CTMS系统，具备完善的功能模块
+              {{$t("ctms.leadBrief")}}
             </p>
           </div>
           <div class="ctms-brief-right-item">
-            <h4 class="ctms-brief-right-item-title">全方位掌控</h4>
+            <h4 class="ctms-brief-right-item-title">{{$t("ctms.control")}}</h4>
             <p class="ctms-brief-right-item-desc">
-              简洁明了的仪表盘和报表，实现实时掌握项目的全方位进展
+              {{$t("ctms.controlBrief")}}
             </p>
           </div>
           <div class="ctms-brief-right-item">
-            <h4 class="ctms-brief-right-item-title">快速上线</h4>
+            <h4 class="ctms-brief-right-item-title">{{$t("ctms.speed")}}</h4>
             <p class="ctms-brief-right-item-desc">
-              内置多套功能模板，实现快速部署，平均1-2个月完成系统上线
+              {{$t("ctms.speedBrief")}}
             </p>
           </div>
         </div>
@@ -55,7 +55,7 @@
     </div>
     <div class="ctms-security">
       <div class="ctms-security-desc desc-left">
-        <span class="desc-left-text">支持离线完成监查报告</span>
+        <span class="desc-left-text">{{$t("ctms.report")}}</span>
         <span class="arrow3">
           <svg-icon iconClass="arrow3"></svg-icon>
         </span>
@@ -65,7 +65,7 @@
         <span class="arrow4">
           <svg-icon iconClass="arrow4"></svg-icon>
         </span>
-        <span class="desc-right-text">高级别数据安全性和多地数据备份</span>
+        <span class="desc-right-text">{{$t("ctms.backup")}}</span>
       </div>
     </div>
     <div class="ctms-connect">
@@ -73,7 +73,7 @@
         <img src="@/assets/imgs/lian.png" alt="">
       </div>
       <div class="ctms-connect-right">
-        <p class="ctms-connect-right-strong">多系统协作</p>
+        <p class="ctms-connect-right-strong">{{$t("ctms.manySys")}}</p>
         <p class="ctms-connect-right-text">与<span class="highlight">eTMF、EDC、RTSM</span>等系统无缝整合</p>
       </div>
     </div>
@@ -86,7 +86,11 @@ export default {
   data() {
     return {};
   },
-  computed: {},
+  computed: {
+    isCurrLocal() {
+      return this.$i18n.locale;
+    }
+  },
   created() {},
   mounted() {},
   watch: {},

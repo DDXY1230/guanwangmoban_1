@@ -9,15 +9,15 @@
         <el-menu :default-active="activeIndex" class="el-menu-demo is-web-show" mode="horizontal" menu-trigger="click" @select="handleSelect">
           <el-menu-item index="/">{{ $t("header.home") }}</el-menu-item>
           <el-submenu index="/service">
-            <template slot="title">服务与解决方案</template>
-            <el-menu-item index="/service/CTMS">CTMS临床研究管理系统</el-menu-item>
-            <el-menu-item index="/service/EDC">EDC电子数据采集</el-menu-item>
-            <el-menu-item index="/service/eCOA">eCOA电子临床结局评估</el-menu-item>
-            <el-menu-item index="/service/RTSM">RTSM随机与药物管理</el-menu-item>
-            <el-menu-item index="/service/eTMF">eTMF文档管理</el-menu-item>
-            <el-menu-item index="/service/eConsent">eConsent电子知情同意系统</el-menu-item>
+            <template slot="title">{{ $t("header.service") }}</template>
+            <el-menu-item index="/service/CTMS">{{ $t("header.ctms") }}</el-menu-item>
+            <el-menu-item index="/service/EDC">{{ $t("header.edc") }}</el-menu-item>
+            <el-menu-item index="/service/eCOA">{{ $t("header.ecoa") }}</el-menu-item>
+            <el-menu-item index="/service/RTSM">{{ $t("header.rtsm") }}</el-menu-item>
+            <el-menu-item index="/service/eTMF">{{ $t("header.etmt") }}</el-menu-item>
+            <el-menu-item index="/service/eConsent">{{ $t("header.econsent") }}</el-menu-item>
           </el-submenu>
-          <el-menu-item index="/industryInfo">行业资讯</el-menu-item>
+          <el-menu-item index="/industryInfo">{{ $t("header.news") }}</el-menu-item>
           <el-menu-item index="/about">{{ $t("header.about") }}</el-menu-item>
           <el-menu-item index="/contact">{{
             $t("header.contact")
@@ -88,10 +88,10 @@ export default {
       });
     },
     languageFunc(e) {
-      if (e == "en") {
-        this.$message.info("努力开发中💪  , 敬请期待!");
-        return;
-      }
+      // if (e == "en") {
+      //   this.$message.info("努力开发中💪  , 敬请期待!");
+      //   return;
+      // }
       this.$i18n.locale = e;
       localStorage.setItem("lang", e);
       this.getCurrentPageTitle(this.$route.name);
@@ -109,11 +109,11 @@ export default {
           break;
         case "IndustryInfo":
           this.activeIndex = "/industryInfo";
-          this.currentItem = "行业资讯";
+          this.currentItem = this.$t("header.news");
           break;
         case "IndustryInfoDetail":
           this.activeIndex = "/industryInfo";
-          this.currentItem = "行业资讯";
+          this.currentItem = this.$t("header.news");
           break;
         case "Service":
         case "CTMS":

@@ -4,25 +4,25 @@
     <div class="eConsent-banner">
       <div class="eConsent-banner-title">
         <p class="eConsent-banner-title-1">EDC</p>
-        <p class="eConsent-banner-title-2">电子数据采集</p>
+        <p class="eConsent-banner-title-2">{{$t("edc.collect")}}</p>
       </div>
     </div>
     <div class="eConsent-support">
       <div class="eConsent-support-content">
         <div class="eConsent-support-content-box box-1">
           <img class="box-img" src="@/assets/imgs/img_EDC2.png" alt="">
-          <h4 class="box-strong">快速设计</h4>
+          <h4 class="box-strong">{{$t("edc.design")}}</h4>
           <p class="box-desc">快速实现eCRF设计</p>
           <p class="box-desc">比传统EDC<span class="highlight">节约30%</span>时间</p>
         </div>
         <div class="eConsent-support-content-box box-2">
           <img class="box-img" src="@/assets/imgs/img_EDC3.png" alt="">
-          <h4 class="box-strong">逻辑核查</h4>
+          <h4 class="box-strong">{{$t("edc.examine")}}</h4>
           <p class="box-desc"><span class="highlight">零编程</span>实现复杂的逻辑核查</p>
         </div>
         <div class="eConsent-support-content-box box-3">
           <img class="box-img" src="@/assets/imgs/img_EDC4.png" alt="">
-          <h4 class="box-strong">标准模板</h4>
+          <h4 class="box-strong">{{$t("edc.template")}}</h4>
           <p class="box-desc">提供符合<span class="highlight">CDISC</span>标准的多个治疗领域的eCRF模板库</p>
         </div>
       </div>
@@ -31,19 +31,19 @@
       <div class="eConsent-function">
         <div class="eConsent-function-item">
           <img src="@/assets/imgs/img_EDC5.png" alt="">
-          <p class="desc">集成MedDRA与WHODD的自动编码功能</p>
+          <p class="desc">{{$t("edc.support_1")}}</p>
         </div>
         <div class="eConsent-function-item">
           <img src="@/assets/imgs/img_EDC6.png" alt="">
-          <p class="desc">提供业界常用的标准化报表，且用户可任意自定义报表</p>
+          <p class="desc">{{$t("edc.support_2")}}</p>
         </div>
         <div class="eConsent-function-item">
           <img src="@/assets/imgs/img_EDC7.png" alt="">
-          <p class="desc">同时支持PC端和移动端数据录入</p>
+          <p class="desc">{{$t("edc.support_3")}}</p>
         </div>
         <div class="eConsent-function-item">
           <img src="@/assets/imgs/img_EDC8.png" alt="">
-          <p class="desc">支持访视提醒功能</p>
+          <p class="desc">{{$t("edc.support_4")}}</p>
         </div>
       </div>
     </div>
@@ -52,7 +52,7 @@
         <img src="@/assets/imgs/lian.png" alt="">
       </div>
       <div class="eConsent-connect-right">
-        <p class="eConsent-connect-right-strong">多系统协作</p>
+        <p class="eConsent-connect-right-strong">{{$t("edc.manySys")}}</p>
         <p class="eConsent-connect-right-text">界面简洁大方，交互友好</p>
         <p class="eConsent-connect-right-text">与<span class="highlight">电子知情同意系统、随机和药物管理、项目管理系统</span>等无缝整合</p>
       </div>
@@ -65,7 +65,11 @@ export default {
   data() {
     return {};
   },
-  computed: {},
+  computed: {
+    isCurrLocal() {
+      return this.$i18n.locale;
+    }
+  },
   created() {},
   mounted() {},
   watch: {},
