@@ -144,6 +144,7 @@ export default {
         margin: 0;
         bottom: 16px;
         font-size: 24px;
+        font-weight: bold;
       }
       img {
         width: 100%;
@@ -187,6 +188,7 @@ export default {
         .box-desc {
           margin: 0;
           font-size: 20px;
+          font-weight: bold;
         }
         &.box-1,
         &.box-3 {
@@ -245,6 +247,7 @@ export default {
         text-align: center;
         margin: 10px 10px 0;
         font-size: 20px;
+        font-weight: bold;
       }
     }
   }

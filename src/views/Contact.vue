@@ -21,11 +21,11 @@
           深圳研发中心
         </span>
         <p class="contact-location-right-icon">
-          <svg-icon iconClass="icon_dingwei" style="font-size: 40px"></svg-icon>
+          <svg-icon iconClass="icon_dingwei" style="font-size: 35px"></svg-icon>
         </p>
         <p>广东省深圳市深圳湾科技生态园12栋B座2楼13号</p>
         <p class="contact-location-right-icon">
-          <svg-icon iconClass="icon_mail2" style="font-size: 40px"></svg-icon>
+          <svg-icon iconClass="icon_mail2" style="font-size: 35px"></svg-icon>
         </p>
         <p>huangyamei@eclincloud.com</p>
         <p class="contact-location-right-number">0755-22671619</p>
@@ -41,11 +41,11 @@
           成都研发中心
         </span>
         <p class="contact-location-right-icon">
-          <svg-icon iconClass="icon_dingwei" style="font-size: 40px"></svg-icon>
+          <svg-icon iconClass="icon_dingwei" style="font-size: 35px"></svg-icon>
         </p>
         <p>四川省成都市武侯区武侯大道双楠段112号武侯庭园E3座</p>
         <p class="contact-location-right-icon">
-          <svg-icon iconClass="icon_mail2" style="font-size: 40px"></svg-icon>
+          <svg-icon iconClass="icon_mail2" style="font-size: 35px"></svg-icon>
         </p>
         <p>huangyamei@eclincloud.com</p>
         <p class="contact-location-right-number">028-67136918</p>
@@ -119,6 +119,7 @@ export default {
           width: 100%;
           box-sizing: border-box;
           margin-bottom: 20px;
+          font-size: 18px;
         }
         .input1:focus {
           border-bottom-color: #00215f;
@@ -126,6 +127,7 @@ export default {
         .input1::-webkit-input-placeholder {
           transition: 0.5s;
           transform-origin: left top;
+          color: #bbb;
         }
         .input1::-moz-placeholder {
           transition: 0.5s;
@@ -163,7 +165,7 @@ export default {
   }
   &-location {
     display: flex;
-    margin: 100px 0 20px;
+    margin: 100px 0 100px;
     justify-content: center;
     &-left {
       text-align: right;
@@ -189,7 +191,7 @@ export default {
         right: 0;
       }
       &-icon {
-        padding-top: 30px;
+        padding-top: 0px;
       }
       &-number {
         font-weight: bold;

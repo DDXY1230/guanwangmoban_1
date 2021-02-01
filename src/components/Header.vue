@@ -6,7 +6,7 @@
       </div>
       <div class="center">
         <!-- web端菜单 -->
-        <el-menu :default-active="activeIndex" class="el-menu-demo is-web-show" mode="horizontal" @select="handleSelect">
+        <el-menu :default-active="activeIndex" class="el-menu-demo is-web-show" mode="horizontal" menu-trigger="click" @select="handleSelect">
           <el-menu-item index="/">{{ $t("header.home") }}</el-menu-item>
           <el-submenu index="/service">
             <template slot="title">服务与解决方案</template>
@@ -97,7 +97,7 @@ export default {
       this.getCurrentPageTitle(this.$route.name);
     },
     getCurrentPageTitle(name) {
-      console.log(name)
+      console.log(name);
       switch (name) {
         case "Home":
           this.activeIndex = "/";
@@ -185,12 +185,16 @@ export default {
 }
 .el-menu.el-menu--horizontal > .el-menu-item {
   height: 100px;
+  font-weight: bold;
+  color: #00215f;
   line-height: 100px;
 }
 ::v-deep .el-menu--horizontal > .el-submenu .el-submenu__title {
   height: 100px;
   line-height: 100px;
+  font-weight: bold;
   font-size: 18px !important;
+  color: #00215f;
 }
 .el-menu.el-menu--horizontal > .el-menu-item.is-active {
   background-color: #00215f !important;
@@ -202,30 +206,14 @@ export default {
   border: none !important;
   color: #fff !important;
 }
+.el-menu--horizontal .el-menu--popup {
+  .el-menu-item {
+    color: #00215f;
+    height: 40px;
+  }
+}
 // 适配移动端
 @media only screen and (max-width: 770px) {
-  .header {
-    height: 45px;
-    .is-web-show {
-      display: none;
-    }
-    .is-phone-show {
-      display: inline-block;
-      padding: 10px;
-    }
-    .left {
-      .yly-icon {
-        height: 30px;
-      }
-    }
-    .center {
-      padding: 0;
-      .el-menu-demo .el-menu-item {
-        padding: 0 3px;
-        height: 45px;
-      }
-    }
-  }
 }
 </style>
 <style >

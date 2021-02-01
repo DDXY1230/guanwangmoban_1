@@ -54,12 +54,18 @@
       </div>
     </div>
     <div class="ctms-security">
-      <div class="ctms-security-desc desc-left"><span class="desc-left-text">支持离线完成监查报告</span>
-        <svg-icon iconClass="arrow3"></svg-icon>
+      <div class="ctms-security-desc desc-left">
+        <span class="desc-left-text">支持离线完成监查报告</span>
+        <span class="arrow3">
+          <svg-icon iconClass="arrow3"></svg-icon>
+        </span>
       </div>
       <img src="@/assets/imgs/img_ctmsn6.png" alt="">
       <div class="ctms-security-desc desc-right">
-        <svg-icon iconClass="arrow4"></svg-icon><span class="desc-right-text">高级别数据安全性和多地数据备份</span>
+        <span class="arrow4">
+          <svg-icon iconClass="arrow4"></svg-icon>
+        </span>
+        <span class="desc-right-text">高级别数据安全性和多地数据备份</span>
       </div>
     </div>
     <div class="ctms-connect">
@@ -140,6 +146,7 @@ export default {
         .box-desc {
           margin: 0;
           font-size: 20px;
+          font-weight: bold;
         }
         &.box-1,
         &.box-3 {
@@ -212,16 +219,25 @@ export default {
         left: 0;
         top: 100px;
         padding-right: 36px;
+        position: relative;
+        .arrow3 {
+          position: absolute;
+          right: 42px;
+          top: 0px;
+        }
         .desc-left-text {
-          padding-right: 60px;
         }
       }
       &.desc-right {
         right: 0;
         bottom: 100px;
         padding-left: 36px;
+        .arrow4 {
+          position: absolute;
+          left: 42px;
+          top: 0px;
+        }
         .desc-right-text {
-          padding-left: 60px;
         }
       }
     }
@@ -249,6 +265,7 @@ export default {
         text-align: center;
         margin: 10px 10px 0;
         font-size: 20px;
+        font-weight: bold;
       }
     }
   }

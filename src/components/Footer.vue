@@ -28,6 +28,7 @@ export default {
   text-align: center;
   padding: 60px 0 30px;
   font-size: 12px;
+  margin-top: 100px;
   &-img {
     margin-bottom: 33px;
   }

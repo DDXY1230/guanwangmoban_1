@@ -140,6 +140,7 @@ export default {
         .box-desc {
           margin: 0;
           font-size: 20px;
+          font-weight: bold;
         }
         &.box-1,
         &.box-3 {
@@ -177,7 +178,7 @@ export default {
       box-sizing: border-box;
       &-item {
         color: #fff;
-        margin: 22px 0;
+        margin: 26px 0;
         &-desc {
           font-size: 24px;
           margin: 4px;

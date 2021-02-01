@@ -182,10 +182,16 @@ export default {
           descList: []
         },
         {
-          firstTitle: "ECONSENT",
+          firstTitle: "eConsent",
           secondTitle: "电子知情同意书",
           carouselImagUrl: require("@/assets/imgs/img_Product4.png"),
-          descList: []
+          descList: [
+            "改变受试者签署知情同意的全过程",
+            "实现受试者对临床研究的充分知情",
+            "知情同意全过程完全留痕",
+            "遵循211 CFR Part 11关于电子签名的要求",
+            "符合HIPAA和GPPR关于受试者隐私保护的要求",
+          ]
         }
       ],
       currentIndex: 0,
@@ -412,7 +418,7 @@ export default {
     }
   }
   &-carousel {
-    background: #EE8A1D;
+    background: #ee8a1d;
     height: 480px;
     width: 100%;
     overflow: hidden;
@@ -470,7 +476,7 @@ export default {
               font-weight: 400;
               line-height: 22px;
               color: #00215f;
-              padding: 4px;
+              padding: 10px 4px;
             }
           }
         }
@@ -640,13 +646,13 @@ export default {
         margin: 0 30px;
         &-list {
           list-style: none;
-            font-size: 24px;
+          font-size: 24px;
           li {
             color: #ee8a1d;
             line-height: 100px;
           }
           &-centerli {
-            padding-left: 40px;
+            padding-left: 50px;
           }
         }
       }

@@ -92,7 +92,7 @@ export default {
         background: #fff;
         bottom: 20px;
         left: 0;
-        padding: 20px 22px;
+        padding: 20px 10px;
         box-sizing: border-box;
         &-title {
           font-size: 36px;
@@ -101,6 +101,7 @@ export default {
         &-desc {
           font-size: 20px;
           margin: 0;
+          font-weight: bold;
         }
       }
     }
