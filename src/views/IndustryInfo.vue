@@ -77,6 +77,7 @@ export default {
         margin: 0;
       }
       &-word {
+        line-height: 30px;
       }
     }
   }

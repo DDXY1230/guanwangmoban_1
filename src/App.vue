@@ -3,17 +3,16 @@
     <!-- 头部导航栏 -->
     <Header></Header>
     <div class="main">
-      <router-view/>
+      <router-view />
     </div>
     <Footer></Footer>
     <quick-to-top></quick-to-top>
-
   </div>
 </template>
 <script>
-import Header from '@/components/Header'
-import Footer from '@/components/Footer'
-import QuickToTop from '@/components/QuickToTop'
+import Header from "@/components/Header";
+import Footer from "@/components/Footer";
+import QuickToTop from "@/components/QuickToTop";
 
 export default {
   components: {
@@ -21,13 +20,13 @@ export default {
     Footer,
     QuickToTop
   }
-}
+};
 </script>
 
 <style lang="scss">
 @font-face {
-  src: url('./fonts/SourceHanSerifCN-Bold-2.otf') format('truetype');
-  font-family: 'SourceHanSerifCN-Bold-2';
+  src: url("./fonts/SourceHanSerifCN-Bold-2.otf") format("truetype");
+  font-family: "SourceHanSerifCN-Bold-2";
 }
 body {
   margin: 0;
@@ -36,19 +35,54 @@ body {
   min-width: 1280px;
 }
 #app {
-  font-family: 'PingFangSC-Regular', 'PingFang SC','Avenir', 'Helvetica', 'Arial', 'sans-serif';
+  font-family: "PingFangSC-Regular", "PingFang SC", "Avenir", "Helvetica",
+    "Arial", "sans-serif";
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   color: #2c3e50;
-  background: #F7FCFF;
+  background: #f7fcff;
 }
 .main {
   min-height: calc(100vh - 120px);
   // border: 1px solid transparent;
   box-sizing: border-box;
 }
+
+body::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+/*正常情况下滑块的样式*/
+body::-webkit-scrollbar-thumb {
+  background-color: rgb(186, 208, 221);
+  border-radius: 10px;
+  -webkit-box-shadow: inset 1px 1px 0 rgba(0, 0, 0, 0.1);
+}
+/*鼠标悬浮在该类指向的控件上时滑块的样式*/
+body:hover::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  -webkit-box-shadow: inset 1px 1px 0 rgba(0, 0, 0, 0.1);
+}
+/*鼠标悬浮在滑块上时滑块的样式*/
+body::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(0, 0, 0, 0.4);
+  -webkit-box-shadow: inset 1px 1px 0 rgba(0, 0, 0, 0.1);
+}
+/*正常时候的主干部分*/
+body::-webkit-scrollbar-track {
+  border-radius: 10px;
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0);
+  background-color: white;
+}
+/*鼠标悬浮在滚动条上的主干部分*/
+body::-webkit-scrollbar-track:hover {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.4);
+  background-color: rgba(0, 0, 0, 0.01);
+}
+
 .highlight {
-    color: #ee8a1d;
-    font-weight: bold;
+  color: #ee8a1d;
+  font-weight: bold;
 }
 </style>

@@ -6,10 +6,10 @@
         <div class="about-banner-content-brief">
           <h4 class="about-banner-content-brief-title">{{$t("about.intro")}}</h4>
           <div v-if="isCurrLocal == 'cn'">
-          <p class="about-banner-content-brief-desc">易临云科技旨在建立领先的临床研究云平台，以<span class="highlight">“科技创新为病人带来有效治疗”</span>为使命，立足中国、服务全球的医疗卫生与生命科技企业。</p>
+          <p class="about-banner-content-brief-desc">一临云科技旨在建立领先的临床研究云平台，以<span class="highlight">“科技创新为病人带来有效治疗”</span>为使命，立足中国、服务全球的医疗卫生与生命科技企业。</p>
           </div>
           <div v-else>
-            <p>
+            <p class="about-banner-content-brief-desc">
               eClinCloud Technologies (AKA. ECC) is a global clinical trial cloud platform. Our mission is to "leverage innovative technology for patients to access effective treatment". Our journey started in China,
               servicing the global life sciences community. ECC’s clinical trial cloud platform is a uniformed platform, including eConsent, EDC, RTSM, eCOA, CTMS, eTM, RBM and Virtual Trial solutions.
             </p>
@@ -27,14 +27,14 @@
           <h3 class="about-part1-right-content-title">{{$t("about.integration")}}</h3>
           <div v-if="isCurrLocal == 'cn'">
             <p class="about-part1-right-text">
-              易临云的临床研究云平台是自主研发的端到端无缝整合一体化平台，包括<span class="highlight">电子知情同意eConsent、电子数据采集EDC、随机与药物管理RTSM、电子临床结局评估eCOA、临床研究项目管理系统CTMS、电子化试验主文档管理eTMF、基于风险的监查系统RBM、虚拟化临床研究Virtual Trial</span>等。
+              一临云的临床研究云平台是自主研发的端到端无缝整合一体化平台，包括电子知情同意<span class="highlight">eConsent</span>、电子数据采集<span class="highlight">EDC</span>、随机与药物管理<span class="highlight">RTSM</span>、电子临床结局评估e<span class="highlight">COA</span>、临床研究项目管理系统<span class="highlight">CTMS</span>、电子化试验主文档管理<span class="highlight">eTMF</span>、基于风险的监查系统<span class="highlight">RBM</span>、虚拟化临床研究<span class="highlight">Virtual Trial</span>等。
             </p>
             <p class="about-part1-right-text">
-              通过易临云的专业化解决方案，为制药企业、医疗器械公司、研究机构加速新药研发的进程、缩减临床研究的成本、降低临床研究的风险。
+              通过一临云的专业化解决方案，为制药企业、医疗器械公司、研究机构加速新药研发的进程、缩减临床研究的成本、降低临床研究的风险。
             </p>
           </div>
           <div v-else>
-            <p>
+            <p class="about-part1-right-text">
               To better serve our global life sciences community, ECC has entered into exclusive strategic partnerships with world leading clinical trial system provider in Greater China.  ECC works closely with leading experts in different therapeutic domains and provides optimized planning through data capture and management as well as risk management with tools such as Central Imaging, Cardiac Safety, Respiratory Safety and Sensor & Wearable Device.
             </p>
           </div>
@@ -122,6 +122,8 @@ export default {
           font-size: 20px;
           margin: 0;
           font-weight: bold;
+          line-height: 30px;
+          text-indent: 26px;
         }
       }
     }
@@ -163,6 +165,8 @@ export default {
       &-text {
         max-width: 600px;
         z-index: 100;
+        text-indent: 26px;
+        line-height: 30px;
       }
     }
   }
@@ -171,7 +175,7 @@ export default {
     background: #dfe3ee;
     width: 100%;
     &-wrap {
-      height: 360px;
+      min-height: 360px;
       padding-top: 60px;
       width: 100%;
       overflow: hidden;
@@ -182,6 +186,7 @@ export default {
       min-height: 280px;
       display: flex;
       position: relative;
+      line-height: 30px;
       .zuoyinhao {
         position: absolute;
         top: -14px;
@@ -215,12 +220,13 @@ export default {
         padding-left: 32px;
         &-title {
           position: absolute;
-          top: -61px;
+          top: -52px;
           left: 34px;
           font-size: 36px;
         }
         &-text {
           margin: 30px 0 0;
+          text-indent: 26px;
         }
       }
       &-right {
@@ -249,6 +255,7 @@ export default {
       justify-content: space-around;
       padding: 20px 40px;
       position: relative;
+      text-indent: 26px;
       &-icon {
         position: absolute;
         width: 64px;

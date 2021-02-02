@@ -8,7 +8,7 @@
       <svg-icon iconClass="email"></svg-icon>
       ecc@eclincloud.com
     </p>
-    <p>© 2020-2020 易临云（深圳）科技有限公司 版权所有 粤ICP备20068916号.</p>
+    <p>© 2020-2020 一临云（深圳）科技有限公司 版权所有 粤ICP备20068916号.</p>
   </div>
 </template>
 <script>

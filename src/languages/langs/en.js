@@ -20,7 +20,7 @@ const en = {
     econsent: 'eConsent'
   },
   footer: {
-    text: '© 2020-2020 易临云（深圳）科技有限公司 版权所有  粤ICP备20068916号. '
+    text: '© 2020-2020 eClinCloud (Shenzhen) Technology Co., Ltd copyright  粤ICP备20068916号. '
   },
   home: {
     innovate: 'Innovation through science and technology',
@@ -56,7 +56,9 @@ const en = {
     contactWay: 'Please leave your contact information, customer service will contact you as soon as possible.',
     submit: 'Submit',
     shenzhen: 'Shenzhen R & D Center',
+    shenzhenAddr: 'No.13, 2 / F, block B, building 12, shenzhenwan science and technology ecological park, Shenzhen City, Guangdong Province',
     chengdu: 'Chengdu R & D Center',
+    chengduAddr: 'Block E3, Wuhou garden, No. 112, Shuangnan section, Wuhou Avenue, Wuhou District, Chengdu City, Sichuan Province',
     nonsupport: 'Unable to submit for the time being, please contact us directly by email and telephone!'
   },
   ctms: {
@@ -154,7 +156,7 @@ const en = {
     desc_3: 'Reduce drug waste by using drug distribution template with predictive functions',
     desc_4: 'Role level security management configuration',
     desc_5: 'Seamless integrates with EDC and CTMS as well as external portal',
-    desc_6: 'Provides 24/7/365 support',
+    desc_6: 'Provides 24/7/365 support',
   }
 }
 export default en

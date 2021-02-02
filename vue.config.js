@@ -18,7 +18,7 @@ module.exports = {
   chainWebpack: (config) => {
     // config.plugin('html')
     //   .tap(args => {
-    //     args[0].title = "易临云";
+    //     args[0].title = "一临云";
     //     return args;
     //   })
     // svg rule loader
@@ -41,7 +41,7 @@ module.exports = {
   pages: {
     index: {
       entry: "src/main.js",
-      title: "易临云", //放要改的title名
+      title: "一临云", //放要改的title名
     },
   },
   css: {

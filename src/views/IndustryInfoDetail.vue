@@ -3,12 +3,12 @@
   <div class='industryInfoDetail'>
 
     <div class="industryInfoDetail-left">
-      <p class="industryInfoDetail-left-back">{{ $t("header.news") }} 《 <span class="back" @click="back()">{{ $t("header.back") }}</span></p>
+      <p class="industryInfoDetail-left-back">{{ $t("header.news") }} 《 <span class="back" @click="back()">{{ $t("common.back") }}</span></p>
 
       <h4 class="industryInfoDetail-left-title">最新研究发现c9ww</h4>
       <p class="industryInfoDetail-left-time">2021-02-12</p>
       <img class="industryInfoDetail-left-cover" src="@/assets/imgs/img_Product2.png" alt="">
-      <p>
+      <p class="industryInfoDetail-left-caption">
         利用定量模型和GIS方法，从空间布局、服务范围以及航空客流分布等方面来研究中国的机场体系及其服务水平利用定量模型和GIS方法.
         在中国大陆拥有26家分支行的汇丰银行（HSBC）表示，新条例将使其能够进一步扩大分行网络和服务范围。用定量模型和GIS方法，从空间布局、服务范围以及航空客流分布等方面来研究中国的机场体系及其服务水平利用定量模型和GIS方法.在中国大陆拥有26家分支行的汇丰银行（HSBC）表示，新条例将使其能够进一步扩大分行网络和服务范围。
         利用定量模型和GIS方法，从空间布局、服务范围以及航空客流分布等方面来研究中国的机场体系及其服务水平利用定量模型和GIS方法.在中国大陆拥有26家分支行的汇丰银行（HSBC）表示，新条例将使其能够进一步扩大分行网络和服务范围
@@ -63,6 +63,10 @@ export default {
   &-left {
     flex: 1;
     margin-right: 200px;
+    &-caption {
+      line-height: 30px;
+      text-indent: 26px;
+    }
     &-back {
       .back {
         cursor: pointer;

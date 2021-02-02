@@ -23,7 +23,7 @@
         <p class="contact-location-right-icon">
           <svg-icon iconClass="icon_dingwei" style="font-size: 35px"></svg-icon>
         </p>
-        <p>广东省深圳市深圳湾科技生态园12栋B座2楼13号</p>
+        <p>{{$t("contact.shenzhenAddr")}}</p>
         <p class="contact-location-right-icon">
           <svg-icon iconClass="icon_mail2" style="font-size: 35px"></svg-icon>
         </p>
@@ -43,7 +43,7 @@
         <p class="contact-location-right-icon">
           <svg-icon iconClass="icon_dingwei" style="font-size: 35px"></svg-icon>
         </p>
-        <p>四川省成都市武侯区武侯大道双楠段112号武侯庭园E3座</p>
+        <p>{{$t("contact.chengduAddr")}}</p>
         <p class="contact-location-right-icon">
           <svg-icon iconClass="icon_mail2" style="font-size: 35px"></svg-icon>
         </p>
@@ -179,7 +179,8 @@ export default {
 
       &-center {
         display: inline-block;
-        width: 207px;
+        padding: 0 12px;
+        min-width: 207px;
         height: 60px;
         line-height: 60px;
         background: #ee8a1d;

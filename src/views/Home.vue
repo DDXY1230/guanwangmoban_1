@@ -60,11 +60,11 @@
           <!-- <p class="home-about-desc">About us</p> -->
           <div v-if="isCurrLocal == 'cn'">
             <p class="home-about-left-text-1">
-              易临云科技旨在建立领先的临床研究云平台，以“<span class="highlight">科技创新为病人带来有效治疗</span>”为使命，立足中国、服务全球的医疗卫生与生命科技企业。
+              一临云科技旨在建立领先的临床研究云平台，以“<span class="highlight">科技创新为病人带来有效治疗</span>”为使命，立足中国、服务全球的医疗卫生与生命科技企业。
             </p>
             <p class="home-about-left-text-2">
-              易临云的临床研究云平台是自主研发的端到端无缝整合一体化平台，包括<span class="highlight">电子知情同意eConsent、电子数据采集EDC、随机与药物管理RTSM、电子临床结局评估eCOA、临床研究项目管理系统CTMS、电子化试验主文档管理eTMF、基于风险的监查系统RBM、虚拟化临床研究Virtual
-                Trial</span>等。通过易临云的专业化解决方案，为制药企业、医疗器械公司、研究机构加速新药研发的进程、缩减临床研究的成本、降低临床研究的风险。
+              一临云的临床研究云平台是自主研发的端到端无缝整合一体化平台，包括<span class="highlight">电子知情同意eConsent、电子数据采集EDC、随机与药物管理RTSM、电子临床结局评估eCOA、临床研究项目管理系统CTMS、电子化试验主文档管理eTMF、基于风险的监查系统RBM、虚拟化临床研究Virtual
+                Trial</span>等。通过一临云的专业化解决方案，为制药企业、医疗器械公司、研究机构加速新药研发的进程、缩减临床研究的成本、降低临床研究的风险。
             </p>
           </div>
           <div v-else>
@@ -535,6 +535,7 @@ export default {
         text-indent: 20px;
         font-size: 18px;
         font-weight: 400;
+        line-height: 30px;
         .highlight {
           color: #ee8a1d;
         }
@@ -601,7 +602,7 @@ export default {
             position: absolute;
             bottom: 0;
             width: 720px;
-            height: 104px;
+            min-height: 104px;
             background: rgba(0, 0, 0, 0.6);
             cursor: pointer;
             .mask {
@@ -621,6 +622,7 @@ export default {
               &-content {
                 color: #fff;
                 margin: 0 10px;
+                line-height: 30px;
               }
             }
           }
@@ -636,6 +638,9 @@ export default {
         .title {
           font-size: 24px;
           margin: 2px;
+        }
+        .content {
+          line-height: 30px;
         }
       }
     }
