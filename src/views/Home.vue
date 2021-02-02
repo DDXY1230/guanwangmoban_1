@@ -151,7 +151,10 @@ export default {
             "内置多套功能模板，实现<span class='highlight'>快速部署</span>，平均1-2个月完成系统上线",
             "支持<span class='highlight'>多语言、多时区</span>和<span class='highlight'>多种货币</span>的转换",
           ] : [
-            "good good study"
+            'Supports multiple randomization algorithms',
+            '90% of the project can complete configuration within three hours',
+            'Role level security management configuration',
+            'Provides 24/7/365 support',
           ]
         },
         {
@@ -164,7 +167,10 @@ export default {
             "集成<span class='highlight'>MedDRA</span>与<span class='highlight'>WHODD</span>的自动编码功能",
             "提供业界常用的标准化报表,且用户可任意<span class='highlight'>自定义报表</span>",
           ] : [
-            "good good study"
+            'Supports multiple randomization algorithms',
+            '90% of the project can complete configuration within three hours',
+            'Role level security management configuration',
+            'Provides 24/7/365 support',
           ]
         },
         {
@@ -177,7 +183,10 @@ export default {
             "支持<span class='highlight'>BYOD</span>和<span class='highlight'>移动终端</span>租赁模式",
             "提供从量表版权获取、翻译、语言验证、<span class='highlight'>eCOA部署</span>、培训、数据质量分析等服务",
           ] : [
-            "good good study"
+            'Supports multiple randomization algorithms',
+            '90% of the project can complete configuration within three hours',
+            'Role level security management configuration',
+            'Provides 24/7/365 support',
           ]
         },
         {
@@ -190,7 +199,10 @@ export default {
             "药物发放模块具备<span class='highlight'>预测功能</span>,最大可能的减少药物的浪费",
             "严格的<span class='highlight'>角色配置</span>和<span class='highlight'>权限管理</span>",
           ] : [
-            "good good study"
+            'Supports multiple randomization algorithms',
+            '90% of the project can complete configuration within three hours',
+            'Role level security management configuration',
+            'Provides 24/7/365 support',
           ]
         },
         {
@@ -199,6 +211,10 @@ export default {
           carouselImagUrl: require("@/assets/imgs/img_Product5.png"),
           descList: this.isCurrLocal == 'cn' ? [
           ] : [
+            'Supports multiple randomization algorithms',
+            '90% of the project can complete configuration within three hours',
+            'Role level security management configuration',
+            'Provides 24/7/365 support',
           ]
         },
         {
@@ -211,7 +227,10 @@ export default {
             "遵循<span class='highlight'>211 CFR Part11</span>关于电子签名的要求",
             "符合<span class='highlight'>HIPAA</span>和<span class='highlight'>GPPR</span>关于受试者隐私保护的要求",
           ] : [
-            "good good study"
+            'Supports multiple randomization algorithms',
+            '90% of the project can complete configuration within three hours',
+            'Role level security management configuration',
+            'Provides 24/7/365 support',
           ]
         }
       ]
@@ -498,11 +517,15 @@ export default {
           }
           &-list {
             padding-left: 22px;
+            height: 284px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
             &-li {
               font-size: 18px;
               font-weight: 400;
               color: #00215f;
-              padding: 10px 4px;
+              padding: 0;
               line-height: 40px;
             }
           }
@@ -541,6 +564,7 @@ export default {
         font-size: 18px;
         font-weight: 400;
         line-height: 30px;
+        color: #00215f;
         .highlight {
           color: #ee8a1d;
         }
