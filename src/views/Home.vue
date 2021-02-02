@@ -45,8 +45,7 @@
               <span class="title-2">{{currentItem.secondTitle}}</span>
             </h3>
             <ul class="home-carousel-content-right-box-list">
-              <li class="home-carousel-content-right-box-list-li" v-for="(item,index) in currentItem.descList" :key="index">
-                {{item}}
+              <li class="home-carousel-content-right-box-list-li" v-for="(item,index) in currentItem.descList" :key="index" v-html="item">
               </li>
             </ul>
           </div>
@@ -131,78 +130,7 @@ export default {
   name: "Home",
   data() {
     return {
-      itemData: [
-        {
-          firstTitle: "CTMS",
-          secondTitle: "临床项目管理系统",
-          carouselImagUrl: require("@/assets/imgs/img_Product6.png"),
-          descList: [
-            this.$t("ctms.desc_1"),
-            this.$t("ctms.desc_2"),
-            this.$t("ctms.desc_3"),
-            this.$t("ctms.desc_4")
-            // this.$t('ctms.desc_5'),
-            // this.$t('ctms.desc_6'),
-          ]
-        },
-        {
-          firstTitle: "EDC",
-          secondTitle: "电子数据采集系统",
-          carouselImagUrl: require("@/assets/imgs/img_Product3.png"),
-          descList: [
-            this.$t("edc.desc_1"),
-            this.$t("edc.desc_2"),
-            this.$t("edc.desc_3"),
-            this.$t("edc.desc_4"),
-            this.$t("edc.desc_5"),
-            this.$t("edc.desc_6")
-          ]
-        },
-        {
-          firstTitle: "eCOA",
-          secondTitle: "电子临床结局评估",
-          carouselImagUrl: require("@/assets/imgs/img_Product1.png"),
-          descList: [
-            this.$t("ecoa.desc_1"),
-            this.$t("ecoa.desc_2"),
-            this.$t("ecoa.desc_3"),
-            this.$t("ecoa.desc_4"),
-            this.$t("ecoa.desc_5")
-            // this.$t('ecoa.desc_6'),
-          ]
-        },
-        {
-          firstTitle: "RTSM",
-          secondTitle: "随机与药物管理",
-          carouselImagUrl: require("@/assets/imgs/img_Product2.png"),
-          descList: [
-            this.$t("rtsm.desc_1"),
-            this.$t("rtsm.desc_2"),
-            this.$t("rtsm.desc_3"),
-            this.$t("rtsm.desc_4"),
-            this.$t("rtsm.desc_5")
-            // this.$t('rtsm.desc_6'),
-          ]
-        },
-        {
-          firstTitle: "eTMF",
-          secondTitle: "文档管理",
-          carouselImagUrl: require("@/assets/imgs/img_Product5.png"),
-          descList: []
-        },
-        {
-          firstTitle: "eConsent",
-          secondTitle: "电子知情同意书",
-          carouselImagUrl: require("@/assets/imgs/img_Product4.png"),
-          descList: [
-            this.$t("econsent.desc_1"),
-            this.$t("econsent.desc_2"),
-            this.$t("econsent.desc_3"),
-            this.$t("econsent.desc_4"),
-            this.$t("econsent.desc_5")
-          ]
-        }
-      ],
+      
       currentIndex: 0,
       currentItem: {}
     };
@@ -210,6 +138,83 @@ export default {
   computed: {
     isCurrLocal() {
       return this.$i18n.locale;
+    },
+    itemData() {
+      return [
+        {
+          firstTitle: "CTMS",
+          secondTitle: "临床项目管理系统",
+          carouselImagUrl: require("@/assets/imgs/img_Product6.png"),
+          descList:this.isCurrLocal == 'cn' ? [
+            "<span class='highlight'>业内领先</span>的CTMS系统，具备完善的功能模块",
+            "实现<span class='highlight'>实时掌握</span>项目的全方位进展",
+            "内置多套功能模板，实现<span class='highlight'>快速部署</span>，平均1-2个月完成系统上线",
+            "支持<span class='highlight'>多语言、多时区</span>和<span class='highlight'>多种货币</span>的转换",
+          ] : [
+            "good good study"
+          ]
+        },
+        {
+          firstTitle: "EDC",
+          secondTitle: "电子数据采集系统",
+          carouselImagUrl: require("@/assets/imgs/img_Product3.png"),
+          descList: this.isCurrLocal == 'cn' ? [
+            "快速实现<span class='highlight'>eCRF</span>设计, 比传统EDC<span class='highlight'>节约30%</span>时间",
+            "提供<span class='highlight'>符合CDISC标准</span>的对个治疗领域的eCRF模块库",
+            "集成<span class='highlight'>MedDRA</span>与<span class='highlight'>WHODD</span>的自动编码功能",
+            "提供业界常用的标准化报表,且用户可任意<span class='highlight'>自定义报表</span>",
+          ] : [
+            "good good study"
+          ]
+        },
+        {
+          firstTitle: "eCOA",
+          secondTitle: "电子临床结局评估",
+          carouselImagUrl: require("@/assets/imgs/img_Product1.png"),
+          descList: this.isCurrLocal == 'cn' ? [
+            "业内<span class='highlight'>最快实现</span>eCOA<span class='highlight'>部署</span>,平均在4周完成上线",
+            "实施团队具有<span class='highlight'>丰富的国际大型</span>eCOA项目<span class='highlight'>经验</span>",
+            "支持<span class='highlight'>BYOD</span>和<span class='highlight'>移动终端</span>租赁模式",
+            "提供从量表版权获取、翻译、语言验证、<span class='highlight'>eCOA部署</span>、培训、数据质量分析等服务",
+          ] : [
+            "good good study"
+          ]
+        },
+        {
+          firstTitle: "RTSM",
+          secondTitle: "随机与药物管理",
+          carouselImagUrl: require("@/assets/imgs/img_Product2.png"),
+          descList: this.isCurrLocal == 'cn' ? [
+            "零编程快速实现<span class='highlight'>随机和药物管理</span>的配置",
+            "90%以上的项目可在<span class='highlight'>三小时内完成</span>部署",
+            "药物发放模块具备<span class='highlight'>预测功能</span>,最大可能的减少药物的浪费",
+            "严格的<span class='highlight'>角色配置</span>和<span class='highlight'>权限管理</span>",
+          ] : [
+            "good good study"
+          ]
+        },
+        {
+          firstTitle: "eTMF",
+          secondTitle: "文档管理",
+          carouselImagUrl: require("@/assets/imgs/img_Product5.png"),
+          descList: this.isCurrLocal == 'cn' ? [
+          ] : [
+          ]
+        },
+        {
+          firstTitle: "eConsent",
+          secondTitle: "电子知情同意书",
+          carouselImagUrl: require("@/assets/imgs/img_Product4.png"),
+          descList: this.isCurrLocal == 'cn' ? [
+            "改变受试者签署知情同意的<span class='highlight'>全过程</span>",
+            "实现受试者对临床研究的<span class='highlight'>充分知情</span>",
+            "遵循<span class='highlight'>211 CFR Part11</span>关于电子签名的要求",
+            "符合<span class='highlight'>HIPAA</span>和<span class='highlight'>GPPR</span>关于受试者隐私保护的要求",
+          ] : [
+            "good good study"
+          ]
+        }
+      ]
     }
   },
   mounted() {
@@ -481,7 +486,7 @@ export default {
           background: #fff;
           padding: 32px;
           &-title {
-            color: #ee8a1d;
+            color: #00215F;
             margin: 0;
             .title-1 {
               font-size: 36px;
@@ -496,9 +501,9 @@ export default {
             &-li {
               font-size: 18px;
               font-weight: 400;
-              line-height: 22px;
               color: #00215f;
               padding: 10px 4px;
+              line-height: 40px;
             }
           }
         }

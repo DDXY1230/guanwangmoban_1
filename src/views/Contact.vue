@@ -27,7 +27,7 @@
         <p class="contact-location-right-icon">
           <svg-icon iconClass="icon_mail2" style="font-size: 35px"></svg-icon>
         </p>
-        <p>huangyamei@eclincloud.com</p>
+        <p>ecc@eclincloud.com</p>
         <p class="contact-location-right-number">0755-22671619</p>
         <img class="contact-location-right-phone" src="@/assets/imgs/icon_phone2.png" alt="">
       </div>
@@ -47,7 +47,7 @@
         <p class="contact-location-right-icon">
           <svg-icon iconClass="icon_mail2" style="font-size: 35px"></svg-icon>
         </p>
-        <p>huangyamei@eclincloud.com</p>
+        <p>ecc@eclincloud.com</p>
         <p class="contact-location-right-number">028-67136918</p>
         <img class="contact-location-right-phone" src="@/assets/imgs/icon_phone2.png" alt="">
       </div>
