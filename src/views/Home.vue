@@ -112,10 +112,15 @@
           <img src="@/assets/imgs/img_services.png" alt="">
         </div>
         <div class="home-service-content-right">
-          <ul :class="['home-service-content-right-list',{'home-service-content-right-list-isEn': isCurrLocal == 'en'}]">
-            <li>• {{$t("home.teamwork")}}</li>
-            <li class="home-service-content-right-list-centerli">• {{$t("home.manage")}}</li>
-            <li>• {{$t("home.risk")}}</li>
+          <ul :class="['home-service-content-right-list']" v-if="isCurrLocal == 'cn'">
+            <li>• 不同治疗领域的意见领袖<span class="highlight">深度合作</span></li>
+            <li class="home-service-content-right-list-centerli">• 提供从<span class="highlight">方案优化</span>到<span class="highlight">数据收集</span>和管理</li>
+            <li>• <span class="highlight">风险管理</span>等解决方案</li>
+          </ul>
+          <ul :class="['home-service-content-right-list']" v-else>
+            <li>• <span class="highlight">In depth cooperation</span> of opinion leaders in different treatment fields</li>
+            <li class="home-service-content-right-list-centerli">• From <span class="highlight">solution</span> optimization to data collection and management</li>
+            <li>• <span class="highlight">Risk management</span> and other solutions</li>
           </ul>
         </div>
       </div>
@@ -707,11 +712,11 @@ export default {
             font-size: 20px;
           }
           li {
-            color: #ee8a1d;
-            line-height: 100px;
+            color: #00215f;
+            padding: 20px 0;
           }
           &-centerli {
-            padding-left: 50px;
+            padding-left: 50px !important;
           }
         }
       }

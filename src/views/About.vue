@@ -256,6 +256,7 @@ export default {
       padding: 20px 40px;
       position: relative;
       text-indent: 26px;
+      line-height: 30px;
       &-icon {
         position: absolute;
         width: 64px;

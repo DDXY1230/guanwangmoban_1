@@ -31,9 +31,9 @@ const cn = {
     contact: '联系我们',
     dynamic: '业内动态',
     service: '服务范围',
-    teamwork: '不同治疗领域的意见领袖深度合作',
-    manage: '提供从方案优化到数据收集和管理',
-    risk: '风险管理等解决方案'
+    teamwork: '不同治疗领域的意见领袖<span class="highlight">深度合作</span>',
+    manage: '提供从<span class="highlight">方案优化</span>到<span class="highlight">数据收集</span>和管理',
+    risk: '<span class="highlight">风险管理</span>等解决方案'
   },
   about: {
     intro: '公司简介',
