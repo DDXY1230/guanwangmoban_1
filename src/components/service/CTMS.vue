@@ -142,7 +142,7 @@ export default {
         flex: 1;
         text-align: center;
         padding-top: 100px;
-        font-size: 18px;
+        line-height: 20px;
         .box-img {
           width: 158px;
           height: 158px;
@@ -150,11 +150,13 @@ export default {
         .box-strong {
           margin: 40px 0 10px;
           font-size: 36px;
+          line-height: 36px;
         }
         .box-desc {
           margin: 0;
           font-size: 20px;
           font-weight: bold;
+          line-height: 28px;
         }
         &.box-1,
         &.box-3 {
@@ -228,6 +230,7 @@ export default {
         top: 100px;
         padding-right: 36px;
         position: relative;
+        font-weight: bold;
         .arrow3 {
           position: absolute;
           right: 42px;
@@ -240,6 +243,7 @@ export default {
         right: 0;
         bottom: 100px;
         padding-left: 36px;
+        font-weight: bold;
         .arrow4 {
           position: absolute;
           left: 42px;
@@ -267,6 +271,8 @@ export default {
       &-strong {
         font-size: 36px;
         margin: 0;
+        line-height: 36px;
+        margin-bottom: 14px;
         font-weight: 700;
       }
       &-text {
@@ -274,6 +280,7 @@ export default {
         margin: 10px 10px 0;
         font-size: 20px;
         font-weight: bold;
+        line-height: 28px;
       }
     }
   }

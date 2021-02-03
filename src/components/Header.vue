@@ -6,9 +6,9 @@
       </div>
       <div class="center">
         <!-- web端菜单 -->
-        <el-menu :default-active="activeIndex" class="el-menu-demo is-web-show" mode="horizontal" menu-trigger="click" @select="handleSelect">
+        <el-menu :default-active="activeIndex" class="el-menu-demo is-web-show" popper-class="abc" mode="horizontal" menu-trigger="click" @select="handleSelect">
           <el-menu-item index="/">{{ $t("header.home") }}</el-menu-item>
-          <el-submenu index="/service">
+          <el-submenu index="/service" popper-class="abc">
             <template slot="title">{{ $t("header.service") }}</template>
             <el-menu-item index="/service/CTMS">{{ $t("header.ctms") }}</el-menu-item>
             <el-menu-item index="/service/EDC">{{ $t("header.edc") }}</el-menu-item>
@@ -24,7 +24,7 @@
           }}</el-menu-item>
         </el-menu>
         <!-- 手机端菜单 -->
-        <el-dropdown class="is-phone-show" trigger="click" @command="handleCommand">
+        <el-dropdown class="is-phone-show" @command="handleCommand">
           <span class="el-dropdown-link">
             {{ currentItem }}<i class="el-icon-arrow-down el-icon--right"></i>
           </span>
@@ -80,7 +80,7 @@ export default {
     handleSelect(key, keyPath) {
       console.log(key, keyPath);
       if (key === "/service/eTMF") {
-        this.$message.info("努力开发中💪  ,敬请期待!");
+        this.$message.info("努力开发中 ,敬请期待!");
         return;
       }
       this.$router.push({
@@ -89,7 +89,7 @@ export default {
     },
     languageFunc(e) {
       // if (e == "en") {
-      //   this.$message.info("努力开发中💪  , 敬请期待!");
+      //   this.$message.info("努力开发中  , 敬请期待!");
       //   return;
       // }
       this.$i18n.locale = e;
@@ -163,7 +163,7 @@ export default {
       width: 60px;
       align-items: center;
       display: flex;
-      font-size: 18px;
+      line-height: 20px;
       span {
         cursor: pointer;
       }
@@ -180,8 +180,12 @@ export default {
   }
 }
 .el-menu-item {
-  padding: 0 42px;
+  padding: 0 30px !important;
+  line-height: 20px;
   font-size: 18px;
+}
+.el-menu .el-menu--popup {
+  border: 1px solid red !important;
 }
 .el-menu.el-menu--horizontal > .el-menu-item {
   height: 100px;
@@ -209,7 +213,8 @@ export default {
 .el-menu--horizontal .el-menu--popup {
   .el-menu-item {
     color: #00215f;
-    height: 40px;
+    height: 54px;
+    line-height: 54px;
   }
 }
 // 适配移动端

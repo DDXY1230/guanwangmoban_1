@@ -69,7 +69,7 @@ export default {
     flex: 1;
     margin-right: 200px;
     &-caption {
-      line-height: 30px;
+      line-height: 32px;
       text-indent: 26px;
     }
     &-back {
@@ -82,7 +82,7 @@ export default {
       margin: 0;
     }
     &-time {
-      font-size: 18px;
+      line-height: 20px;
       margin: 0 0 14px;
     }
     &-cover {

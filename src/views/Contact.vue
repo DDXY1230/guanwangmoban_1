@@ -21,13 +21,13 @@
           {{$t("contact.shenzhen")}}
         </span>
         <p class="contact-location-right-icon">
-          <svg-icon iconClass="icon_dingwei" style="font-size: 35px"></svg-icon>
+          <svg-icon iconClass="icon_dingwei" style="font-size: 30px"></svg-icon>
         </p>
-        <p>{{$t("contact.shenzhenAddr")}}</p>
+        <p class="contact-location-email">{{$t("contact.shenzhenAddr")}}</p>
         <p class="contact-location-right-icon">
-          <svg-icon iconClass="icon_mail2" style="font-size: 35px"></svg-icon>
+          <svg-icon iconClass="icon_mail2" style="font-size: 30px"></svg-icon>
         </p>
-        <p>ecc@eclincloud.com</p>
+        <p class="contact-location-email">ecc@eclincloud.com</p>
         <p class="contact-location-right-number">0755-22671619</p>
         <img class="contact-location-right-phone" src="@/assets/imgs/icon_phone2.png" alt="">
       </div>
@@ -41,13 +41,13 @@
           {{$t("contact.chengdu")}}
         </span>
         <p class="contact-location-right-icon">
-          <svg-icon iconClass="icon_dingwei" style="font-size: 35px"></svg-icon>
+          <svg-icon iconClass="icon_dingwei" style="font-size: 30px"></svg-icon>
         </p>
-        <p>{{$t("contact.chengduAddr")}}</p>
+        <p class="contact-location-email">{{$t("contact.chengduAddr")}}</p>
         <p class="contact-location-right-icon">
-          <svg-icon iconClass="icon_mail2" style="font-size: 35px"></svg-icon>
+          <svg-icon iconClass="icon_mail2" style="font-size: 30px"></svg-icon>
         </p>
-        <p>ecc@eclincloud.com</p>
+        <p class="contact-location-email">ecc@eclincloud.com</p>
         <p class="contact-location-right-number">028-67136918</p>
         <img class="contact-location-right-phone" src="@/assets/imgs/icon_phone2.png" alt="">
       </div>
@@ -84,7 +84,7 @@ export default {
 </script>
 <style lang="scss" scoped>
 .contact {
-  font-size: 18px;
+  line-height: 20px;
   &-banner {
     background: url("../assets/imgs/img_conus1.png") no-repeat center #000d26;
     height: 580px;
@@ -119,7 +119,7 @@ export default {
           width: 100%;
           box-sizing: border-box;
           margin-bottom: 20px;
-          font-size: 18px;
+          line-height: 20px;
         }
         .input1:focus {
           border-bottom-color: #00215f;
@@ -167,12 +167,17 @@ export default {
     display: flex;
     margin: 100px 0 100px;
     justify-content: center;
+    &-email {
+      font-size: 24px;
+      line-height: 30px;
+      padding-left: 30px;
+    }
     &-left {
       text-align: right;
       width: 500px;
     }
     &-right {
-      width: 450px;
+      width: 580px;
       padding: 70px 0 0 60px;
       color: #00215f;
       position: relative;

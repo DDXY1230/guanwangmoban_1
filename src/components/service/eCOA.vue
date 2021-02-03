@@ -17,7 +17,7 @@
             <p class="box-desc">平均在4周完成上线</p>
           </div>
           <div v-else>
-            <p>
+            <p class="box-desc">
               ECOA deployment is <span class="highlight">the fastest</span> in the industry, with an average of 4 weeks
             </p>
           </div>
@@ -30,7 +30,7 @@
             <p class="box-desc"><span class="highlight">国际大型eCOA项目</span>经验</p>
           </div>
           <div v-else>
-            <p>
+            <p class="box-desc">
               The implementation team has rich experience in <span class="highlight">large international ECOA</span> projects
             </p>
           </div>
@@ -43,7 +43,7 @@
             <p class="box-desc"><span class="highlight">eCOA部署</span>、培训、数据质量分析等服务</p>
           </div>
           <div v-else>
-            <p>It provides services such as scale copyright acquisition, translation, language verification, <span class="highlight">ECOA</span> deployment, training, data quality analysis, etc</p>
+            <p class="box-desc">It provides services such as scale copyright acquisition, translation, language verification, <span class="highlight">ECOA</span> deployment, training, data quality analysis, etc</p>
           </div>
         </div>
       </div>
@@ -151,7 +151,7 @@ export default {
         flex: 1;
         text-align: center;
         padding-top: 100px;
-        font-size: 18px;
+        line-height: 20px;
         .box-img {
           width: 158px;
           height: 158px;
@@ -159,11 +159,13 @@ export default {
         .box-strong {
           margin: 40px 0 10px;
           font-size: 36px;
+          line-height: 36px;
         }
         .box-desc {
           margin: 0;
           font-size: 20px;
           font-weight: bold;
+          line-height: 28px;
         }
         &.box-1,
         &.box-3 {

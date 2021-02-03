@@ -17,7 +17,7 @@
           <p class="box-desc">比传统EDC<span class="highlight">节约30%</span>时间</p>
           </div>
           <div v-else>
-            <p>
+            <p class="box-desc">
               Fast implementation of ECRF design <span class="highlight">saves 30%</span> time compared with traditional EDC
             </p>
           </div>
@@ -26,7 +26,7 @@
           <img class="box-img" src="@/assets/imgs/img_EDC3.png" alt="">
           <h4 class="box-strong">{{$t("edc.examine")}}</h4>
           <p class="box-desc" v-if="isCurrLocal == 'cn'"><span class="highlight">零编程</span>实现复杂的逻辑核查</p>
-          <p v-else>
+          <p v-else class="box-desc">
             <span class="highlight">Zero programming</span> for complex logic verification
           </p>
         </div>
@@ -69,7 +69,7 @@
         <p class="eConsent-connect-right-text">与<span class="highlight">电子知情同意系统、随机和药物管理、项目管理系统</span>等无缝整合</p>
         </div>
         <div v-else>
-          <p>
+          <p class="eConsent-connect-right-text">
             The interface is simple and friendly. It integrates with electronic informed consent system, random and drug management system, project management system and so on
           </p>
         </div>
@@ -96,7 +96,6 @@ export default {
 </script>
 <style lang='scss' scoped>
 .eConsent {
-  font-size: 18px;
   &-banner {
     height: 400px;
     background: url("../../assets/imgs/img_EDC1.png") center top no-repeat;
@@ -129,7 +128,7 @@ export default {
     justify-content: space-around;
     text-align: center;
     color: #00215f;
-    font-size: 18px;
+    line-height: 20px;
   }
   &-function {
     max-width: 1280px;
@@ -186,7 +185,7 @@ export default {
         flex: 1;
         text-align: center;
         padding-top: 100px;
-        font-size: 18px;
+        line-height: 20px;
         .box-img {
           width: 158px;
           height: 158px;
@@ -194,11 +193,13 @@ export default {
         .box-strong {
           margin: 40px 0 10px;
           font-size: 36px;
+          line-height: 36px;
         }
         .box-desc {
           margin: 0;
           font-size: 20px;
           font-weight: bold;
+          line-height: 28px;
         }
         &.box-1,
         &.box-3 {
@@ -222,13 +223,15 @@ export default {
       }
       &-strong {
         font-size: 36px;
-        margin: 0;
+        margin-bottom: 14px;
+        line-height: 36px;
         font-weight: 700;
       }
       &-text {
         text-align: center;
         margin: 10px 10px 0;
         font-size: 20px;
+        line-height: 28px;
         font-weight: bold;
       }
     }

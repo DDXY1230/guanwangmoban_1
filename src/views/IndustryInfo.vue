@@ -64,9 +64,11 @@ export default {
         font-size: 48px;
         font-weight: 500px;
         margin: 4px;
+        font-weight: bold;
       }
       .time-2 {
         font-size: 28px;
+        font-weight: bold;
         margin: 0;
       }
     }
@@ -77,7 +79,7 @@ export default {
         margin: 0;
       }
       &-word {
-        line-height: 30px;
+        line-height: 32px;
       }
     }
   }

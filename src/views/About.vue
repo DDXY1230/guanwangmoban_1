@@ -6,7 +6,7 @@
         <div class="about-banner-content-brief">
           <h4 class="about-banner-content-brief-title">{{$t("about.intro")}}</h4>
           <div v-if="isCurrLocal == 'cn'">
-          <p class="about-banner-content-brief-desc">一临云科技旨在建立领先的临床研究云平台，以<span class="highlight">“科技创新为病人带来有效治疗”</span>为使命，立足中国、服务全球的医疗卫生与生命科技企业。</p>
+            <p class="about-banner-content-brief-desc">一临云科技旨在建立领先的临床研究云平台，以<span class="highlight">“科技创新为病人带来有效治疗”</span>为使命，立足中国、服务全球的医疗卫生与生命科技企业。</p>
           </div>
           <div v-else>
             <p class="about-banner-content-brief-desc">
@@ -27,7 +27,10 @@
           <h3 class="about-part1-right-content-title">{{$t("about.integration")}}</h3>
           <div v-if="isCurrLocal == 'cn'">
             <p class="about-part1-right-text">
-              一临云的临床研究云平台是自主研发的端到端无缝整合一体化平台，包括电子知情同意<span class="highlight">eConsent</span>、电子数据采集<span class="highlight">EDC</span>、随机与药物管理<span class="highlight">RTSM</span>、电子临床结局评估e<span class="highlight">COA</span>、临床研究项目管理系统<span class="highlight">CTMS</span>、电子化试验主文档管理<span class="highlight">eTMF</span>、基于风险的监查系统<span class="highlight">RBM</span>、虚拟化临床研究<span class="highlight">Virtual Trial</span>等。
+              一临云的临床研究云平台是自主研发的端到端无缝整合一体化平台。</p>
+            <p class="about-part1-right-text">包括电子知情同意<span class="highlight">eConsent</span>、电子数据采集<span class="highlight">EDC</span>、随机与药物管理<span class="highlight">RTSM</span>、电子临床结局评估e<span
+                class="highlight">COA</span>、临床研究项目管理系统<span class="highlight">CTMS</span>、电子化试验主文档管理<span class="highlight">eTMF</span>、基于风险的监查系统<span class="highlight">RBM</span>、虚拟化临床研究<span class="highlight">Virtual
+                Trial</span>等。
             </p>
             <p class="about-part1-right-text">
               通过一临云的专业化解决方案，为制药企业、医疗器械公司、研究机构加速新药研发的进程、缩减临床研究的成本、降低临床研究的风险。
@@ -35,7 +38,9 @@
           </div>
           <div v-else>
             <p class="about-part1-right-text">
-              To better serve our global life sciences community, ECC has entered into exclusive strategic partnerships with world leading clinical trial system provider in Greater China.  ECC works closely with leading experts in different therapeutic domains and provides optimized planning through data capture and management as well as risk management with tools such as Central Imaging, Cardiac Safety, Respiratory Safety and Sensor & Wearable Device.
+              To better serve our global life sciences community, ECC has entered into exclusive strategic partnerships with world leading clinical trial system provider in Greater China. ECC works closely with leading
+              experts in different therapeutic domains and provides optimized planning through data capture and management as well as risk management with tools such as Central Imaging, Cardiac Safety, Respiratory Safety
+              and Sensor & Wearable Device.
             </p>
           </div>
         </div>
@@ -47,11 +52,11 @@
           <div class="about-part2-content-left">
             <h3 class="about-part2-content-left-title">{{$t("about.solution")}}</h3>
             <p class="about-part2-content-left-text">{{$t("about.solutionText1")}}</p>
-            <p class="highlight">
-              {{$t("about.centralImaging")}}<br>
-              {{$t("about.cardiacSafety")}}<br>
-              {{$t("about.respiratory")}}<br>
-              {{$t("about.device")}}<br>
+            <p class="about-part2-content-left-focus">
+              <span v-html='$t("about.centralImaging")'></span><br>
+              <span v-html='$t("about.cardiacSafety")'></span><br>
+              <span v-html='$t("about.respiratory")'></span><br>
+              <span v-html='$t("about.device")'></span><br>
             </p>
           </div>
           <div class="about-part2-content-right">
@@ -112,7 +117,7 @@ export default {
         background: #fff;
         bottom: 20px;
         left: 0;
-        padding: 20px 10px;
+        padding: 14px 4px 14px 22px;
         box-sizing: border-box;
         &-title {
           font-size: 36px;
@@ -122,8 +127,7 @@ export default {
           font-size: 20px;
           margin: 0;
           font-weight: bold;
-          line-height: 30px;
-          text-indent: 26px;
+          line-height: 32px;
         }
       }
     }
@@ -147,13 +151,13 @@ export default {
       justify-content: center;
       &-content {
         background: #eeeeee;
-        padding: 35px 61px;
+        padding: 35px 59px;
         position: relative;
-        font-size: 18px;
+        font-size: 20px;
         &-zuoyinhao {
           position: absolute;
-          top: -15px;
-          left: 20px;
+          top: -18px;
+          left: 0;
         }
         &-title {
           position: absolute;
@@ -165,8 +169,7 @@ export default {
       &-text {
         max-width: 600px;
         z-index: 100;
-        text-indent: 26px;
-        line-height: 30px;
+        line-height: 32px;
       }
     }
   }
@@ -186,10 +189,10 @@ export default {
       min-height: 280px;
       display: flex;
       position: relative;
-      line-height: 30px;
+      line-height: 32px;
       .zuoyinhao {
         position: absolute;
-        top: -14px;
+        top: -19px;
         left: -32px;
       }
       .left-line {
@@ -216,17 +219,19 @@ export default {
         flex-direction: column;
         justify-content: center;
         color: #00215f;
-        font-size: 18px;
-        padding-left: 32px;
+        font-size: 20px;
+        padding-left: 20px;
         &-title {
           position: absolute;
           top: -52px;
-          left: 34px;
+          left: 24px;
           font-size: 36px;
         }
         &-text {
           margin: 30px 0 0;
-          text-indent: 26px;
+        }
+        &-focus {
+          font-weight: bold;
         }
       }
       &-right {
@@ -245,7 +250,7 @@ export default {
     min-height: 336px;
     display: flex;
     margin: 50px auto;
-    font-size: 18px;
+    font-size: 20px;
     &-left {
       flex: 1;
       background: #00215f;
@@ -255,8 +260,7 @@ export default {
       justify-content: space-around;
       padding: 20px 40px;
       position: relative;
-      text-indent: 26px;
-      line-height: 30px;
+      line-height: 32px;
       &-icon {
         position: absolute;
         width: 64px;

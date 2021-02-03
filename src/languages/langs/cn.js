@@ -12,12 +12,12 @@ const cn = {
     about: '关于一临云',
     contact: '联系我们',
 
-    ctms: '临床研究管理系统(CTMS)',
-    edc: '电子数据采集(EDC)',
-    ecoa: '电子临床结局评估(eCOA)',
-    rtsm: '随机与药物管理(RTSM)',
-    etmt: 'eTMF文档管理(eTMF)',
-    econsent: '电子知情同意系统(eConsent)'
+    ctms: 'CTMS临床研究管理系统',
+    edc: 'EDC电子数据采集',
+    ecoa: 'eCOA电子临床结局评估',
+    rtsm: 'RTSM随机与药物管理',
+    etmt: 'eTMF文档管理',
+    econsent: 'eConsent电子知情同意系统'
   },
   footer: {
     text: '© 2020-2020 一临云（深圳）科技有限公司 版权所有  粤ICP备20068916号. '
@@ -40,10 +40,10 @@ const cn = {
     integration: '一体化平台',
     solution: '解决方案',
     solutionText1: '为了更好地服务中国企业的国际化以及外资企业的全球化战略，公司与全球领先的临床研究系统供应商建立战略合作关系（大中华区独家合作伙伴）；与不同治疗领域的意见领袖深度合作，提供从方案优化到数据收集和管理、风险管理等解决方案：',
-    centralImaging: '比如中心影像评估Central Imaging、',
-    cardiacSafety: '心脏安全Cardiac Safety、',
-    respiratory: '呼吸科安全Respiratory、',
-    device: '传感器与可穿戴设备Sensor & Wearable Device。',
+    centralImaging: '比如中心影像评估<span class="highlight">Central Imaging、</span>',
+    cardiacSafety: '心脏安全<span class="highlight">Cardiac Safety、</span>',
+    respiratory: '呼吸科安全<span class="highlight">Respiratory、</span>',
+    device: '传感器与可穿戴设备<span class="highlight">Sensor & Wearable Device。</span>',
 
     intro_1: '公司总部在粤港澳大湾区的核心深圳湾科技生态园，并在成都设有研发中心。目前在北京、上海、台北有分支机构。',
     intro_2: '创始团队和管理团队在临床研究领域深耕多年，具有丰富的经验；产品的研发与运维团队来自腾讯、华为、阿里巴巴等顶尖的互联网公司，对平台及软件系统的稳定性、数据安全保障、流程规范等均按照高级别要求。',
@@ -113,7 +113,7 @@ const cn = {
     support_4: '支持纯电子签名、打印手动签名、以及混合模式',
     keep_1: '遵循211 CFR Part 11关于电子签名的要求',
     keep_2: '符合HIPAA和GPPR关于受试者隐私保护的要求',
-
+    manySys: '多系统协作',
 
     desc_1: '改变受试者签署知情同意的全过程',
     desc_2: '实现受试者对临床研究的充分知情',

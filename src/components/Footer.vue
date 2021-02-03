@@ -8,7 +8,7 @@
       <svg-icon iconClass="email"></svg-icon>
       ecc@eclincloud.com
     </p>
-    <p>© 2020-2021 易临云（深圳）科技有限公司 版权所有 粤ICP备20068916号.</p>
+    <p class="footer-copyright">© 2020-2021 易临云（深圳）科技有限公司 版权所有 粤ICP备20068916号.</p>
   </div>
 </template>
 <script>
@@ -26,14 +26,18 @@ export default {
   background: #00215F;
   color: #fff;
   text-align: center;
-  padding: 60px 0 30px;
-  font-size: 12px;
+  padding: 48px 0 30px;
   margin-top: 100px;
+
   &-img {
-    margin-bottom: 33px;
+    margin-bottom: 4px;
+    width: 208px;
   }
   &-contact {
-    margin-bottom: 26px;
+    margin-bottom: 16px;
+  }
+  &-copyright {
+    font-size: 12px;
   }
 }
 </style>

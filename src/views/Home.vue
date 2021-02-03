@@ -62,16 +62,17 @@
               一临云科技旨在建立领先的临床研究云平台，以“<span class="highlight">科技创新为病人带来有效治疗</span>”为使命，立足中国、服务全球的医疗卫生与生命科技企业。
             </p>
             <p class="home-about-left-text-2">
-              一临云的临床研究云平台是自主研发的端到端无缝整合一体化平台，包括<span class="highlight">电子知情同意eConsent、电子数据采集EDC、随机与药物管理RTSM、电子临床结局评估eCOA、临床研究项目管理系统CTMS、电子化试验主文档管理eTMF、基于风险的监查系统RBM、虚拟化临床研究Virtual
+              一临云的临床研究云平台是自主研发的端到端无缝整合一体化平台，包括电子知情同意<span class="highlight">eConsent</span>、电子数据采集<span class="highlight">EDC</span>、随机与药物管理<span class="highlight">RTSM</span>、电子临床结局评估<span
+                class="highlight">eCOA</span>、临床研究项目管理系统<span class="highlight">CTMS</span>、电子化试验主文档管理<span class="highlight">eTMF</span>、基于风险的监查系统<span class="highlight">RBM</span>、虚拟化临床研究<span class="highlight">Virtual
                 Trial</span>等。通过一临云的专业化解决方案，为制药企业、医疗器械公司、研究机构加速新药研发的进程、缩减临床研究的成本、降低临床研究的风险。
             </p>
           </div>
           <div v-else>
-            <p>
+            <p class="home-about-left-text-1">
               eClinCloud Technologies (AKA. ECC) is a global clinical trial cloud platform. Our mission is to "leverage innovative technology for patients to access effective treatment". Our journey started in China,
               servicing the global life sciences community. ECC’s clinical trial cloud platform is a uniformed platform, including eConsent, EDC, RTSM, eCOA, CTMS, eTM, RBM and Virtual Trial solutions.
             </p>
-            <p>
+            <p class="home-about-left-text-2">
               ECC’s suite of strategic solutions accelerate the clinical research process with a focus to deliver treatments to patients faster with lower costs and risks for pharmaceutical companies, medical instrument
               companies and clinical trial institutions.
             </p>
@@ -115,14 +116,14 @@
         </div>
         <div class="home-service-content-right">
           <ul :class="['home-service-content-right-list']" v-if="isCurrLocal == 'cn'">
-            <li>• 不同治疗领域的意见领袖<span class="highlight">深度合作</span></li>
-            <li class="home-service-content-right-list-centerli">• 提供从<span class="highlight">方案优化</span>到<span class="highlight">数据收集</span>和管理</li>
-            <li>• <span class="highlight">风险管理</span>等解决方案</li>
+            <li><span class="highlight">•</span> 不同治疗领域的意见领袖<span class="highlight">深度合作</span></li>
+            <li class="home-service-content-right-list-centerli"><span class="highlight">•</span> 提供从<span class="highlight">方案优化</span>到<span class="highlight">数据收集</span>和管理</li>
+            <li><span class="highlight">•</span> <span class="highlight">风险管理</span>等解决方案</li>
           </ul>
           <ul :class="['home-service-content-right-list']" v-else>
-            <li>• <span class="highlight">In depth cooperation</span> of opinion leaders in different treatment fields</li>
-            <li class="home-service-content-right-list-centerli">• From <span class="highlight">solution</span> optimization to data collection and management</li>
-            <li>• <span class="highlight">Risk management</span> and other solutions</li>
+            <li><span class="highlight">•</span> <span class="highlight">In depth cooperation</span> of opinion leaders in different treatment fields</li>
+            <li class="home-service-content-right-list-centerli"><span class="highlight">•</span> From <span class="highlight">solution</span> optimization to data collection and management</li>
+            <li><span class="highlight">•</span> <span class="highlight">Risk management</span> and other solutions</li>
           </ul>
         </div>
       </div>
@@ -262,7 +263,7 @@ export default {
     },
     handleItem(index) {
       if (index == 4) {
-        this.$message.info("努力开发中💪  ,敬请期待!");
+        this.$message.info("努力开发中  ,敬请期待!");
         return;
       }
       let name = "";
@@ -315,7 +316,7 @@ export default {
 </script>
 <style lang="scss" scoped>
 .home {
-  font-size: 18px;
+  line-height: 20px;
   &-banner {
     background: url("../assets/imgs/bannerbg.png") no-repeat center #000d26;
     height: 600px;
@@ -372,7 +373,7 @@ export default {
             width: 160px;
             height: 48px;
             line-height: 48px;
-            font-size: 18px;
+            line-height: 20px;
             text-align: center;
             display: inline-block;
           }
@@ -459,6 +460,7 @@ export default {
             &-desc {
               font-size: 16px;
               margin: 0;
+              margin-top: 10px;
             }
             &-more {
               position: absolute;
@@ -468,7 +470,7 @@ export default {
               line-height: 40px;
               height: 40px;
               background: #ee8a1d;
-              font-size: 18px;
+              line-height: 20px;
               color: #fff;
               text-align: right;
               border-radius: 30px 0 0 0;
@@ -526,7 +528,7 @@ export default {
               font-size: 36px;
             }
             .title-2 {
-              font-size: 18px;
+              line-height: 20px;
               padding-left: 8px;
             }
           }
@@ -536,8 +538,9 @@ export default {
             display: flex;
             flex-direction: column;
             justify-content: space-around;
+            font-size: 20px;
             &-li {
-              font-size: 18px;
+              line-height: 20px;
               font-weight: 400;
               color: #00215f;
               padding: 0;
@@ -551,7 +554,8 @@ export default {
   &-about {
     max-width: $content-width;
     margin: 0 auto;
-    height: 480px;
+    min-height: 480px;
+    max-height: 560px;
     display: flex;
     &-wrap {
       width: 100%;
@@ -573,12 +577,12 @@ export default {
       width: 700px;
       padding: 0 30px;
       box-sizing: border-box;
+      font-size: 18px;
       &-text-1,
       &-text-2 {
-        text-indent: 20px;
-        font-size: 18px;
+        line-height: 20px;
         font-weight: 400;
-        line-height: 30px;
+        line-height: 32px;
         color: #00215f;
         .highlight {
           color: #ee8a1d;
@@ -590,7 +594,6 @@ export default {
         line-height: 48px;
         height: 48px;
         background: #ee8a1d;
-        font-size: 18px;
         color: #fff;
         text-align: center;
         cursor: pointer;
@@ -666,7 +669,8 @@ export default {
               &-content {
                 color: #fff;
                 margin: 0 10px;
-                line-height: 30px;
+                line-height: 32px;
+                font-size: 18px;
               }
             }
           }
@@ -684,7 +688,8 @@ export default {
           margin: 2px;
         }
         .content {
-          line-height: 30px;
+          line-height: 32px;
+          font-size: 18px;
         }
       }
     }
@@ -694,7 +699,7 @@ export default {
     margin: 60px auto;
     &-title {
       color: #00215f;
-      font-size: 32px;
+      font-size: 36px;
       text-align: center;
       margin: 4px 0;
     }
@@ -710,23 +715,30 @@ export default {
       justify-content: center;
       margin: 30px 0 0;
       &-left {
-        // flex: 1;
       }
       &-right {
-        // flex: 1;
         margin: 0 30px;
         &-list {
+          margin: 0;
+          height: 100%;
           list-style: none;
           font-size: 24px;
+          font-weight: bold;
+          display: flex;
+          padding: 30px 0 30px 20px;
+          box-sizing: border-box;
+          flex-direction: column;
+          justify-content: space-around;
           &-isEn {
             font-size: 20px;
           }
           li {
             color: #00215f;
-            padding: 20px 0;
+            // padding: 20px 0;
+            line-height: 30px;
           }
           &-centerli {
-            padding-left: 50px !important;
+            padding-left: 30px !important;
           }
         }
       }
