@@ -180,7 +180,7 @@ export default {
     }
     &-right {
       width: 580px;
-      padding: 70px 0 0 60px;
+      padding: 60px 0 0 60px;
       color: #00215f;
       position: relative;
 
@@ -212,7 +212,7 @@ export default {
       }
       &-phone {
         position: absolute;
-        bottom: -34px;
+        bottom: -8px;
         right: 84px;
       }
     }
