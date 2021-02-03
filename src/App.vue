@@ -28,6 +28,10 @@ export default {
   src: url("./fonts/SourceHanSerifCN-Bold-2.otf") format("truetype");
   font-family: "SourceHanSerifCN-Bold-2";
 }
+@font-face {
+  src: url("./fonts/PingFangSC-Regular.ttf") format("truetype");
+  font-family: "PingFangSC-Regular";
+}
 body {
   margin: 0;
   width: 100%;
