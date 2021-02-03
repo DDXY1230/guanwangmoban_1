@@ -101,14 +101,11 @@ export default {
       this.getCurrentPageTitle(this.$route.name);
     },
     getCurrentPageTitle(name) {
-      console.log(name);
-      if (this.$route.name === name) return;
       switch (name) {
         case "Home":
           this.activeIndex = "/";
           this.currentItem = this.$t("header.home");
           break;
-
         case "IndustryInfo":
           this.activeIndex = "/industryInfo";
           this.currentItem = this.$t("header.news");
