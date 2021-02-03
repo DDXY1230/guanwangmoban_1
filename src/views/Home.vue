@@ -116,14 +116,14 @@
         </div>
         <div class="home-service-content-right">
           <ul :class="['home-service-content-right-list']" v-if="isCurrLocal == 'cn'">
-            <li><span class="highlight">•</span> 不同治疗领域的意见领袖<span class="highlight">深度合作</span></li>
-            <li class="home-service-content-right-list-centerli"><span class="highlight">•</span> 提供从<span class="highlight">方案优化</span>到<span class="highlight">数据收集</span>和管理</li>
-            <li><span class="highlight">•</span> <span class="highlight">风险管理</span>等解决方案</li>
+            <li><span class="highlight li-dot">·</span> 不同治疗领域的意见领袖<span class="highlight">深度合作</span></li>
+            <li class="home-service-content-right-list-centerli"><span class="highlight li-dot">·</span> 提供从<span class="highlight">方案优化</span>到<span class="highlight">数据收集</span>和管理</li>
+            <li><span class="highlight li-dot">·</span> <span class="highlight">风险管理</span>等解决方案</li>
           </ul>
           <ul :class="['home-service-content-right-list']" v-else>
-            <li><span class="highlight">•</span> <span class="highlight">In depth cooperation</span> of opinion leaders in different treatment fields</li>
-            <li class="home-service-content-right-list-centerli"><span class="highlight">•</span> From <span class="highlight">solution</span> optimization to data collection and management</li>
-            <li><span class="highlight">•</span> <span class="highlight">Risk management</span> and other solutions</li>
+            <li><span class="highlight li-dot">·</span> <span class="highlight">In depth cooperation</span> of opinion leaders in different treatment fields</li>
+            <li class="home-service-content-right-list-centerli"><span class="highlight li-dot">·</span> From <span class="highlight">solution</span> optimization to data collection and management</li>
+            <li><span class="highlight li-dot">·</span> <span class="highlight">Risk management</span> and other solutions</li>
           </ul>
         </div>
       </div>
@@ -470,7 +470,6 @@ export default {
               line-height: 40px;
               height: 40px;
               background: #ee8a1d;
-              line-height: 20px;
               color: #fff;
               text-align: right;
               border-radius: 30px 0 0 0;
@@ -597,6 +596,7 @@ export default {
         color: #fff;
         text-align: center;
         cursor: pointer;
+        margin-top: 50px;
       }
     }
     &-right {
@@ -685,11 +685,17 @@ export default {
         }
         .title {
           font-size: 24px;
-          margin: 2px;
+          margin: 20px 0 25px;
         }
         .content {
           line-height: 32px;
+          height: 96px;
           font-size: 18px;
+          text-overflow: ellipsis;
+          display: -webkit-box;
+          -webkit-box-orient: vertical;
+          -webkit-line-clamp: 3;
+          overflow: hidden;
         }
       }
     }
@@ -729,6 +735,9 @@ export default {
           box-sizing: border-box;
           flex-direction: column;
           justify-content: space-around;
+          .li-dot {
+            padding-right: 10px;
+          }
           &-isEn {
             font-size: 20px;
           }

@@ -198,6 +198,7 @@ export default {
       }
       &-icon {
         padding-top: 0px;
+        margin: 0;
       }
       &-number {
         font-weight: bold;
