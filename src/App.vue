@@ -44,7 +44,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   color: #2c3e50;
-  background: #f7fcff;
+  background: #fff;
 }
 .main {
   min-height: calc(100vh - 120px);
