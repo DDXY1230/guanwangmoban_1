@@ -181,7 +181,7 @@ export default {
   }
 }
 .el-menu-item {
-  padding: 0 30px !important;
+  padding: 0 42px !important;
   line-height: 20px;
   font-size: 18px;
 }

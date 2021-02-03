@@ -171,6 +171,8 @@ export default {
       font-size: 24px;
       line-height: 30px;
       padding-left: 30px;
+      min-height: 60px;
+      margin: 10px;
     }
     &-left {
       text-align: right;
@@ -210,8 +212,8 @@ export default {
       }
       &-phone {
         position: absolute;
-        bottom: 0;
-        right: 0;
+        bottom: -34px;
+        right: 84px;
       }
     }
   }
