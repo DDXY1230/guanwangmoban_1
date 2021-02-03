@@ -17,7 +17,10 @@ const en = {
     ecoa: 'eCOA',
     rtsm: 'RTSM',
     etmt: 'eTMF',
-    econsent: 'eConsent'
+    econsent: 'eConsent',
+
+    profile: 'Company Profile',
+    team: "Team"
   },
   footer: {
     text: '© 2020-2020 eClinCloud (Shenzhen) Technology Co., Ltd copyright  粤ICP备20068916号. '

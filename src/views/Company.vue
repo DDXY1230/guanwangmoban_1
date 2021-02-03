@@ -170,6 +170,7 @@ export default {
         max-width: 600px;
         z-index: 100;
         line-height: 32px;
+        font-weight: bold;
       }
     }
   }
@@ -229,6 +230,7 @@ export default {
         }
         &-text {
           margin: 30px 0 0;
+          font-weight: bold;
         }
         &-focus {
           font-weight: bold;
@@ -272,6 +274,7 @@ export default {
       }
       p {
         z-index: 99;
+        font-weight: bold;
       }
     }
     &-right {

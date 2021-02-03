@@ -12,12 +12,15 @@ const cn = {
     about: '关于一临云',
     contact: '联系我们',
 
-    ctms: 'CTMS临床研究管理系统',
-    edc: 'EDC电子数据采集',
-    ecoa: 'eCOA电子临床结局评估',
-    rtsm: 'RTSM随机与药物管理',
-    etmt: 'eTMF文档管理',
-    econsent: 'eConsent电子知情同意系统'
+    ctms: '临床研究管理系统(CTMS)',
+    edc: '电子数据采集(EDC)',
+    ecoa: '电子临床结局评估(eCOA)',
+    rtsm: '随机与药物管理(RTSM)',
+    etmt: '文档管理(eTMF)',
+    econsent: '电子知情同意系统(eConsent)',
+
+    profile: '公司简介',
+    team: "资深团队"
   },
   footer: {
     text: '© 2020-2020 一临云（深圳）科技有限公司 版权所有  粤ICP备20068916号. '

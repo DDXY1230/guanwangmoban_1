@@ -6,9 +6,9 @@
       </div>
       <div class="center">
         <!-- web端菜单 -->
-        <el-menu :default-active="activeIndex" class="el-menu-demo is-web-show" popper-class="abc" mode="horizontal" menu-trigger="click" @select="handleSelect">
+        <el-menu :default-active="activeIndex" class="el-menu-demo is-web-show" mode="horizontal" @select="handleSelect">
           <el-menu-item index="/">{{ $t("header.home") }}</el-menu-item>
-          <el-submenu index="/service" popper-class="abc">
+          <el-submenu index="/service">
             <template slot="title">{{ $t("header.service") }}</template>
             <el-menu-item index="/service/CTMS">{{ $t("header.ctms") }}</el-menu-item>
             <el-menu-item index="/service/EDC">{{ $t("header.edc") }}</el-menu-item>
@@ -18,7 +18,11 @@
             <el-menu-item index="/service/eConsent">{{ $t("header.econsent") }}</el-menu-item>
           </el-submenu>
           <el-menu-item index="/industryInfo">{{ $t("header.news") }}</el-menu-item>
-          <el-menu-item index="/about">{{ $t("header.about") }}</el-menu-item>
+          <el-submenu index="/about">
+            <template slot="title">{{ $t("header.about") }}</template>
+            <el-menu-item index="/about/company">{{ $t("header.profile") }}</el-menu-item>
+            <el-menu-item index="/about/team">{{ $t("header.team") }}</el-menu-item>
+          </el-submenu>
           <el-menu-item index="/contact">{{
             $t("header.contact")
           }}</el-menu-item>
@@ -70,6 +74,10 @@ export default {
       this.getCurrentPageTitle(newVal.name);
     }
   },
+  mounted() {
+    console.log(this.$route.name);
+    this.getCurrentPageTitle(this.$route.name);
+  },
   methods: {
     handleCommand(command) {
       console.log(command);
@@ -78,35 +86,29 @@ export default {
       });
     },
     handleSelect(key, keyPath) {
-      console.log(key, keyPath);
       if (key === "/service/eTMF") {
         this.$message.info("努力开发中 ,敬请期待!");
         return;
       }
+      if (this.$route.path == key) return;
       this.$router.push({
         path: key
       });
     },
     languageFunc(e) {
-      // if (e == "en") {
-      //   this.$message.info("努力开发中  , 敬请期待!");
-      //   return;
-      // }
       this.$i18n.locale = e;
       localStorage.setItem("lang", e);
       this.getCurrentPageTitle(this.$route.name);
     },
     getCurrentPageTitle(name) {
       console.log(name);
+      if (this.$route.name === name) return;
       switch (name) {
         case "Home":
           this.activeIndex = "/";
           this.currentItem = this.$t("header.home");
           break;
-        case "About":
-          this.activeIndex = "/about";
-          this.currentItem = this.$t("header.about");
-          break;
+
         case "IndustryInfo":
           this.activeIndex = "/industryInfo";
           this.currentItem = this.$t("header.news");
@@ -117,13 +119,37 @@ export default {
           break;
         case "Service":
         case "CTMS":
-        case "EDC":
-        case "eCOA":
-        case "RTSM":
-        case "eTMF":
-        case "eConsent":
           this.activeIndex = "/service/CTMS";
           this.currentItem = this.$t("header.service");
+          break;
+        case "EDC":
+          this.activeIndex = "/service/EDC";
+          this.currentItem = this.$t("header.service");
+          break;
+        case "eCOA":
+          this.activeIndex = "/service/eCOA";
+          this.currentItem = this.$t("header.service");
+          break;
+        case "RTSM":
+          this.activeIndex = "/service/RTSM";
+          this.currentItem = this.$t("header.service");
+          break;
+        case "eTMF":
+          this.activeIndex = "/service/eTMF";
+          this.currentItem = this.$t("header.service");
+          break;
+        case "eConsent":
+          this.activeIndex = "/service/eConsent";
+          this.currentItem = this.$t("header.service");
+          break;
+        case "About":
+        case "Company":
+          this.activeIndex = "/about/company";
+          this.currentItem = this.$t("header.about");
+          break;
+        case "Team":
+          this.activeIndex = "/about/team";
+          this.currentItem = this.$t("header.about");
           break;
         case "Contact":
           this.activeIndex = "/contact";
@@ -183,16 +209,19 @@ export default {
 .el-menu-item {
   padding: 0 42px !important;
   line-height: 20px;
-  font-size: 18px;
-}
-.el-menu .el-menu--popup {
-  border: 1px solid red !important;
+  font-size: 20px;
+  &:hover {
+    color: red;
+  }
 }
 .el-menu.el-menu--horizontal > .el-menu-item {
   height: 100px;
   font-weight: bold;
   color: #00215f;
   line-height: 100px;
+  &:hover {
+    color: #ee8a1d;
+  }
 }
 ::v-deep .el-menu--horizontal > .el-submenu .el-submenu__title {
   height: 100px;
@@ -200,22 +229,35 @@ export default {
   font-weight: bold;
   font-size: 18px !important;
   color: #00215f;
+  &:hover {
+    color: #ee8a1d;
+  }
 }
 .el-menu.el-menu--horizontal > .el-menu-item.is-active {
   background-color: #00215f !important;
   border: none;
   color: #fff;
 }
-::v-deep .el-menu--horizontal > .el-submenu.is-active .el-submenu__title {
+::v-deep .el-menu--horizontal > .el-submenu.is-active > .el-submenu__title {
   background-color: #00215f !important;
   border: none !important;
   color: #fff !important;
+  &:hover {
+    color: #ee8a1d;
+  }
+}
+.el-menu--horizontal .el-menu .el-menu-item.is-active,
+.el-menu--horizontal .el-menu .el-submenu.is-active > .el-submenu__title {
+  color: #ee8a1d;
 }
 .el-menu--horizontal .el-menu--popup {
   .el-menu-item {
     color: #00215f;
     height: 54px;
     line-height: 54px;
+    &:hover {
+      color: #ee8a1d;
+    }
   }
 }
 // 适配移动端
