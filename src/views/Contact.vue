@@ -21,7 +21,7 @@
           {{$t("contact.shenzhen")}}
         </span>
         <p class="contact-location-right-icon">
-          <svg-icon iconClass="icon_dingwei" style="font-size: 34px"></svg-icon>
+          <svg-icon iconClass="icon_dingwei" style="font-size: 40px"></svg-icon>
         </p>
         <p class="contact-location-email">{{$t("contact.shenzhenAddr")}}</p>
         <p class="contact-location-right-icon">
@@ -41,7 +41,7 @@
           {{$t("contact.chengdu")}}
         </span>
         <p class="contact-location-right-icon">
-          <svg-icon iconClass="icon_dingwei" style="font-size: 34px"></svg-icon>
+          <svg-icon iconClass="icon_dingwei" style="font-size: 40px"></svg-icon>
         </p>
         <p class="contact-location-email">{{$t("contact.chengduAddr")}}</p>
         <p class="contact-location-right-icon">
