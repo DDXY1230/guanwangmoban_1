@@ -145,14 +145,15 @@ export default {
     margin: 0 auto;
     display: flex;
     .left {
-      width: 100px;
+      width: 140px;
       align-items: center;
       display: flex;
       // background-color: #00215f;
-      padding: 0 30px;
+      padding: 0 10px;
       .yly-logo {
-        width: 120px;
+        width: 140px;
         height: 60px;
+        object-fit: cover;
       }
     }
     .center {

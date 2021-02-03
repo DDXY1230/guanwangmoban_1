@@ -112,7 +112,7 @@ export default {
       &-brief {
         color: #00215f;
         position: absolute;
-        width: 748px;
+        width: 758px;
         min-height: 154px;
         background: #fff;
         bottom: 20px;
