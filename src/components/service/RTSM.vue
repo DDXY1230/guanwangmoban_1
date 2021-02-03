@@ -44,7 +44,7 @@
           <!-- <p>
           <svg-icon iconClass="arrow_hint_down"></svg-icon>
         </p> -->
-          <p class="eConsent-desc-item-text">{{$t("rtsm.support_1")}}</p>
+          <p class="eConsent-desc-item-text">{{$t("rtsm.support_1")}}222</p>
         </div>
         <div class="eConsent-desc-item">
           <img src="@/assets/imgs/img_RTSM3.png" alt="">
@@ -134,6 +134,7 @@ export default {
       padding: 68px 0 71px;
     }
     &-item {
+      width: 415px;
       img {
         margin-bottom: 43px;
       }

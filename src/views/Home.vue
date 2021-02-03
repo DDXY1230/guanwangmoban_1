@@ -344,8 +344,9 @@ export default {
             line-height: 86px;
             letter-spacing: 6px;
             &-isEn {
-              font-size: 26px;
+              font-size: 36px;
               line-height: 36px;
+              width: 800px;
             }
           }
           &-second-title {
@@ -355,8 +356,10 @@ export default {
             font-family: "SourceHanSerifCN-Bold-2";
             margin: 0;
             &-isEn {
-              font-size: 26px;
+              font-size: 36px;
               line-height: 36px;
+              margin-top: 30px;
+              width: 800px;
             }
           }
           &-desc {

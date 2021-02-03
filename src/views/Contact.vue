@@ -205,6 +205,8 @@ export default {
         color: #00215f;
         font-size: 48px;
         font-family: "SourceHanSerifCN-Bold-2";
+        // line-height: 48px;
+        padding-left: 30px;
       }
       &-phone {
         position: absolute;
