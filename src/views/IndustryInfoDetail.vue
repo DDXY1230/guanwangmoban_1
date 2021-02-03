@@ -13,6 +13,11 @@
         在中国大陆拥有26家分支行的汇丰银行（HSBC）表示，新条例将使其能够进一步扩大分行网络和服务范围。用定量模型和GIS方法，从空间布局、服务范围以及航空客流分布等方面来研究中国的机场体系及其服务水平利用定量模型和GIS方法.在中国大陆拥有26家分支行的汇丰银行（HSBC）表示，新条例将使其能够进一步扩大分行网络和服务范围。
         利用定量模型和GIS方法，从空间布局、服务范围以及航空客流分布等方面来研究中国的机场体系及其服务水平利用定量模型和GIS方法.在中国大陆拥有26家分支行的汇丰银行（HSBC）表示，新条例将使其能够进一步扩大分行网络和服务范围
       </p>
+      <img class="industryInfoDetail-left-cover" src="@/assets/imgs/img_Product2.png" alt="">
+      <p>
+        <!-- 利用定量模型和GIS方法，从空间布局、服务范围以及航空客流分布等方面来研究中国的机场体系及其服务水平水平利用定量模型和。在中国大陆拥有26家分支行的汇丰银行（HSBC）表示，新条例将使其能够进一步扩大分行网络和服务范围。用定量模型和GIS方法，从空间布局、服务范围以及航空客流分布等方面来研究中国的机场体系及其服务水平利用定量模型和GIS方法.在中国大陆拥有26家分支行的汇丰银行（HSBC）表示，新条例将使其能够进一步扩大分行网络和服务范围。
+        利用定量模型和GIS方法，从空间布局、服务范围以及航空客流分布等方面来研究中国的机场体系及其服务水平利用定量模型和GIS方法.在中国大陆拥有26家分支行的汇丰银行（HSBC）表示，新条例将使其能够进一步扩大分行网络和服务范围 -->
+      </p>
     </div>
     <div class="industryInfoDetail-right">
       <div class="industryInfoDetail-right-item" @click="viewArticle()">
@@ -40,16 +45,16 @@ export default {
   },
   methods: {
     viewArticle() {
-      this.$message.info('敬请期待.')
-      return
+      this.$message.info("敬请期待.");
+      return;
       // this.$router.push({
       //   path: "/industryInfoDetail/2"
       // });
     },
     back() {
       this.$router.push({
-        path: '/industryInfo'
-      })
+        path: "/industryInfo"
+      });
     }
   }
 };
