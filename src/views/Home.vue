@@ -24,7 +24,7 @@
           <div class="item">
             <div :class="['item-icon', `item-${index + 1}`]"></div>
             <p class="item-title">{{ i.firstTitle }}</p>
-            <p class="item-desc">{{ i.secondTitle }}</p>
+            <p class="item-desc" v-if="isCurrLocal == 'cn'">{{ i.secondTitle }}</p>
             <div class="item-more">{{$t("home.learn")}} ></div>
           </div>
           <p class="title">{{ i.firstTitle }}</p>
@@ -42,7 +42,7 @@
           <div class="home-carousel-content-right-box">
             <h3 class="home-carousel-content-right-box-title">
               <span class="title-1">{{currentItem.firstTitle}}</span>
-              <span class="title-2">{{currentItem.secondTitle}}</span>
+              <span class="title-2" v-if="isCurrLocal == 'cn'">{{currentItem.secondTitle}}</span>
             </h3>
             <ul class="home-carousel-content-right-box-list">
               <li class="home-carousel-content-right-box-list-li" v-for="(item,index) in currentItem.descList" :key="index" v-html="item">
@@ -331,10 +331,9 @@ export default {
       max-width: $content-width;
       margin: 0 auto;
       display: flex;
-      justify-content: space-around;
+      justify-content: start;
       &-left {
-        min-width: 300px;
-        max-width: 510px;
+        
         color: #fff;
         .left {
           &-title {
@@ -344,9 +343,8 @@ export default {
             line-height: 86px;
             letter-spacing: 6px;
             &-isEn {
-              font-size: 36px;
+              font-size: 40px;
               line-height: 36px;
-              width: 800px;
             }
           }
           &-second-title {
@@ -359,7 +357,6 @@ export default {
               font-size: 36px;
               line-height: 36px;
               margin-top: 30px;
-              width: 800px;
             }
           }
           &-desc {
@@ -383,11 +380,6 @@ export default {
         }
       }
       &-right {
-        width: 580px;
-        img {
-          width: 100%;
-          object-fit: contain;
-        }
       }
     }
   }

@@ -10,7 +10,7 @@ const en = {
     service: 'Service & Solution',
     news: 'Industry Information',
     about: 'About Us',
-    contact: 'Connect Us',
+    contact: 'Contact Us',
 
     ctms: 'CTMS',
     edc: 'EDC',
@@ -23,12 +23,12 @@ const en = {
     team: "Team"
   },
   footer: {
-    text: '© 2020-2020 eClinCloud (Shenzhen) Technology Co., Ltd copyright  粤ICP备20068916号. '
+    text: '© 2020-2021 eClinCloud (Shenzhen) Technology Co., Ltd copyright  粤ICP备20068916号. '
   },
   home: {
-    innovate: 'Innovation through science and technology',
-    effective: 'Bring effective treatment to patients',
-    product: 'Product classification',
+    innovate: 'Innovation Through Science And Technology',
+    effective: 'Bring Effective Treatment To Patients',
+    product: 'Products',
     learn: 'Learn more',
     aboutUs: 'About Us',
     contact: 'Contact Us',
@@ -39,8 +39,8 @@ const en = {
     risk: 'Risk management and other solutions'
   },
   about: {
-    intro: 'Company profile',
-    integration: 'Integrated platform',
+    intro: 'Company Profile',
+    integration: 'Integrated Platform',
     solution: 'Solution',
     solutionText1: 'To better serve our global life sciences community, ECC has entered into exclusive strategic partnerships with world leading clinical trial system provider in Greater China.  ECC works closely with leading experts in different therapeutic domains and provides optimized planning through data capture and management as well as risk management with tools such as Central Imaging, Cardiac Safety, Respiratory Safety and Sensor & Wearable Device.',
     centralImaging: 'Central Imaging、',

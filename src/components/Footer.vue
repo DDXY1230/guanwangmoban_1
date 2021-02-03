@@ -8,7 +8,7 @@
       <svg-icon iconClass="email"></svg-icon>
       ecc@eclincloud.com
     </p>
-    <p class="footer-copyright">© 2020-2021 易临云（深圳）科技有限公司 版权所有 粤ICP备20068916号.</p>
+    <p class="footer-copyright">{{$t('footer.text')}}</p>
   </div>
 </template>
 <script>
@@ -23,7 +23,7 @@ export default {
 </script>
 <style lang="scss" scoped>
 .footer {
-  background: #00215F;
+  background: #00215f;
   color: #fff;
   text-align: center;
   padding: 48px 0 30px;
