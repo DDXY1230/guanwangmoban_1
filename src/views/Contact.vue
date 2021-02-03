@@ -21,11 +21,11 @@
           {{$t("contact.shenzhen")}}
         </span>
         <p class="contact-location-right-icon">
-          <svg-icon iconClass="icon_dingwei" style="font-size: 30px"></svg-icon>
+          <svg-icon iconClass="icon_dingwei" style="font-size: 34px"></svg-icon>
         </p>
         <p class="contact-location-email">{{$t("contact.shenzhenAddr")}}</p>
         <p class="contact-location-right-icon">
-          <svg-icon iconClass="icon_mail2" style="font-size: 30px"></svg-icon>
+          <svg-icon iconClass="icon_mail2" style="font-size: 34px"></svg-icon>
         </p>
         <p class="contact-location-email">ecc@eclincloud.com</p>
         <p class="contact-location-right-number">0755-22671619</p>
@@ -41,11 +41,11 @@
           {{$t("contact.chengdu")}}
         </span>
         <p class="contact-location-right-icon">
-          <svg-icon iconClass="icon_dingwei" style="font-size: 30px"></svg-icon>
+          <svg-icon iconClass="icon_dingwei" style="font-size: 34px"></svg-icon>
         </p>
         <p class="contact-location-email">{{$t("contact.chengduAddr")}}</p>
         <p class="contact-location-right-icon">
-          <svg-icon iconClass="icon_mail2" style="font-size: 30px"></svg-icon>
+          <svg-icon iconClass="icon_mail2" style="font-size: 34px"></svg-icon>
         </p>
         <p class="contact-location-email">ecc@eclincloud.com</p>
         <p class="contact-location-right-number">028-67136918</p>
