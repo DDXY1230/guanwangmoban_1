@@ -288,7 +288,7 @@ export default {
       });
     },
     handleItem(index) {
-      if (index == 4) {
+      if ([1,6,7,8,9].includes(index)) {
         this.$message.info("努力开发中  ,敬请期待!");
         return;
       }
@@ -298,19 +298,31 @@ export default {
           name = "CTMS";
           break;
         case 1:
-          name = "EDC";
+          name = " eTMF";
           break;
         case 2:
-          name = "eCOA";
+          name = "EDC ";
           break;
         case 3:
           name = "RTSM";
           break;
         case 4:
-          name = "eTMF";
+          name = "eCOA";
           break;
         case 5:
           name = "eConsent";
+          break;
+        case 6:
+          name = "Payment";
+          break;
+        case 7:
+          name = "RemoteVisit";
+          break;
+        case 8:
+          name = "PV";
+          break;
+        case 9:
+          name = "TM";
           break;
         default:
           name = "CTMS";
