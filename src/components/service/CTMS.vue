@@ -24,8 +24,8 @@
         <div class="ctms-support-content-box box-3">
           <img class="box-img" src="@/assets/imgs/img_ctmsn5.png" alt="">
           <h4 class="box-strong">{{$t("ctms.role")}}</h4>
-          <p class="box-desc" v-if="isCurrLocal == 'cn'">具备<span class="highlight">不同角色</span>的提醒功能</p>
-          <p class="box-desc" v-else>Reminder function for <span class="highlight">different roles</span></p>
+          <p class="box-desc" v-if="isCurrLocal == 'cn'">提供行业<span class="highlight">最佳实践、简洁易用</span></p>
+          <p class="box-desc" v-else>Industry best <span class="highlight">practices, simplicity and ease of use. </span></p>
         </div>
       </div>
     </div>

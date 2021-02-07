@@ -8,6 +8,12 @@
         <!-- web端菜单 -->
         <el-menu :default-active="activeIndex" class="el-menu-demo is-web-show" mode="horizontal" @select="handleSelect">
           <el-menu-item index="/">{{ $t("header.home") }}</el-menu-item>
+          <el-submenu index="/about">
+            <template slot="title">{{ $t("header.about") }}</template>
+            <el-menu-item index="/about/company">{{ $t("header.profile") }}</el-menu-item>
+            <el-menu-item index="/about/team">{{ $t("header.team") }}</el-menu-item>
+            <el-menu-item index="/about/joinUs">{{ $t("header.joinUs") }}</el-menu-item>
+          </el-submenu>
           <el-submenu index="/service">
             <template slot="title">{{ $t("header.service") }}</template>
             <el-menu-item index="/service/CTMS">{{ $t("header.ctms") }}</el-menu-item>
@@ -18,11 +24,6 @@
             <el-menu-item index="/service/eConsent">{{ $t("header.econsent") }}</el-menu-item>
           </el-submenu>
           <el-menu-item index="/industryInfo">{{ $t("header.news") }}</el-menu-item>
-          <el-submenu index="/about">
-            <template slot="title">{{ $t("header.about") }}</template>
-            <el-menu-item index="/about/company">{{ $t("header.profile") }}</el-menu-item>
-            <el-menu-item index="/about/team">{{ $t("header.team") }}</el-menu-item>
-          </el-submenu>
           <el-menu-item index="/contact">{{
             $t("header.contact")
           }}</el-menu-item>
@@ -101,6 +102,7 @@ export default {
       this.getCurrentPageTitle(this.$route.name);
     },
     getCurrentPageTitle(name) {
+      console.log(name)
       switch (name) {
         case "Home":
           this.activeIndex = "/";
@@ -147,6 +149,10 @@ export default {
         case "Team":
           this.activeIndex = "/about/team";
           this.currentItem = this.$t("header.about");
+          break;
+        case "JoinUs":
+          this.activeIndex = "/about/joinUs";
+          this.currentItem = this.$t("header.joinUs");
           break;
         case "Contact":
           this.activeIndex = "/contact";

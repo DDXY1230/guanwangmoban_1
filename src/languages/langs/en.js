@@ -20,7 +20,8 @@ const en = {
     econsent: 'eConsent',
 
     profile: 'Company Profile',
-    team: "Team"
+    team: "Team",
+    joinUs: 'Join Us'
   },
   footer: {
     text: '© 2020-2021 eClinCloud (Shenzhen) Technology Co., Ltd copyright  粤ICP备20068916号. '

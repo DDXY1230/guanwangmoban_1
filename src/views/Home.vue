@@ -32,23 +32,71 @@
       </div>
     </div>
     <div class="home-carousel">
-      <div class="home-carousel-content">
-        <img class="home-carousel-content-arrow left" src="@/assets/imgs/arrow2.png" alt="" @click="preItem()">
-        <img class="home-carousel-content-arrow right" src="@/assets/imgs/arrow2.png" alt="" @click="nextItem()">
-        <div class="home-carousel-content-left">
-          <img class="home-carousel-content-left-cover" :src="currentItem.carouselImagUrl" alt="">
-        </div>
-        <div class="home-carousel-content-right">
-          <div class="home-carousel-content-right-box">
-            <h3 class="home-carousel-content-right-box-title">
-              <span class="title-1">{{currentItem.firstTitle}}</span>
-              <span class="title-2" v-if="isCurrLocal == 'cn'">{{currentItem.secondTitle}}</span>
-            </h3>
-            <ul class="home-carousel-content-right-box-list">
-              <li class="home-carousel-content-right-box-list-li" v-for="(item,index) in currentItem.descList" :key="index" v-html="item">
-              </li>
-            </ul>
+      <!-- <img class="home-carousel-content-arrow left" src="@/assets/imgs/arrow2.png" alt="" @click="preItem()"> -->
+      <!-- <img class="home-carousel-content-arrow right" src="@/assets/imgs/arrow2.png" alt="" @click="nextItem()"> -->
+      <el-carousel ref="carousel" height="480px">
+        <el-carousel-item v-for="(item,index) in itemData" :key="index">
+          <div class="home-carousel-content">
+            <div class="home-carousel-content-left">
+              <img class="home-carousel-content-left-cover" :src="item.carouselImagUrl" alt="">
+            </div>
+            <div class="home-carousel-content-right">
+              <div class="home-carousel-content-right-box">
+                <h3 class="home-carousel-content-right-box-title">
+                  <span class="title-1">{{item.firstTitle}}</span>
+                  <span class="title-2" v-if="isCurrLocal == 'cn'">{{item.secondTitle}}</span>
+                </h3>
+                <ul class="home-carousel-content-right-box-list">
+                  <li class="home-carousel-content-right-box-list-li" v-for="(i,index) in item.descList" :key="index" v-html="i">
+                  </li>
+                </ul>
+              </div>
+            </div>
           </div>
+        </el-carousel-item>
+      </el-carousel>
+    </div>
+    <div class="home-service">
+      <h2 class="home-service-title">{{$t("home.service")}}</h2>
+      <!-- <p class="home-service-title">Scope of services</p> -->
+      <div class="home-service-content">
+
+        <div class="home-service-content-left">
+          <img src="@/assets/imgs/img_services.png" alt="">
+        </div>
+        <div class="home-service-content-right">
+          <ul :class="['home-service-content-right-list']" v-if="isCurrLocal == 'cn'">
+            <li><span class="highlight li-dot">·</span> 不同治疗领域的意见领袖深度合作</li>
+            <li class="home-service-content-right-list-centerli"><span class="highlight li-dot">·</span> 提供从方案优化到数据收集和管理</li>
+            <li><span class="highlight li-dot">·</span> 风险管理等解决方案</li>
+          </ul>
+          <ul :class="['home-service-content-right-list']" v-else>
+            <li><span class="highlight li-dot">·</span> <span class="highlight">In depth cooperation</span> of opinion leaders in different treatment fields</li>
+            <li class="home-service-content-right-list-centerli"><span class="highlight li-dot">·</span> From <span class="highlight">solution</span> optimization to data collection and management</li>
+            <li><span class="highlight li-dot">·</span> <span class="highlight">Risk management</span> and other solutions</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="home-dynamic">
+      <img class="arrow-down" src="@/assets/imgs/arrow_down.png" alt="">
+      <h2 class="home-dynamic-title">{{$t("home.dynamic")}}</h2>
+      <!-- <p class="home-dynamic-title">Industry news</p> -->
+      <div class="home-dynamic-content">
+        <div class="home-dynamic-content-left">
+          <div class="home-dynamic-content-left-img">
+            <img src="@/assets/imgs/img_eg1.png" alt="">
+            <div class="home-dynamic-content-left-img-mask">
+              <p class="mask-title">最新研究发现c9ww <span class="date">2020-03-23</span></p>
+              <p class="mask-content">利用定量模型和GIS方法，从空间布局、服务范围以及航空客流分布等方面来研究中国的机场体系及其服务水平利用定量模型和GIS方法….</p>
+            </div>
+          </div>
+        </div>
+        <div class="home-dynamic-content-right">
+          <p class="date">2020-03-23</p>
+          <img src="@/assets/imgs/img_eg2.png" alt="">
+          <p class="title">最新研究发现c9ww</p>
+          <p class="content">利用定量模型和GIS方法，从空间布局、服务范围以及航空客流分布等方面来研究中国的机场体系及其服务水平利用定量模型和GIS方法.在中国大陆拥有26家分支行的汇丰银行（HSBC）表示，新条例将使其能够进一步扩大分行网络和服务范围</p>
         </div>
       </div>
     </div>
@@ -84,52 +132,6 @@
         </div>
       </div>
     </div>
-    <div class="home-dynamic">
-      <img class="arrow-down" src="@/assets/imgs/arrow_down.png" alt="">
-      <h2 class="home-dynamic-title">{{$t("home.dynamic")}}</h2>
-      <!-- <p class="home-dynamic-title">Industry news</p> -->
-      <div class="home-dynamic-content">
-        <div class="home-dynamic-content-left">
-          <div class="home-dynamic-content-left-img">
-            <img src="@/assets/imgs/img_eg1.png" alt="">
-            <div class="home-dynamic-content-left-img-mask">
-              <p class="mask-title">最新研究发现c9ww <span class="date">2020-03-23</span></p>
-              <p class="mask-content">利用定量模型和GIS方法，从空间布局、服务范围以及航空客流分布等方面来研究中国的机场体系及其服务水平利用定量模型和GIS方法….</p>
-            </div>
-          </div>
-        </div>
-        <div class="home-dynamic-content-right">
-          <p class="date">2020-03-23</p>
-          <img src="@/assets/imgs/img_eg2.png" alt="">
-          <p class="title">最新研究发现c9ww</p>
-          <p class="content">利用定量模型和GIS方法，从空间布局、服务范围以及航空客流分布等方面来研究中国的机场体系及其服务水平利用定量模型和GIS方法.在中国大陆拥有26家分支行的汇丰银行（HSBC）表示，新条例将使其能够进一步扩大分行网络和服务范围</p>
-        </div>
-      </div>
-    </div>
-    <div class="home-service">
-      <h2 class="home-service-title">{{$t("home.service")}}</h2>
-      <!-- <p class="home-service-title">Scope of services</p> -->
-      <div class="home-service-content">
-
-        <div class="home-service-content-left">
-          <img src="@/assets/imgs/img_services.png" alt="">
-        </div>
-        <div class="home-service-content-right">
-          <ul :class="['home-service-content-right-list']" v-if="isCurrLocal == 'cn'">
-            <li><span class="highlight li-dot">·</span> 不同治疗领域的意见领袖<span class="highlight">深度合作</span></li>
-            <li class="home-service-content-right-list-centerli"><span class="highlight li-dot">·</span> 提供从<span class="highlight">方案优化</span>到<span class="highlight">数据收集</span>和管理</li>
-            <li><span class="highlight li-dot">·</span> <span class="highlight">风险管理</span>等解决方案</li>
-          </ul>
-          <ul :class="['home-service-content-right-list']" v-else>
-            <li><span class="highlight li-dot">·</span> <span class="highlight">In depth cooperation</span> of opinion leaders in different treatment fields</li>
-            <li class="home-service-content-right-list-centerli"><span class="highlight li-dot">·</span> From <span class="highlight">solution</span> optimization to data collection and management</li>
-            <li><span class="highlight li-dot">·</span> <span class="highlight">Risk management</span> and other solutions</li>
-          </ul>
-        </div>
-      </div>
-
-    </div>
-
   </div>
 </template>
 
@@ -168,6 +170,12 @@ export default {
                 ]
         },
         {
+          firstTitle: "eTMF",
+          secondTitle: "文档管理",
+          carouselImagUrl: require("@/assets/imgs/img_Product5.png"),
+          descList: this.isCurrLocal == "cn" ? [] : []
+        },
+        {
           firstTitle: "EDC",
           secondTitle: "电子数据采集系统",
           carouselImagUrl: require("@/assets/imgs/img_Product3.png"),
@@ -184,25 +192,6 @@ export default {
                   "Integrates auto coding for MedDRA and WHODD",
                   "Provides site visit reminder alert",
                   "No coding required to configure complex edit checks"
-                ]
-        },
-        {
-          firstTitle: "eCOA",
-          secondTitle: "电子临床结局评估",
-          carouselImagUrl: require("@/assets/imgs/img_Product1.png"),
-          descList:
-            this.isCurrLocal == "cn"
-              ? [
-                  "业内<span class='highlight'>最快实现</span>eCOA<span class='highlight'>部署</span>,平均在4周完成上线",
-                  "实施团队具有<span class='highlight'>丰富的国际大型</span>eCOA项目<span class='highlight'>经验</span>",
-                  "支持<span class='highlight'>BYOD</span>和<span class='highlight'>移动终端</span>租赁模式",
-                  "提供从量表版权获取、翻译、语言验证、<span class='highlight'>eCOA部署</span>、培训、数据质量分析等服务"
-                ]
-              : [
-                  "Implementation team with major international eCOA project experiences",
-                  "Provides powerful standard scale library",
-                  "Supports BYOD and device provisioning",
-                  "Compatible with both iOS and Android system"
                 ]
         },
         {
@@ -225,10 +214,23 @@ export default {
                 ]
         },
         {
-          firstTitle: "eTMF",
-          secondTitle: "文档管理",
-          carouselImagUrl: require("@/assets/imgs/img_Product5.png"),
-          descList: this.isCurrLocal == "cn" ? [] : []
+          firstTitle: "eCOA",
+          secondTitle: "电子临床结局评估",
+          carouselImagUrl: require("@/assets/imgs/img_Product1.png"),
+          descList:
+            this.isCurrLocal == "cn"
+              ? [
+                  "业内<span class='highlight'>最快实现</span>eCOA<span class='highlight'>部署</span>,平均在4周完成上线",
+                  "实施团队具有<span class='highlight'>丰富的国际大型</span>eCOA项目<span class='highlight'>经验</span>",
+                  "支持<span class='highlight'>BYOD</span>和<span class='highlight'>移动终端</span>租赁模式",
+                  "提供从量表版权获取、翻译、语言验证、<span class='highlight'>eCOA部署</span>、培训、数据质量分析等服务"
+                ]
+              : [
+                  "Implementation team with major international eCOA project experiences",
+                  "Provides powerful standard scale library",
+                  "Supports BYOD and device provisioning",
+                  "Compatible with both iOS and Android system"
+                ]
         },
         {
           firstTitle: "eConsent",
@@ -248,6 +250,30 @@ export default {
                   "Enhances transparency for the clinical process to trial participants",
                   "Supports remote consent, e-signatures, handprint signatures or both"
                 ]
+        },
+        {
+          firstTitle: "Payment",
+          secondTitle: "支付",
+          carouselImagUrl: require("@/assets/imgs/img_Product4.png"),
+          descList: this.isCurrLocal == "cn" ? [] : []
+        },
+        {
+          firstTitle: "Remote Visit",
+          secondTitle: "远程访视",
+          carouselImagUrl: require("@/assets/imgs/img_Product4.png"),
+          descList: this.isCurrLocal == "cn" ? [] : []
+        },
+        {
+          firstTitle: "PV",
+          secondTitle: "药物警戒",
+          carouselImagUrl: require("@/assets/imgs/img_Product4.png"),
+          descList: this.isCurrLocal == "cn" ? [] : []
+        },
+        {
+          firstTitle: "TM",
+          secondTitle: "工时管理",
+          carouselImagUrl: require("@/assets/imgs/img_Product4.png"),
+          descList: this.isCurrLocal == "cn" ? [] : []
         }
       ];
     }
@@ -296,6 +322,7 @@ export default {
     handleMouseover(index) {
       this.currentIndex = index;
       this.currentItem = this.itemData[index];
+      this.$refs["carousel"].setActiveItem(index);
     },
     preItem() {
       if (this.currentIndex == 0) {
@@ -331,9 +358,8 @@ export default {
       max-width: $content-width;
       margin: 0 auto;
       display: flex;
-      justify-content: start;
+      justify-content: flex-start;
       &-left {
-        
         color: #fff;
         .left {
           &-title {
@@ -387,6 +413,7 @@ export default {
     margin: 0 auto;
     padding: 0;
     text-align: center;
+
     &-title {
       color: #00215f;
       font-size: 36px;
@@ -400,17 +427,22 @@ export default {
     }
     &-cabinet {
       display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
+      // justify-content: center;
+      width: 1280px;
+      height: 380px;
+      overflow: auto;
+      margin: 0 auto;
       &-item {
         width: 212px;
         height: 360px;
+        flex-shrink: 0;
         cursor: pointer;
         background: #fff;
         color: #3f4c6e;
         position: relative;
         @each $i, $name in (1, CTMS), (2, EDC), (3, eCOA), (4, RTSM), (5, eTMF),
-          (6, eConsent)
+          (6, eConsent), (7, eConsent), (8, eConsent), (9, eConsent),
+          (10, eConsent)
         {
           &-#{$i} {
             background: url("../assets/imgs/#{$name}.png");
@@ -571,7 +603,7 @@ export default {
       width: 700px;
       padding: 0 30px;
       box-sizing: border-box;
-      font-size: 18px;
+      font-size: 20px;
       &-text-1,
       &-text-2 {
         line-height: 20px;

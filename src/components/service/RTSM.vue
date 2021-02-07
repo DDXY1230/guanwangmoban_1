@@ -14,12 +14,10 @@
           <img class="box-img" src="@/assets/imgs/img_RTSM5.png" alt="">
           <h4 class="box-strong">{{$t("rtsm.forecast")}}</h4>
           <div v-if="isCurrLocal == 'cn'">
-            <p class="box-desc">药物发放模块具备<span class="highlight">预测</span>功能</p>
-            <p class="box-desc">最大可能的减少药物的浪费</p>
+            <p class="box-desc">运用运筹学<span class="highlight">最优化算法、节约药物浪费</span></p>
           </div>
           <div v-else>
-            <p class="box-desc">Drug delivery module has <span class="highlight">prediction</span> function</p>
-            <p class="box-desc">Minimize drug waste as much as possible</p>
+            <p class="box-desc">Using <span class="highlight">optimization algorithm of operational</span> research to save drug waste</p>
           </div>
         </div>
         <div class="eConsent-support-content-box box-2">
@@ -44,7 +42,7 @@
           <!-- <p>
           <svg-icon iconClass="arrow_hint_down"></svg-icon>
         </p> -->
-          <p class="eConsent-desc-item-text">{{$t("rtsm.support_1")}}222</p>
+          <p class="eConsent-desc-item-text">{{$t("rtsm.support_1")}}</p>
         </div>
         <div class="eConsent-desc-item">
           <img src="@/assets/imgs/img_RTSM3.png" alt="">

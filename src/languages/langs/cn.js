@@ -20,10 +20,11 @@ const cn = {
     econsent: '电子知情同意系统(eConsent)',
 
     profile: '公司简介',
-    team: "资深团队"
+    team: "资深团队",
+    joinUs: '加入我们'
   },
   footer: {
-    text: '© 2020-2021 一临云（深圳）科技有限公司 版权所有  粤ICP备20068916号. '
+    text: '© 2020-2021 易临云（深圳）科技有限公司 版权所有  粤ICP备20068916号. '
   },
   home: {
     innovate: '以科技创新',
@@ -67,8 +68,8 @@ const cn = {
   ctms: {
     clinicalStudy: '临床研究管理系统',
     collaboration: '多端协作',
-    transition: '多区转换',
-    role: '角色明确',
+    transition: '国际化',
+    role: '优化流程',
     lead: '行业领先',
     leadBrief: '业内领先的CTMS系统，具备完善的功能模块',
     control: '全方位掌控',
@@ -89,8 +90,8 @@ const cn = {
   ecoa: {
     assessment: '电子临床结局评估',
     rapidDeployment: '快速部署',
-    internationalProject: '国际项目',
-    multiservice: '多种服务',
+    internationalProject: '国际经验',
+    multiservice: '全面服务',
     scale: '提供丰富的标准量表库',
     leasingModel: '支持BYOD和移动终端租赁模式',
     support: '同时支持iOS和Android系统',
@@ -128,12 +129,12 @@ const cn = {
     collect: '电子数据采集',
     design: '快速设计',
     examine: '逻辑核查',
-    template: '标准模板',
+    template: '行业标准',
     support_1: '集成MedDRA与WHODD的自动编码功能',
     support_2: '提供业界常用的标准化报表，且用户可任意自定义报表',
     support_3: '同时支持PC端和移动端数据录入',
     support_4: '支持访视提醒功能',
-    manySys: '多系统协作',
+    manySys: '平台一体化',
 
     desc_1: '支持多种随机方法',
     desc_2: '零编程快速实现随机和药物管理的配置',
@@ -144,13 +145,13 @@ const cn = {
   },
   rtsm: {
     random: '随机与药物管理',
-    forecast: '准确预测',
+    forecast: '预测',
     role: '角色分明',
     immediate: '即时支持',
     support_1: '支持多种随机方法',
     support_2: '零编程快速实现',
     support_3: '随机和药物管理的配置',
-    support_4: '90%以上的项目可在三小时内完成部署',
+    support_4: '与eConsent、EDC等系统无缝对接',
     manySys: '多系统协作',
 
     desc_1: '快速实现eCRF设计，比传统EDC节约30%时间',

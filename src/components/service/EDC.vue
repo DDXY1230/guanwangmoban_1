@@ -33,8 +33,8 @@
         <div class="eConsent-support-content-box box-3">
           <img class="box-img" src="@/assets/imgs/img_EDC4.png" alt="">
           <h4 class="box-strong">{{$t("edc.template")}}</h4>
-          <p class="box-desc" v-if="isCurrLocal == 'cn'">提供符合<span class="highlight">CDISC</span>标准的多个治疗领域的eCRF模板库</p>
-          <p class="box-desc" v-else>Provide ECRF template library of multiple treatment fields in accordance with <span class="highlight">CDISC</span> standard</p>
+          <p class="box-desc" v-if="isCurrLocal == 'cn'">支持CDISC的<span class="highlight">CDASH标准</span></p>
+          <p class="box-desc" v-else>Provide CDASH with <span class="highlight">CDISC</span> standard</p>
         </div>
       </div>
     </div>
@@ -65,7 +65,6 @@
       <div class="eConsent-connect-right">
         <p class="eConsent-connect-right-strong">{{$t("edc.manySys")}}</p>
         <div v-if="isCurrLocal == 'cn'">
-        <p class="eConsent-connect-right-text">界面简洁大方，交互友好</p>
         <p class="eConsent-connect-right-text">与<span class="highlight">电子知情同意系统、随机和药物管理、项目管理系统</span>等无缝整合</p>
         </div>
         <div v-else>
