@@ -3,7 +3,7 @@
     <div class="home-banner">
       <div class="home-banner-content">
         <div class="home-banner-content-left">
-          <h2 :class="['left-title',{'left-title-isEn': isCurrLocal == 'en'}]">{{$t("home.innovate")}}</h2>
+          <h2 :class="['left-title']">{{$t("home.innovate")}}</h2>
           <h2 :class="['left-second-title', {'left-second-title-isEn': isCurrLocal == 'en'}]">{{$t("home.effective")}}</h2>
           <!-- <p class="left-desc">
             leverage innovative technology for patients to access effective treatment
@@ -392,7 +392,7 @@ export default {
             font-family: "SourceHanSerifCN-Bold-2";
             margin: 0;
             &-isEn {
-              font-size: 36px;
+              font-size: 72px;
               line-height: 36px;
               margin-top: 30px;
             }

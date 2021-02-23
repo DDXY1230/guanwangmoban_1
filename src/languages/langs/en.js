@@ -8,7 +8,7 @@ const en = {
   header: {
     home: 'Home',
     service: 'Service & Solution',
-    news: 'Industry Information',
+    news: 'Info',
     about: 'About Us',
     contact: 'Contact Us',
 
@@ -27,8 +27,8 @@ const en = {
     text: '© 2020-2021 eClinCloud (Shenzhen) Technology Co., Ltd copyright  粤ICP备20068916号. '
   },
   home: {
-    innovate: 'Innovation Through Science And Technology',
-    effective: 'Bring Effective Treatment To Patients',
+    innovate: 'Innovative Technology',
+    effective: 'Better Treatment',
     product: 'Products',
     learn: 'Learn more',
     aboutUs: 'About Us',

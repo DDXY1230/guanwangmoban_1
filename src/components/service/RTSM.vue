@@ -14,22 +14,22 @@
           <img class="box-img" src="@/assets/imgs/img_RTSM5.png" alt="">
           <h4 class="box-strong">{{$t("rtsm.forecast")}}</h4>
           <div v-if="isCurrLocal == 'cn'">
-            <p class="box-desc">运用运筹学<span class="highlight">最优化算法、节约药物浪费</span></p>
+            <p class="box-desc">运用运筹学最优化算法、节约药物浪费</p>
           </div>
           <div v-else>
-            <p class="box-desc">Using <span class="highlight">optimization algorithm of operational</span> research to save drug waste</p>
+            <p class="box-desc">Using optimization algorithm of operational research to save drug waste</p>
           </div>
         </div>
         <div class="eConsent-support-content-box box-2">
           <img class="box-img" src="@/assets/imgs/img_RTSM6.png" alt="">
           <h4 class="box-strong">{{$t("rtsm.role")}}</h4>
-          <p class="box-desc" v-if="isCurrLocal == 'cn'">严格的<span class="highlight">角色配置</span>和<span class="highlight">权限管理</span></p>
-          <p class="box-desc" v-else>Strict <span class="highlight">role configuration</span> and <span class="highlight">authority management</span></p>
+          <p class="box-desc" v-if="isCurrLocal == 'cn'">严格的角色配置和权限管理</p>
+          <p class="box-desc" v-else>Strict role configuration and authority management</p>
         </div>
         <div class="eConsent-support-content-box box-3">
           <img class="box-img" src="@/assets/imgs/img_RTSM7.png" alt="">
           <h4 class="box-strong">{{$t("rtsm.immediate")}}</h4>
-          <p class="box-desc" v-if="isCurrLocal == 'cn'">提供<span class="highlight">7*24小时</span>桌面支持</p>
+          <p class="box-desc" v-if="isCurrLocal == 'cn'">提供7*24小时桌面支持</p>
           <p class="box-desc" v-else>Provide 7 * 24-hour desktop support</p>
         </div>
       </div>

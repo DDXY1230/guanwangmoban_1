@@ -12,11 +12,11 @@ const cn = {
     about: '关于一临云',
     contact: '联系我们',
 
-    ctms: '临床研究管理系统(CTMS)',
+    ctms: '临床试验项目管理系统(CTMS)',
+    etmt: '临床试验主文档管理(eTMF)',
     edc: '电子数据采集(EDC)',
     ecoa: '电子临床结局评估(eCOA)',
     rtsm: '随机与药物管理(RTSM)',
-    etmt: '文档管理(eTMF)',
     econsent: '电子知情同意系统(eConsent)',
 
     profile: '公司简介',
@@ -66,7 +66,7 @@ const cn = {
     nonsupport: '暂时不能提交,请直接用以下邮箱电话方式联系!'
   },
   ctms: {
-    clinicalStudy: '临床研究管理系统',
+    clinicalStudy: '临床试验项目管理系统',
     collaboration: '多端协作',
     transition: '国际化',
     role: '优化流程',
@@ -128,7 +128,7 @@ const cn = {
   edc: {
     collect: '电子数据采集',
     design: '快速设计',
-    examine: '逻辑核查',
+    examine: '零编程',
     template: '行业标准',
     support_1: '集成MedDRA与WHODD的自动编码功能',
     support_2: '提供业界常用的标准化报表，且用户可任意自定义报表',

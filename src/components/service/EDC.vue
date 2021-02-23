@@ -13,28 +13,27 @@
           <img class="box-img" src="@/assets/imgs/img_EDC2.png" alt="">
           <h4 class="box-strong">{{$t("edc.design")}}</h4>
           <div v-if="isCurrLocal == 'cn'">
-          <p class="box-desc">快速实现eCRF设计</p>
-          <p class="box-desc">比传统EDC<span class="highlight">节约30%</span>时间</p>
+          <p class="box-desc">比传统EDC建库节约30%以上时间</p>
           </div>
           <div v-else>
             <p class="box-desc">
-              Fast implementation of ECRF design <span class="highlight">saves 30%</span> time compared with traditional EDC
+              Fast implementation of ECRF design saves 30% time compared with traditional EDC
             </p>
           </div>
         </div>
         <div class="eConsent-support-content-box box-2">
           <img class="box-img" src="@/assets/imgs/img_EDC3.png" alt="">
           <h4 class="box-strong">{{$t("edc.examine")}}</h4>
-          <p class="box-desc" v-if="isCurrLocal == 'cn'"><span class="highlight">零编程</span>实现复杂的逻辑核查</p>
+          <p class="box-desc" v-if="isCurrLocal == 'cn'">零编程实现复杂的逻辑核查</p>
           <p v-else class="box-desc">
-            <span class="highlight">Zero programming</span> for complex logic verification
+            Zero programming for complex logic verification
           </p>
         </div>
         <div class="eConsent-support-content-box box-3">
           <img class="box-img" src="@/assets/imgs/img_EDC4.png" alt="">
           <h4 class="box-strong">{{$t("edc.template")}}</h4>
-          <p class="box-desc" v-if="isCurrLocal == 'cn'">支持CDISC的<span class="highlight">CDASH标准</span></p>
-          <p class="box-desc" v-else>Provide CDASH with <span class="highlight">CDISC</span> standard</p>
+          <p class="box-desc" v-if="isCurrLocal == 'cn'">支持CDISC的CDASH标准</p>
+          <p class="box-desc" v-else>Provide CDASH with CDISC standard</p>
         </div>
       </div>
     </div>

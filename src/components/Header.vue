@@ -16,10 +16,10 @@
           <el-submenu index="/service">
             <template slot="title">{{ $t("header.service") }}</template>
             <el-menu-item index="/service/CTMS">{{ $t("header.ctms") }}</el-menu-item>
+            <el-menu-item index="/service/eTMF">{{ $t("header.etmt") }}</el-menu-item>
             <el-menu-item index="/service/EDC">{{ $t("header.edc") }}</el-menu-item>
             <el-menu-item index="/service/eCOA">{{ $t("header.ecoa") }}</el-menu-item>
             <el-menu-item index="/service/RTSM">{{ $t("header.rtsm") }}</el-menu-item>
-            <el-menu-item index="/service/eTMF">{{ $t("header.etmt") }}</el-menu-item>
             <el-menu-item index="/service/eConsent">{{ $t("header.econsent") }}</el-menu-item>
           </el-submenu>
           <el-menu-item index="/industryInfo">{{ $t("header.news") }}</el-menu-item>
