@@ -24,17 +24,17 @@ const cn = {
     joinUs: '加入我们'
   },
   footer: {
-    text: '© 2020-2021 易临云（深圳）科技有限公司 版权所有  粤ICP备20068916号. '
+    text: '© 2020-2021 一临云（深圳）科技有限公司 版权所有  粤ICP备20068916号. '
   },
   home: {
     innovate: '以科技创新',
-    effective: '为病人带来有效治疗',
-    product: '产品分类',
+    effective: '为受试者带来有效治疗',
+    product: '产品',
     learn: '了解详情',
     aboutUs: '关于我们',
     contact: '联系我们',
     dynamic: '业内动态',
-    service: '服务范围',
+    service: '专业服务',
     teamwork: '不同治疗领域的意见领袖<span class="highlight">深度合作</span>',
     manage: '提供从<span class="highlight">方案优化</span>到<span class="highlight">数据收集</span>和管理',
     risk: '<span class="highlight">风险管理</span>等解决方案'
@@ -42,14 +42,14 @@ const cn = {
   about: {
     intro: '公司简介',
     integration: '一体化平台',
-    solution: '解决方案',
+    solution: '国际合作',
     solutionText1: '为了更好地服务中国企业的国际化以及外资企业的全球化战略，公司与全球领先的临床研究系统供应商建立战略合作关系（大中华区独家合作伙伴）；与不同治疗领域的意见领袖深度合作，提供从方案优化到数据收集和管理、风险管理等解决方案：',
-    centralImaging: '比如中心影像评估<span class="highlight">Central Imaging、</span>',
-    cardiacSafety: '心脏安全<span class="highlight">Cardiac Safety、</span>',
-    respiratory: '呼吸科安全<span class="highlight">Respiratory、</span>',
-    device: '传感器与可穿戴设备<span class="highlight">Sensor & Wearable Device。</span>',
+    centralImaging: '<span class="highlight">Central Imaging、</span>',
+    cardiacSafety: '<span class="highlight">Cardiac Safety、</span>',
+    respiratory: '<span class="highlight">Respiratory、</span>',
+    device: '<span class="highlight">Sensor & Wearable Device。</span>',
 
-    intro_1: '公司总部在粤港澳大湾区的核心深圳湾科技生态园，并在成都设有研发中心。目前在北京、上海、台北有分支机构。',
+    intro_1: '公司总部在粤港澳大湾区的核心深圳湾科技生态园，并在成都设有研发中心。目前在北京、上海有分支机构。',
     intro_2: '创始团队和管理团队在临床研究领域深耕多年，具有丰富的经验；产品的研发与运维团队来自腾讯、华为、阿里巴巴等顶尖的互联网公司，对平台及软件系统的稳定性、数据安全保障、流程规范等均按照高级别要求。',
     intro_3: '一临云平台上所有应用软件均遵循ICH、FDA和NMPA关于临床研究系统的相关要求进行验证，满足21 CFR Part 11的要求。',
   },

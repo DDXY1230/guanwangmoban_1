@@ -66,9 +66,10 @@
         </div>
         <div class="home-service-content-right">
           <ul :class="['home-service-content-right-list']" v-if="isCurrLocal == 'cn'">
-            <li><span class="highlight li-dot">·</span> 不同治疗领域的意见领袖深度合作</li>
-            <li class="home-service-content-right-list-centerli"><span class="highlight li-dot">·</span> 提供从方案优化到数据收集和管理</li>
-            <li><span class="highlight li-dot">·</span> 风险管理等解决方案</li>
+            <li><span class="highlight li-dot">·</span> 与多个治疗领域的意见领袖深度合作</li>
+            <li class="home-service-content-right-list-centerli"><span class="highlight li-dot">·</span> 运营团队具有丰富的临床试验经验</li>
+            <li class="home-service-content-right-list-centerli"><span class="highlight li-dot">·</span> 业内领先的风险管理解决方案</li>
+            <li><span class="highlight li-dot">·</span> 应用大数据算法提高数据质量</li>
           </ul>
           <ul :class="['home-service-content-right-list']" v-else>
             <li><span class="highlight li-dot">·</span> <span class="highlight">In depth cooperation</span> of opinion leaders in different treatment fields</li>
@@ -78,10 +79,10 @@
         </div>
       </div>
     </div>
-    <div class="home-dynamic">
+    <!-- <div class="home-dynamic">
       <img class="arrow-down" src="@/assets/imgs/arrow_down.png" alt="">
       <h2 class="home-dynamic-title">{{$t("home.dynamic")}}</h2>
-      <!-- <p class="home-dynamic-title">Industry news</p> -->
+      <p class="home-dynamic-title">Industry news</p>
       <div class="home-dynamic-content">
         <div class="home-dynamic-content-left">
           <div class="home-dynamic-content-left-img">
@@ -99,7 +100,7 @@
           <p class="content">利用定量模型和GIS方法，从空间布局、服务范围以及航空客流分布等方面来研究中国的机场体系及其服务水平利用定量模型和GIS方法.在中国大陆拥有26家分支行的汇丰银行（HSBC）表示，新条例将使其能够进一步扩大分行网络和服务范围</p>
         </div>
       </div>
-    </div>
+    </div> -->
     <div class="home-about-wrap">
       <div class="home-about">
         <div class="home-about-left">
@@ -107,12 +108,11 @@
           <!-- <p class="home-about-desc">About us</p> -->
           <div v-if="isCurrLocal == 'cn'">
             <p class="home-about-left-text-1">
-              一临云科技旨在建立领先的临床研究云平台，以“<span class="highlight">科技创新为病人带来有效治疗</span>”为使命，立足中国、服务全球的医疗卫生与生命科技企业。
+              一临云科技旨在建立领先的临床研究云平台，以“科技创新为病人带来有效治疗”为使命，立足中国、服务全球的医疗卫生与生命科技企业。
             </p>
             <p class="home-about-left-text-2">
-              一临云的临床研究云平台是自主研发的端到端无缝整合一体化平台，包括电子知情同意<span class="highlight">eConsent</span>、电子数据采集<span class="highlight">EDC</span>、随机与药物管理<span class="highlight">RTSM</span>、电子临床结局评估<span
-                class="highlight">eCOA</span>、临床研究项目管理系统<span class="highlight">CTMS</span>、电子化试验主文档管理<span class="highlight">eTMF</span>、基于风险的监查系统<span class="highlight">RBM</span>、虚拟化临床研究<span class="highlight">Virtual
-                Trial</span>等。通过一临云的专业化解决方案，为制药企业、医疗器械公司、研究机构加速新药研发的进程、缩减临床研究的成本、降低临床研究的风险。
+              一临云的临床研究云平台是自主研发的端到端无缝整合一体化平台，包括电子知情同意eConsent、电子数据采集EDC、随机与药物管理RTSM、电子临床结局评估eCOA、临床研究项目管理系统CTMS、电子化试验主文档管理eTMF、基于风险的监查系统RBM、虚拟化临床研究Virtual
+                Trial等。通过一临云的专业化解决方案，为制药企业、医疗器械公司、研究机构加速新药研发的进程、缩减临床研究的成本、降低临床研究的风险。
             </p>
           </div>
           <div v-else>
@@ -157,10 +157,10 @@ export default {
           descList:
             this.isCurrLocal == "cn"
               ? [
-                  "<span class='highlight'>业内领先</span>的CTMS系统，具备完善的功能模块",
-                  "实现<span class='highlight'>实时掌握</span>项目的全方位进展",
-                  "内置多套功能模板，实现<span class='highlight'>快速部署</span>，平均1-2个月完成系统上线",
-                  "支持<span class='highlight'>多语言、多时区</span>和<span class='highlight'>多种货币</span>的转换"
+                  "业内领先的CTMS系统，具备完善的功能模块",
+                  "实现实时掌握项目的全方位进展",
+                  "内置多套功能模板，实现快速部署，平均1-2个月完成系统上线",
+                  "支持多语言、多时区和多种货币的转换"
                 ]
               : [
                   "Industry leading CTMS systems with complete functional modules",
@@ -182,10 +182,10 @@ export default {
           descList:
             this.isCurrLocal == "cn"
               ? [
-                  "快速实现<span class='highlight'>eCRF</span>设计, 比传统EDC<span class='highlight'>节约30%</span>时间",
-                  "提供<span class='highlight'>符合CDISC标准</span>的对个治疗领域的eCRF模块库",
-                  "集成<span class='highlight'>MedDRA</span>与<span class='highlight'>WHODD</span>的自动编码功能",
-                  "提供业界常用的标准化报表,且用户可任意<span class='highlight'>自定义报表</span>"
+                  "快速实现eCRF设计, 比传统EDC节约30%时间",
+                  "提供符合CDISC标准的对个治疗领域的eCRF模块库",
+                  "集成MedDRA与WHODD的自动编码功能",
+                  "提供业界常用的标准化报表,且用户可任意自定义报表"
                 ]
               : [
                   "Supports both PC and mobile data entry at the same time",
@@ -201,10 +201,10 @@ export default {
           descList:
             this.isCurrLocal == "cn"
               ? [
-                  "零编程快速实现<span class='highlight'>随机和药物管理</span>的配置",
-                  "90%以上的项目可在<span class='highlight'>三小时内完成</span>部署",
-                  "药物发放模块具备<span class='highlight'>预测功能</span>,最大可能的减少药物的浪费",
-                  "严格的<span class='highlight'>角色配置</span>和<span class='highlight'>权限管理</span>"
+                  "零编程快速实现随机和药物管理的配置",
+                  "90%以上的项目可在三小时内完成部署",
+                  "药物发放模块具备预测功能,最大可能的减少药物的浪费",
+                  "严格的角色配置和权限管理"
                 ]
               : [
                   "Supports multiple randomization algorithms",
@@ -220,10 +220,10 @@ export default {
           descList:
             this.isCurrLocal == "cn"
               ? [
-                  "业内<span class='highlight'>最快实现</span>eCOA<span class='highlight'>部署</span>,平均在4周完成上线",
-                  "实施团队具有<span class='highlight'>丰富的国际大型</span>eCOA项目<span class='highlight'>经验</span>",
-                  "支持<span class='highlight'>BYOD</span>和<span class='highlight'>移动终端</span>租赁模式",
-                  "提供从量表版权获取、翻译、语言验证、<span class='highlight'>eCOA部署</span>、培训、数据质量分析等服务"
+                  "业内最快实现eCOA部署,平均在4周完成上线",
+                  "实施团队具有丰富的国际大型eCOA项目经验",
+                  "支持BYOD和移动终端租赁模式",
+                  "提供从量表版权获取、翻译、语言验证、eCOA部署、培训、数据质量分析等服务"
                 ]
               : [
                   "Implementation team with major international eCOA project experiences",
@@ -239,10 +239,10 @@ export default {
           descList:
             this.isCurrLocal == "cn"
               ? [
-                  "改变受试者签署知情同意的<span class='highlight'>全过程</span>",
-                  "实现受试者对临床研究的<span class='highlight'>充分知情</span>",
-                  "遵循<span class='highlight'>211 CFR Part11</span>关于电子签名的要求",
-                  "符合<span class='highlight'>HIPAA</span>和<span class='highlight'>GPPR</span>关于受试者隐私保护的要求"
+                  "改变受试者签署知情同意的全过程",
+                  "实现受试者对临床研究的充分知情",
+                  "遵循211 CFR Part11关于电子签名的要求",
+                  "符合HIPAA和GPPR关于受试者隐私保护的要求"
                 ]
               : [
                   "Automate the clinical trial participants consent tracking",
@@ -441,9 +441,10 @@ export default {
       display: flex;
       // justify-content: center;
       width: 1280px;
-      height: 380px;
+      height: 390px;
       overflow: auto;
       margin: 0 auto;
+      @include scrollbar();
       &-item {
         width: 212px;
         height: 360px;

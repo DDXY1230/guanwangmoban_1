@@ -3,7 +3,8 @@
   <div class="about">
     <div class="about-banner">
       <div class="about-banner-content">
-        <div class="about-banner-content-brief">
+        <h2 class="about-banner-content-title">智能、高效的临床试验平台</h2>
+        <!-- <div class="about-banner-content-brief">
           <h4 class="about-banner-content-brief-title">{{$t("about.intro")}}</h4>
           <div v-if="isCurrLocal == 'cn'">
             <p class="about-banner-content-brief-desc">一临云科技旨在建立领先的临床研究云平台，以<span class="highlight">“科技创新为病人带来有效治疗”</span>为使命，立足中国、服务全球的医疗卫生与生命科技企业。</p>
@@ -14,7 +15,7 @@
               servicing the global life sciences community. ECC’s clinical trial cloud platform is a uniformed platform, including eConsent, EDC, RTSM, eCOA, CTMS, eTM, RBM and Virtual Trial solutions.
             </p>
           </div>
-        </div>
+        </div> -->
       </div>
     </div>
     <div class="about-part1">
@@ -109,6 +110,19 @@ export default {
       height: 580px;
       position: relative;
       margin: 0 auto;
+      &-title {
+        font-size: 72px;
+        padding: 100px 0 10px;
+        color: #fff;
+        margin: 0;
+        font-family: "SourceHanSerifCN-Bold-2";
+        line-height: 86px;
+        letter-spacing: 6px;
+        &-isEn {
+          font-size: 40px;
+          line-height: 36px;
+        }
+      }
       &-brief {
         color: #00215f;
         position: absolute;
