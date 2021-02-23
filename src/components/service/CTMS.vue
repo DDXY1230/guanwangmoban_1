@@ -12,20 +12,20 @@
         <div class="ctms-support-content-box box-1">
           <img class="box-img" src="@/assets/imgs/img_ctmsn3.png" alt="">
           <h4 class="box-strong">{{$t("ctms.collaboration")}}</h4>
-          <p class="box-desc" v-if="isCurrLocal == 'cn'">同时支持<span class="highlight">PC端</span>和<span class="highlight">移动端</span></p>
-          <p class="box-desc" v-else>Both <span class="highlight">PC</span> and <span class="highlight">mobile terminals</span> are supported</p>
+          <p class="box-desc" v-if="isCurrLocal == 'cn'">同时支持PC端和移动端</p>
+          <p class="box-desc" v-else>Both PC and mobile terminals are supported</p>
         </div>
         <div class="ctms-support-content-box box-2">
           <img class="box-img" src="@/assets/imgs/img_ctmsn4.png" alt="">
           <h4 class="box-strong">{{$t("ctms.transition")}}</h4>
-          <p class="box-desc" v-if="isCurrLocal == 'cn'">支持多语言、多时区和多种货币的<span class="highlight">转换</span></p>
-          <p class="box-desc" v-else>Support multi language, multi time zone and <span class="highlight">multi currency conversion</span></p>
+          <p class="box-desc" v-if="isCurrLocal == 'cn'">支持多语言、多时区和多种货币的转换</p>
+          <p class="box-desc" v-else>Support multi language, multi time zone and multi currency conversion</p>
         </div>
         <div class="ctms-support-content-box box-3">
           <img class="box-img" src="@/assets/imgs/img_ctmsn5.png" alt="">
           <h4 class="box-strong">{{$t("ctms.role")}}</h4>
-          <p class="box-desc" v-if="isCurrLocal == 'cn'">提供行业<span class="highlight">最佳实践、简洁易用</span></p>
-          <p class="box-desc" v-else>Industry best <span class="highlight">practices, simplicity and ease of use. </span></p>
+          <p class="box-desc" v-if="isCurrLocal == 'cn'">提供行业最佳实践、简洁易用</p>
+          <p class="box-desc" v-else>Industry best practices, simplicity and ease of use. </p>
         </div>
       </div>
     </div>

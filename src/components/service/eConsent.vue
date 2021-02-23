@@ -12,20 +12,20 @@
         <div class="eConsent-support-1-content-box box-1">
           <img class="box-img" src="@/assets/imgs/img_eConsent2.png" alt="">
           <h4 class="box-strong">{{$t("econsent.process")}}</h4>
-          <p class="box-desc" v-if="isCurrLocal == 'cn'">改变受试者<span class="highlight">签署知情同意</span>的全过程</p>
-          <p class="box-desc" v-else>The whole process of <span class="highlight">informed consent was changed</span></p>
+          <p class="box-desc" v-if="isCurrLocal == 'cn'">改变受试者签署知情同意的全过程</p>
+          <p class="box-desc" v-else>The whole process of informed consent was changed</p>
         </div>
         <div class="eConsent-support-1-content-box box-2">
           <img class="box-img" src="@/assets/imgs/img_eConsent3.png" alt="">
           <h4 class="box-strong">{{$t("econsent.know")}}</h4>
-          <p class="box-desc" v-if="isCurrLocal == 'cn'">实现受试者对临床研究的<span class="highlight">充分知情</span></p>
-          <p class="box-desc" v-else>To realize the full knowledge of <span class="highlight">clinical research</span></p>
+          <p class="box-desc" v-if="isCurrLocal == 'cn'">实现受试者对临床研究的充分知情</p>
+          <p class="box-desc" v-else>To realize the full knowledge of clinical research</p>
         </div>
         <div class="eConsent-support-1-content-box box-3">
           <img class="box-img" src="@/assets/imgs/img_eConsent4.png" alt="">
           <h4 class="box-strong">{{$t("econsent.trace")}}</h4>
-          <p class="box-desc" v-if="isCurrLocal == 'cn'">知情同意全过程<span class="highlight">完全留痕</span></p>
-          <p class="box-desc" v-else>The whole process of informed consent is <span class="highlight">completely traceable</span></p>
+          <p class="box-desc" v-if="isCurrLocal == 'cn'">知情同意全过程完全留痕</p>
+          <p class="box-desc" v-else>The whole process of informed consent is completely traceable</p>
         </div>
       </div>
     </div>
