@@ -12,7 +12,6 @@
             <template slot="title">{{ $t("header.about") }}</template>
             <el-menu-item index="/about/company">{{ $t("header.profile") }}</el-menu-item>
             <el-menu-item index="/about/team">{{ $t("header.team") }}</el-menu-item>
-            <el-menu-item index="/about/joinUs">{{ $t("header.joinUs") }}</el-menu-item>
           </el-submenu>
           <el-submenu index="/service">
             <template slot="title">{{ $t("header.service") }}</template>
@@ -24,6 +23,7 @@
             <el-menu-item index="/service/eConsent">{{ $t("header.econsent") }}</el-menu-item>
           </el-submenu>
           <el-menu-item index="/industryInfo">{{ $t("header.news") }}</el-menu-item>
+          <el-menu-item index="/joinUs">{{ $t("header.joinUs") }}</el-menu-item>
           <el-menu-item index="/contact">{{
             $t("header.contact")
           }}</el-menu-item>
@@ -151,7 +151,7 @@ export default {
           this.currentItem = this.$t("header.about");
           break;
         case "JoinUs":
-          this.activeIndex = "/about/joinUs";
+          this.activeIndex = "/joinUs";
           this.currentItem = this.$t("header.joinUs");
           break;
         case "Contact":
