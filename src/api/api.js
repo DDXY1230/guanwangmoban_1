@@ -194,7 +194,7 @@ function apiAxios(method, url, params, option) {
         let success = false;
         let data = res.data;
         const message = res.data.message;
-        if (data && Number(data.code) === 0) {
+        if (data && Number(data.code) === 200) {
           success = true;
           data = res.data.data;
         }

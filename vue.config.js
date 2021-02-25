@@ -4,12 +4,12 @@ module.exports = {
       open: true,
       // https: true,
       proxy: {
-        "/user": {
-          target: "http://zs-edcuser.eclincloud.net",
+        "": {
+          target: "http://172.20.3.22:8888",
           changeOrigin: true, // 跨域访问设置，true代表跨域
-          pathRewrite: {
-            "^/user": "/user",
-          },
+          // pathRewrite: {
+          //   "^/user": "/user",
+          // },
         },
       },
     },

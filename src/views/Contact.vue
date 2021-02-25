@@ -8,7 +8,7 @@
           <input class="input1" type="text" :placeholder="$t('contact.linkman')">
           <input class="input1" type="text" :placeholder="$t('contact.phone')">
           <span class="contact-banner-content-collect-submit" @click="submit()">{{$t("contact.submit")}}</span>
-        <img class="left-icon" src="@/assets/imgs/ic1.png" alt="">
+          <img class="left-icon" src="@/assets/imgs/ic1.png" alt="">
         </div>
       </div>
     </div>
@@ -63,7 +63,7 @@
 <script>
 import map1 from "@/components/map1.vue";
 import map2 from "@/components/map2.vue";
-import { submitData } from '@/api/user.js'
+import { submitData } from "@/api/user.js";
 export default {
   components: {
     map1,
@@ -74,10 +74,10 @@ export default {
   },
   methods: {
     async submit() {
-      this.$message.info(this.$t('contact.nonsupport'))
-      return
-      let data = await submitData()
-      console.log(data)
+      let data = await submitData({ username: "123", contactWay: "138373737" });
+      if (data.success) {
+        this.$message.success("您的联系方式提交成功,我们会尽快联系您!");
+      }
     }
   }
 };
