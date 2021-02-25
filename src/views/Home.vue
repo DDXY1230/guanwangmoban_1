@@ -56,6 +56,37 @@
         </el-carousel-item>
       </el-carousel>
     </div>
+    <div class="home-about-wrap">
+      <div class="home-about">
+        <div class="home-about-left">
+          <h2 class="home-about-title">{{$t("home.aboutUs")}}</h2>
+          <!-- <p class="home-about-desc">About us</p> -->
+          <div v-if="isCurrLocal == 'cn'">
+            <p class="home-about-left-text-1">
+              一临云科技旨在建立领先的临床研究云平台，以“科技创新为受试者带来有效治疗”为使命，立足中国、服务全球的医疗卫生与生命科技企业。
+            </p>
+            <p class="home-about-left-text-2">
+              一临云的临床研究云平台是自主研发的端到端无缝整合一体化平台，包括电子知情同意eConsent、电子数据采集EDC、随机与药物管理RTSM、电子临床结局评估eCOA、临床研究项目管理系统CTMS、电子化试验主文档管理eTMF、基于风险的监查系统RBM、虚拟化临床研究Virtual
+              Trial等。通过一临云的专业化解决方案，为制药企业、医疗器械公司、研究机构加速新药研发的进程、缩减临床研究的成本、降低临床研究的风险。
+            </p>
+          </div>
+          <div v-else>
+            <p class="home-about-left-text-1">
+              eClinCloud Technologies (AKA. ECC) is a global clinical trial cloud platform. Our mission is to "leverage innovative technology for patients to access effective treatment". Our journey started in China,
+              servicing the global life sciences community. ECC’s clinical trial cloud platform is a uniformed platform, including eConsent, EDC, RTSM, eCOA, CTMS, eTM, RBM and Virtual Trial solutions.
+            </p>
+            <p class="home-about-left-text-2">
+              ECC’s suite of strategic solutions accelerate the clinical research process with a focus to deliver treatments to patients faster with lower costs and risks for pharmaceutical companies, medical instrument
+              companies and clinical trial institutions.
+            </p>
+          </div>
+          <span class="home-about-left-more" @click="contactUs()">{{$t("home.contact")}} ></span>
+        </div>
+        <div class="home-about-right">
+          <img src="@/assets/imgs/img_Aboutus.png" alt="">
+        </div>
+      </div>
+    </div>
     <div class="home-service">
       <h2 class="home-service-title">{{$t("home.service")}}</h2>
       <!-- <p class="home-service-title">Scope of services</p> -->
@@ -77,6 +108,28 @@
             <li><span class="highlight li-dot">·</span> <span class="highlight">Risk management</span> and other solutions</li>
           </ul>
         </div>
+      </div>
+    </div>
+    <div class="home-last">
+      <div class="home-last-box">
+        <div class="home-last-box-item">
+          <img src="@/assets/imgs/9001.png" alt="">
+        </div>
+        <div class="home-last-box-item">
+          <img src="@/assets/imgs/27001.png" alt="">
+        </div>
+        <div class="home-last-box-item">
+          <img src="@/assets/imgs/腾讯云.png" alt="">
+        </div>
+      </div>
+      <div class="home-last-hint">
+        <p>
+          <img src="@/assets/imgs/arrow3.png" alt="">
+        </p>
+        <p>
+          符合严格的相关法规要求，包括ISO,云服务及数据安全和备份等；<br>
+          通过业界领先公司的验证。
+        </p>
       </div>
     </div>
     <!-- <div class="home-dynamic">
@@ -101,37 +154,7 @@
         </div>
       </div>
     </div> -->
-    <div class="home-about-wrap">
-      <div class="home-about">
-        <div class="home-about-left">
-          <h2 class="home-about-title">{{$t("home.aboutUs")}}</h2>
-          <!-- <p class="home-about-desc">About us</p> -->
-          <div v-if="isCurrLocal == 'cn'">
-            <p class="home-about-left-text-1">
-              一临云科技旨在建立领先的临床研究云平台，以“科技创新为受试者带来有效治疗”为使命，立足中国、服务全球的医疗卫生与生命科技企业。
-            </p>
-            <p class="home-about-left-text-2">
-              一临云的临床研究云平台是自主研发的端到端无缝整合一体化平台，包括电子知情同意eConsent、电子数据采集EDC、随机与药物管理RTSM、电子临床结局评估eCOA、临床研究项目管理系统CTMS、电子化试验主文档管理eTMF、基于风险的监查系统RBM、虚拟化临床研究Virtual
-                Trial等。通过一临云的专业化解决方案，为制药企业、医疗器械公司、研究机构加速新药研发的进程、缩减临床研究的成本、降低临床研究的风险。
-            </p>
-          </div>
-          <div v-else>
-            <p class="home-about-left-text-1">
-              eClinCloud Technologies (AKA. ECC) is a global clinical trial cloud platform. Our mission is to "leverage innovative technology for patients to access effective treatment". Our journey started in China,
-              servicing the global life sciences community. ECC’s clinical trial cloud platform is a uniformed platform, including eConsent, EDC, RTSM, eCOA, CTMS, eTM, RBM and Virtual Trial solutions.
-            </p>
-            <p class="home-about-left-text-2">
-              ECC’s suite of strategic solutions accelerate the clinical research process with a focus to deliver treatments to patients faster with lower costs and risks for pharmaceutical companies, medical instrument
-              companies and clinical trial institutions.
-            </p>
-          </div>
-          <span class="home-about-left-more" @click="contactUs()">{{$t("home.contact")}} ></span>
-        </div>
-        <div class="home-about-right">
-          <img src="@/assets/imgs/img_Aboutus.png" alt="">
-        </div>
-      </div>
-    </div>
+
   </div>
 </template>
 
@@ -288,7 +311,7 @@ export default {
       });
     },
     handleItem(index) {
-      if ([1,6,7,8,9].includes(index)) {
+      if ([1, 6, 7, 8, 9].includes(index)) {
         this.$message.info("努力开发中  ,敬请期待!");
         return;
       }
@@ -741,16 +764,18 @@ export default {
     }
   }
   &-service {
-    max-width: $content-width;
-    margin: 60px auto;
+    // max-width: $content-width;
+    margin: 0px auto 60px;
+    background: #00215F;
+    padding: 40px;
     &-title {
-      color: #00215f;
+      color: #fff;
       font-size: 36px;
       text-align: center;
-      margin: 4px 0;
+      margin: 4px 0 60px;
     }
     &-desc {
-      color: #00215f;
+      color: #fff;
       text-align: center;
       font-size: 36px;
       font-weight: 600;
@@ -782,7 +807,7 @@ export default {
             font-size: 20px;
           }
           li {
-            color: #00215f;
+            color: #fff;
             // padding: 20px 0;
             line-height: 30px;
           }
@@ -792,6 +817,28 @@ export default {
         }
       }
     }
+  }
+  &-last {
+    max-width: $content-width;
+    margin: 0 auto;
+    &-box {
+      display: flex;
+      justify-content: space-around;
+      &-item {
+
+      }
+    }
+    &-hint {
+      margin-top: 30px;
+      background-color: #EE8A1D;
+      // min-height: 96px;
+      text-align: center;
+      padding: 10px 0;
+      color: #fff;
+      font-size: 24px;
+      line-height: 32px;
+    }
+
   }
 }
 // 适配移动端
