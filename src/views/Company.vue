@@ -29,8 +29,8 @@
           <div v-if="isCurrLocal == 'cn'">
             <p class="about-part1-right-text">
               一临云的临床研究云平台是自主研发的端到端无缝整合一体化平台。</p>
-            <p class="about-part1-right-text">包括电子知情同意<span class="highlight">eConsent</span>、电子数据采集<span class="highlight">EDC</span>、随机与药物管理<span class="highlight">RTSM</span>、电子临床结局评估e<span
-                class="highlight">COA</span>、临床研究项目管理系统<span class="highlight">CTMS</span>、电子化试验主文档管理<span class="highlight">eTMF</span>、基于风险的监查系统<span class="highlight">RBM</span>、虚拟化临床研究<span class="highlight">Virtual
+            <p class="about-part1-right-text">包括电子知情同意<span class="highlight">eConsent</span>、电子数据采集<span class="highlight">EDC</span>、随机与药物管理<span class="highlight">RTSM</span>、电子临床结局评估<span
+                class="highlight">eCOA</span>、临床研究项目管理系统<span class="highlight">CTMS</span>、电子化试验主文档管理<span class="highlight">eTMF</span>、基于风险的监查系统<span class="highlight">RBM</span>、虚拟化临床研究<span class="highlight">Virtual
                 Trial</span>等。
             </p>
             <p class="about-part1-right-text">
