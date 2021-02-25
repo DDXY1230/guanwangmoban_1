@@ -7,7 +7,7 @@
         <!-- <div class="about-banner-content-brief">
           <h4 class="about-banner-content-brief-title">{{$t("about.intro")}}</h4>
           <div v-if="isCurrLocal == 'cn'">
-            <p class="about-banner-content-brief-desc">一临云科技旨在建立领先的临床研究云平台，以<span class="highlight">“科技创新为病人带来有效治疗”</span>为使命，立足中国、服务全球的医疗卫生与生命科技企业。</p>
+            <p class="about-banner-content-brief-desc">一临云科技旨在建立领先的临床研究云平台，以<span class="highlight">“科技创新为受试者带来有效治疗”</span>为使命，立足中国、服务全球的医疗卫生与生命科技企业。</p>
           </div>
           <div v-else>
             <p class="about-banner-content-brief-desc">
